@@ -131,7 +131,7 @@
   },
   
   "navigation": {
-    "main_menu": ["CHALK AI", "G-LMS"],
+    "right_menu": ["CHALK AI", "G-LMS"],
     "language": "KR"
   }
 }
