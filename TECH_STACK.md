@@ -3,37 +3,42 @@
 ## ✅ 최종 확정 기술 스택
 
 ### 🎯 Core Framework
-- **Next.js 14.2.x** (App Router)
-  - 최신 React Server Components 지원
+- **Next.js 15.5.0** (App Router) ✅ 설치됨
+  - 최신 React 19 Server Components 지원
+  - Turbopack 개발 서버 적용
   - 뛰어난 SEO 최적화
   - 이미지 최적화 내장
   - 빌트인 폰트 최적화
 
 ### 📝 Language
-- **TypeScript 5.x**
+- **TypeScript 5.x** ✅ 설치됨
+  - 엄격한 타입 검사 활성화
   - 타입 안정성
   - 개발 생산성 향상
   - IDE 자동완성 지원
+  - Path aliases 설정 (`@/*` 등)
 
 ### 🎨 Styling
-- **Tailwind CSS 3.4.x**
+- **Tailwind CSS 4.x** ✅ 설치됨
+  - PostCSS 기반 최신 아키텍처
   - 빠른 프로토타이핑
   - 일관된 디자인 시스템
-  - 퍼지 기능 제거로 번들 사이즈 최적화
+  - CHALK 브랜드 색상 팩럿
+  - 커스텀 애니메이션 설정
   
-- **CSS Modules** (보조)
+- **CSS Modules** (보조) - 예정
   - 복잡한 애니메이션용
   - 컴포넌트별 스코프 격리
 
 ### 🎬 Animation
-- **Framer Motion 11.x**
+- **Framer Motion 11.x** 📦 예정
   - 부드러운 애니메이션
   - 스크롤 트리거 애니메이션
   - 제스처 기반 인터랙션
   - 패럴랙스 효과
 
 ### 📦 State Management
-- **Zustand 4.5.x**
+- **Zustand 4.5.x** 📦 예정
   - 간단한 API
   - TypeScript 완벽 지원
   - 작은 번들 사이즈 (8kb)
@@ -42,12 +47,12 @@
 ### 🛠️ Development Tools
 
 #### Code Quality
-- **ESLint 8.x**
-  - Next.js 권장 설정
-  - TypeScript 규칙
-  - Tailwind CSS 클래스 정렬
+- **ESLint 9.x** ✅ 설치됨
+  - Next.js 15.5.0 권장 설정
+  - TypeScript 엄격 규칙
+  - Tailwind CSS 클래스 정렬 (예정)
   
-- **Prettier 3.x**
+- **Prettier 3.x** 📦 예정
   - 일관된 코드 포맷팅
   - Tailwind CSS 플러그인
 
@@ -108,14 +113,36 @@
 
 ## 📋 Package.json Dependencies
 
+## 현재 설치된 의존성 (package.json)
+
+```json
+{
+  "name": "chalk-web",
+  "version": "0.1.0",
+  "dependencies": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next": "15.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.0",
+    "@eslint/eslintrc": "^3"
+  }
+}
+```
+
+## 추가 예정 의존성
+
 ```json
 {
   "dependencies": {
-    "next": "^14.2.0",
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0",
-    "typescript": "^5.4.0",
-    "tailwindcss": "^3.4.0",
     "framer-motion": "^11.0.0",
     "zustand": "^4.5.0",
     "@radix-ui/react-dialog": "^1.0.0",
@@ -127,11 +154,6 @@
     "lucide-react": "^0.350.0"
   },
   "devDependencies": {
-    "@types/node": "^20.11.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "eslint": "^8.56.0",
-    "eslint-config-next": "^14.2.0",
     "prettier": "^3.2.0",
     "prettier-plugin-tailwindcss": "^0.5.0",
     "husky": "^9.0.0",
@@ -146,29 +168,15 @@
 
 ## 🔧 설정 파일들
 
-### tsconfig.json
+### 현재 설정된 tsconfig.json
+
+사용자가 생성한 코드에서 확인해주세요.
+
+### 추가 예정 tsconfig.json 설정
+
 ```json
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "paths": {
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
@@ -177,72 +185,17 @@
       "@/styles/*": ["./src/styles/*"],
       "@/types/*": ["./src/types/*"]
     }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  }
 }
 ```
 
-### tailwind.config.ts
+### 현재 설정된 tailwind.config.ts
+
+사용자가 생성한 코드에서 확인해주세요. 예상 설정:
+
 ```typescript
-import type { Config } from 'tailwindcss'
-
-const config: Config = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  theme: {
-    extend: {
-      colors: {
-        primary: {
-          DEFAULT: '#6B5EFF',
-          light: '#8B7FFF',
-          dark: '#5548E0',
-        },
-        secondary: '#FF6B9D',
-        accent: '#FFD93D',
-        gray: {
-          900: '#1A1A1A',
-          800: '#2D2D2D',
-          700: '#404040',
-          600: '#525252',
-          500: '#737373',
-          400: '#A3A3A3',
-          300: '#D4D4D4',
-          200: '#E5E5E5',
-          100: '#F5F5F5',
-        }
-      },
-      fontFamily: {
-        pretendard: ['Pretendard', 'sans-serif'],
-      },
-      animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-out',
-        'float': 'float 3s ease-in-out infinite',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
-      },
-    },
-  },
-  plugins: [],
-}
-
-export default config
+// CHALK 브랜드 색상과 애니메이션이 적용된 tailwind.config.ts
+// CONTENT_DATA.json의 디자인 시스템과 연동
 ```
 
 ## ✅ 기술 스택 선정 이유
@@ -275,6 +228,18 @@ export default config
 - ✅ 작은 번들 사이즈
 - ✅ 빠른 학습 곡선
 
-## 🚀 다음 단계
+## 🚀 현재 상황
 
-이제 기술 스택이 확정되었으므로 Next.js 프로젝트를 초기화할 준비가 되었습니다.
+**✅ 완료된 단계**:
+- 1단계: 기술 스택 확정
+- 2단계: Next.js 초기화 (Next.js 15.5.0 + React 19.1.0 + TypeScript + Tailwind CSS 4)
+
+**📦 다음 단계**:
+- 3단계: Figma 에셋 추출
+- 4단계: 컴포넌트 개발
+
+**주요 버전 업그레이드**:
+- Next.js 14.2.x → 15.5.0 (최신 버전)
+- React 18.3.0 → 19.1.0 (최신 React 19)
+- Tailwind CSS 3.4.x → 4.x (PostCSS 아키텍처)
+- ESLint 8.x → 9.x (최신 버전)
