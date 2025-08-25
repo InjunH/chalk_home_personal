@@ -3,19 +3,66 @@ import { siteContent } from '@/lib/content'
 import OptimizedImage from '@/components/ui/OptimizedImage'
 
 export default function IntroSection() {
-  const { intro } = siteContent
+  const { intro, review } = siteContent
 
   return (
-    <section className="py-20 bg-white">
+    <section id="intro" className="py-20 bg-[#0d0d0d]">
       <div className="container mx-auto px-6">
         <div className="text-center space-y-16">
           {/* Main Copy */}
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              {intro.main_copy}
+            <h2 className="font-bold leading-tight bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent" 
+                style={{
+                  fontSize: '72px',
+                  lineHeight: '72px',
+                  fontFamily: 'Pretendard',
+                  fontWeight: 700,
+                  textAlign: 'center'
+                }}>
+              {intro.description}
             </h2>
             
             <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+          </div>
+
+          {/* Review Section */}
+          <div className="space-y-8 max-w-4xl mx-auto">
+            {/* First Quote */}
+            <div className="text-white">
+              <p className="font-bold uppercase" 
+                 style={{
+                   fontSize: '36px',
+                   lineHeight: '39.6px',
+                   letterSpacing: '-0.36px',
+                   fontFamily: 'Pretendard',
+                   fontWeight: 700,
+                   textAlign: 'center'
+                 }}>
+                {review.testimonial.quote1}
+              </p>
+            </div>
+
+            {/* Second Quote */}
+            <div className="text-white opacity-70">
+              <p className="font-bold" 
+                 style={{
+                   fontFamily: 'Pretendard',
+                   fontWeight: 700,
+                   textAlign: 'center'
+                 }}>
+                {review.testimonial.quote2}
+              </p>
+            </div>
+
+            {/* Reviewer Info */}
+            <div className="text-white/70 text-center space-y-2">
+              <p className="text-sm font-semibold uppercase tracking-wide">
+                {review.testimonial.reviewer.title}
+              </p>
+              <p className="text-lg font-medium">
+                {review.testimonial.reviewer.name}
+              </p>
+            </div>
           </div>
 
           {/* Preview Images */}

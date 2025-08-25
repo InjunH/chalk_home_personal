@@ -4,7 +4,7 @@ export default function FeatureSection1() {
   const { features } = siteContent
 
   return (
-    <section className="py-20 bg-black text-white">
+    <section id="features" className="py-20 bg-black text-white">
       <div className="container mx-auto px-6">
         <div className="text-center space-y-16">
           {/* Section Header */}

@@ -4,7 +4,7 @@ export default function Header() {
   const { navigation } = siteContent;
 
   return (
-    <header className="bg-black">
+    <header className="bg-transparent fix">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo - 좌측 */}

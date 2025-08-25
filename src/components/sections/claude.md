@@ -36,11 +36,98 @@
 
 ## 섹션별 특징
 
-### HeroSection (메인 비주얼)
-- **배경**: 검정 + 그라데이션 오버레이
-- **레이아웃**: 2열 (텍스트 + iPad 목업)
-- **특수 효과**: 떠다니는 애니메이션 점들
-- **CTA**: 2개 버튼 (체험해보기, 더 알아보기)
+### HeroSection (메인 비주얼) - Figma 기반 완전 분석
+
+#### 📋 Figma 디자인 요구사항
+
+**🎨 배경 및 시각적 효과**
+- **기본 배경**: 검정색 (`bg-black`)
+- **라이트 그라데이션**: 45도 회전된 Angular Gradient 오버레이
+  - 색상: Green-blue gradient (`#16CF6B` → 투명)  
+  - 투명도: 40% (`opacity-40`)
+  - 회전: 45도 (`rotate-45`)
+- **iPad 목업**: `iPad-silhouette-mockup` 이미지 사용
+- **마스킹 효과**: 이미지 마스킹 레이어 적용
+
+**📝 텍스트 요소 및 정확한 스타일**
+
+1. **Intro Badge**: "INTRO : INTO THE CHALK"
+   - 폰트: Suisse Intl Bold 700
+   - 크기: 16px (`text-base`)
+   - Letter spacing: -0.32px (`tracking-tight`)
+   - Line height: 110% (`leading-normal`)
+
+2. **메인 타이틀**: "WE ALL Dream DIFFERENTLY"
+   - **"WE ALL"**: 
+     - 폰트: Suisse Intl Bold 700, UPPERCASE
+     - 크기: 182px (데스크톱 기준)
+     - Letter spacing: -1.82px
+     - Line height: 90%
+     - 정렬: CENTER
+   - **"Dream"** (하이라이트):
+     - 폰트: NN Konrad Bold 700 (특별 폰트!)
+     - 크기: 182px (메인), 51px (서브)
+     - Letter spacing: -3.64px (메인), -0.51px (서브)
+     - Line height: 100%
+     - **중요**: 그라데이션 또는 특별한 색상 효과 적용
+   - **"DIFFERENTLY"**:
+     - 폰트: Suisse Intl Bold 700, UPPERCASE
+     - 크기: 182px
+     - Letter spacing: -1.82px
+     - Line height: 90%
+
+3. **서브 타이틀**: "Hyper-Personalized Learning Solution"
+   - 위치: 메인 타이틀 하단
+   - 중복 출현 (badge와 별도)
+
+**🎯 레이아웃 구조**
+- **전체**: KV 프레임 내부에 img + area 구조
+- **좌측**: 텍스트 콘텐츠 영역 (area)
+- **우측**: iPad 목업 + 마스킹 이미지
+- **특별 요소**: 썸네일 이미지와 아이콘 영역
+
+**🔧 필요한 수정사항**
+
+1. **폰트 시스템 점검**
+   - NN Konrad 폰트 추가 필요 (Dream 텍스트용)
+   - Suisse Intl 폰트 확인
+
+2. **타이포그래피 정확한 구현**
+   - 182px 대형 텍스트 반응형 처리
+   - Letter spacing 정확한 적용
+   - Line height 90%/100%/110% 구분 적용
+
+3. **배경 그라데이션 재구현**
+   - Angular gradient 45도 회전
+   - Green-blue 색상 적용
+   - 40% 투명도 정확한 적용
+
+4. **"Dream" 텍스트 특별 처리**
+   - NN Konrad 폰트 적용
+   - 그라데이션/색상 효과 추가
+   - 하이라이트 효과 강화
+
+**🎨 색상 시스템 (Figma 추출)**
+- Primary Green: `#16CF6B` (Angular gradient 시작점)
+- Background: Pure Black `#000000`
+- Text: White `#FFFFFF`
+- Highlight: Dream 텍스트용 특별 색상/그라데이션
+
+**📱 반응형 고려사항**
+- 182px → 모바일에서 적절한 크기로 스케일링
+- 2행 → 3행 타이틀 분리 처리
+- iPad 목업 크기 조정
+- 텍스트 간격 반응형 조정
+
+**⚡ 성능 최적화**
+- 대형 폰트 로딩 최적화
+- 그라데이션 CSS 최적화
+- 이미지 마스킹 효과 최적화
+
+**🔍 주의사항**
+- NN Konrad 폰트가 핵심 - 라이선스 확인 필요
+- Dream 텍스트의 특별한 스타일링이 디자인의 핵심
+- 정확한 Letter spacing이 전체 느낌을 좌우
 
 ### IntroSection (서비스 소개)
 - **배경**: 흰색

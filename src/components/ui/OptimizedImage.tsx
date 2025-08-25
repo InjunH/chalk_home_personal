@@ -1,35 +1,34 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 interface OptimizedImageProps {
-  src: string
-  alt: string
-  className?: string
-  width?: number
-  height?: number
-  fill?: boolean
-  priority?: boolean
+  src: string;
+  alt: string;
+  className?: string;
+  width?: number;
+  height?: number;
+  fill?: boolean;
+  priority?: boolean;
+  style?: React.CSSProperties;
 }
 
 export default function OptimizedImage({
   src,
   alt,
-  className = '',
+  className = "",
   width,
   height,
   fill = false,
   priority = false,
-  ...props
+  style,
 }: OptimizedImageProps) {
   // For SVG files or external images, use regular img tag
-  if (src.endsWith('.svg') || src.startsWith('http')) {
-    return (
-      <img 
-        src={src} 
-        alt={alt} 
-        className={className}
-        {...props}
-      />
-    )
+  if (src.endsWith(".svg") || src.startsWith("http")) {
+    return <img src={src} alt={alt} className={className} style={style} />;
+  }
+
+  // If no width/height specified, use original image resolution with img tag
+  if (!width && !height) {
+    return <img src={src} alt={alt} className={className} style={style} />;
   }
 
   // For PNG/JPG files, use Next.js Image component
@@ -41,20 +40,22 @@ export default function OptimizedImage({
         fill
         className={className}
         priority={priority}
-        {...props}
+        sizes="100vw"
+        style={style}
       />
-    )
+    );
   }
 
   return (
     <Image
       src={src}
       alt={alt}
-      width={width || 800}
-      height={height || 600}
+      width={width}
+      height={height}
       className={className}
       priority={priority}
-      {...props}
+      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      style={style}
     />
-  )
+  );
 }

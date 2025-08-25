@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+/* NN Konrad Font - Dream 텍스트 전용 */
+@font-face {
+  font-family: 'NN Konrad';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/nn-konrad/NNKonrad-Bold.woff2') format('woff2'),
+       url('/fonts/nn-konrad/NNKonrad-Bold.woff') format('woff');
+}
+
 /* CHALK Brand Colors & Custom Styles */
 :root {
   /* Brand Colors */
