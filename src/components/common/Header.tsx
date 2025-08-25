@@ -1,49 +1,36 @@
-import { ASSETS } from '@/lib/assets'
-import { siteContent } from '@/lib/content'
-import OptimizedImage from '@/components/ui/OptimizedImage'
+import { siteContent } from "@/lib/content";
 
 export default function Header() {
-  const { navigation } = siteContent
+  const { navigation } = siteContent;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
+    <header className="bg-black">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center">
-            <OptimizedImage 
-              src={ASSETS.logos.chalk} 
-              alt="CHALK" 
-              className="h-8 w-auto"
-            />
-          </div>
+          {/* Logo - 좌측 */}
+          <div className="text-white text-lg font-medium">CHALK</div>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navigation.main_menu.map((item) => (
+          {/* Right Menu - 우측 */}
+          <div className="flex items-center space-x-8">
+            {navigation.right_menu.map((item) => (
               <a
                 key={item}
-                href={`#${item.toLowerCase().replace(' ', '-')}`}
-                className="text-white/80 hover:text-white transition-colors text-sm font-medium"
+                href="#"
+                className="text-white text-sm font-medium hover:text-white/80 transition-colors"
               >
                 {item}
               </a>
             ))}
-          </nav>
 
-          {/* Language & Mobile Menu */}
-          <div className="flex items-center space-x-4">
-            <span className="text-white/60 text-sm">{navigation.language}</span>
-            
-            {/* Mobile Menu Button */}
-            <button className="md:hidden text-white p-2">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
-            </button>
+            {/* Language - Figma 명세: 20px, Semibold, -0.8 letter-spacing, #D9D9D9 */}
+            <div className="bg-gray-800 rounded-[16px] px-4 py-2">
+              <span className="text-gray-200 text-sm font-semibold tracking-tight">
+                {navigation.language}
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </header>
-  )
+  );
 }
