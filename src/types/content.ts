@@ -93,7 +93,7 @@ export interface FooterContent {
 }
 
 export interface NavigationContent {
-  main_menu: string[]
+  right_menu: string[]
   language: string
 }
 
