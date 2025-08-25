@@ -1,0 +1,137 @@
+{
+  "hero": {
+    "main_title": {
+      "line1": "WE ALL",
+      "highlight": "Dream",
+      "line2": "DIFFERENTLY"
+    },
+    "sub_title": "Hyper-Personalized Learning Solution",
+    "intro_badge": "INTRO : INTO THE CHALK"
+  },
+  
+  "intro": {
+    "main_copy": "대치동에서도 볼 수 없던 최고의 선생님을 만나보세요.",
+    "description": "대치동에서도 볼 수 없던\n최고의 선생님을\n만나보세요."
+  },
+  
+  "review": {
+    "testimonial": {
+      "quote1": "인터넷 강의의 다음은 다 이렇게 만들어지지 않을까요?",
+      "quote2": "현재로서는 이 제품이 가장 발전된 형태가 아닐까 싶어요. 아이들이 좋아하는 강의라든지, 문제를 풀때 필요한 모든 정보가 다 담겨있다든지.",
+      "reviewer": {
+        "title": "REVIEWER",
+        "name": "베타 학부모"
+      }
+    }
+  },
+  
+  "features": {
+    "section1": {
+      "title": "The New Paradigm",
+      "subtitle": "Your new Companion",
+      "stats": [
+        {
+          "label": "CHALK 사용시 완강률",
+          "note": "*기존학원 완강률 10%"
+        },
+        {
+          "label": "하루평균 공부시간"
+        },
+        {
+          "label": "2개월 내 평균상승 점수"
+        }
+      ]
+    },
+    
+    "section2": {
+      "title": "Just Chalk it up",
+      "subtitle": "Experience in Every Way",
+      "intro": {
+        "badge": "Intro : I'm BOLD.",
+        "description": "CHALK만의 학습 효율의 차이를\n1분 만에 경험하세요🔥"
+      },
+      "features": [
+        {
+          "title": "Hyper-Personalized Learning Solution",
+          "description": "초개인화로 학생의 상태와 목표, 성향과 선호도를 정확히 파악하고\n개개인의 수준과 선호에 맞는 맞춤형 콘텐츠를 제작합니다.",
+          "bubble": "Try checking this out!\nIt's just what you need right now!"
+        },
+        {
+          "title": "G-LMS",
+          "subtitle": "Gamified Learning Management System",
+          "description": "공부는 머릿속에 지식을 쌓아가는 과정입니다.\n초크를 통해 우리는 성취를 눈으로 보고, 지식을 쌓아갑니다.\n쌓여가는 지식과 성취되는 보상속에서, 공부는\n'해야 하는 것'에서 '하고 싶은 것'이 됩니다.",
+          "bubble": "Finish the course, earn rewards!"
+        }
+      ]
+    },
+    
+    "section3": {
+      "title": "Into the New Future",
+      "subtitle": "Be Ready for the Next Big Thing",
+      "features": [
+        {
+          "title": "나만을 위한 최적의 경로,\n패스트 트랙 파인더",
+          "description": "사용자 데이터를 기반으로 학습 패턴과 수준을 분석해,\n목표까지의 가장 효율적인 경로를 설계하여 제시합니다."
+        },
+        {
+          "title": "이제 강의도 맞춤형으로,\n수준과 스타일에 맞춘 강의",
+          "description": "학습자의 성향과 패턴을 데이터로 분석해, 최적의 강의 스타일을 제공합니다.\n또한, 원하는 강사의 목소리를 설정해 학습자의 취향에 맞춘 맞춤형 학습을 경험합니다."
+        },
+        {
+          "title": "완벽한 데이터 분석 엔진",
+          "description": "학습자의 시기별 약점 개념, 유형 그리고 사고 과정에서의 부족한 부분을 데이터로 분석해 현재 필요한 학습 콘텐츠를 적시에 제공합니다."
+        },
+        {
+          "title": "해야하는 공부에서,\n하고싶은 공부로 만드는 비결",
+          "description": "스스로 쌓아가는 지식과 그 과정에서 얻는\n성취의 보상을 눈으로 확인하는 경험을 제공합니다."
+        }
+      ]
+    }
+  },
+  
+  "cta": {
+    "title": {
+      "line1": "follow the path",
+      "line2": "Find the New"
+    },
+    "email_placeholder": "ENTER YOUR EMAIL",
+    "button_text": "JOIN",
+    "carousel": [
+      {
+        "title": "The Optimal Path for Me",
+        "subtitle": "게임과 결합한 학습, G-LMS."
+      },
+      {
+        "title": "We all Dream differently",
+        "subtitle": "The Future of Learning Starts Here.",
+        "description": "게임과 결합한 학습, G-LMS."
+      }
+    ]
+  },
+  
+  "footer": {
+    "copyright": "© 2025 Copyright firsthabit All Rights Reserved.",
+    "company": {
+      "address_kr": "[KR] 서울시 강남구 학동로 33길 31, 패스워드빌딩",
+      "address_us": "[US] 177 Huntington Ave Boston, MA 02115 United States",
+      "registration": "사업자등록번호 231-81-11681",
+      "ceo": "대표자명 장다겸",
+      "email": "info@firsthabit.com"
+    },
+    "app_info": {
+      "title": "CHALK : Hyper-Personalized Learning Solution",
+      "availability": "Available on App store"
+    },
+    "links": {
+      "company_intro": "COMPANY INTRODUCTION",
+      "download": "Download",
+      "linkedin": "LINKED IN"
+    },
+    "menu": ["HOME", "CHALK AI", "G-LMS"]
+  },
+  
+  "navigation": {
+    "main_menu": ["CHALK AI", "G-LMS"],
+    "language": "KR"
+  }
+}
