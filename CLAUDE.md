@@ -41,6 +41,115 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - [ ] 반응형 동작
 - [ ] 애니메이션 및 전환 효과
 
+## 🎨 Figma 컴포넌트 참조 워크플로우
+
+### 📋 Figma API 연동 방법
+
+**1단계: Figma API 토큰 설정**
+```bash
+# 환경변수에 Figma 토큰 설정
+export FIGMA_ACCESS_TOKEN="your-figma-token-here"
+```
+
+**2단계: Figma 데이터 추출**
+```bash
+# 스크립트 실행하여 디자인 데이터 가져오기
+node fetch_figma.js
+```
+
+**3단계: 추출된 데이터 분석**
+- `figma_node_data.json` - 전체 디자인 구조 및 스타일 정보
+- `figma_components.json` - 컴포넌트별 상세 정보
+
+### 🔍 Figma 데이터 분석 방법
+
+**컴포넌트 검색**
+```bash
+# 특정 컴포넌트 찾기 (예: 헤더, KR 언어 선택기)
+grep -i "header\|navigation\|kr\|language" figma_node_data.json
+
+# 텍스트 스타일 정보 확인
+grep -A 20 -B 10 '"characters": "KR"' figma_node_data.json
+
+# 컴포넌트 색상 정보 확인  
+grep -A 30 -B 5 '"name": "CHALK PC gnb"' figma_node_data.json | grep -A 20 "color"
+```
+
+**스타일 정보 추출 예시**
+```json
+{
+  "style": {
+    "fontFamily": "Suisse Intl",
+    "fontWeight": 600,
+    "fontSize": 20,
+    "letterSpacing": -0.8,
+    "color": {
+      "r": 0.85,
+      "g": 0.85, 
+      "b": 0.85
+    }
+  }
+}
+```
+
+### 💻 Figma 스타일을 Tailwind CSS로 변환
+
+**폰트 스타일 변환**
+```javascript
+// Figma: fontWeight: 600 → Tailwind: font-semibold
+// Figma: fontSize: 20 → Tailwind: text-xl  
+// Figma: letterSpacing: -0.8 → Tailwind: tracking-tight
+```
+
+**색상 변환**
+```javascript
+// Figma RGB (0.85, 0.85, 0.85) → #D9D9D9 → Tailwind: text-gray-200
+// 정확한 색상 매칭을 위해 Figma 값과 가장 가까운 Tailwind 색상 선택
+```
+
+**레이아웃 변환**
+```javascript
+// Figma: padding → Tailwind: px-4 py-2
+// Figma: border-radius → Tailwind: rounded-[16px]
+// Figma: background → Tailwind: bg-gray-800
+```
+
+### 🎯 실제 구현 예시 (KR 언어 선택기)
+
+**Figma 분석 결과:**
+- 텍스트: "KR"
+- 폰트: Suisse Intl Semibold 600
+- 크기: 20px
+- 색상: #D9D9D9 (RGB: 0.85, 0.85, 0.85)
+- Letter spacing: -0.8px
+- 배경: 둥근 모서리 컨테이너
+
+**Tailwind CSS 구현:**
+```jsx
+<div className="bg-gray-800 rounded-[16px] px-4 py-2">
+  <span className="text-gray-200 text-sm font-semibold tracking-tight">
+    {navigation.language}
+  </span>
+</div>
+```
+
+### ⚠️ 주의사항 및 베스트 프랙티스
+
+**정확성 우선**
+- Figma 데이터와 100% 일치하는 스타일 적용
+- 추측이나 추정 금지, 데이터 기반 구현만 허용
+- 불분명한 부분은 반드시 사용자 확인 후 진행
+
+**데이터 검증**
+- 구현 전 Figma API 연동 상태 확인
+- 최신 디자인 데이터 반영 여부 검증
+- 컴포넌트 변경사항 실시간 반영
+
+**문서화**
+- 구현한 컴포넌트마다 Figma 참조 정보 주석 추가
+- 스타일 변환 근거 명시
+- 향후 수정 시 참고할 수 있도록 상세 기록
+
 ## Project Overview
 
 **CHALK HOME** - Hyper-Personalized Learning Solution 웹사이트
