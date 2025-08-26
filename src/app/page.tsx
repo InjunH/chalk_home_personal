@@ -5,6 +5,7 @@ import IntroSection from "@/components/sections/IntroSection";
 
 import FeatureExperience from "@/components/sections/FeatureExperience";
 import CTASection from "@/components/sections/CTASection";
+import QRSection from "@/components/sections/QRSection";
 import FeatureSystem from "@/components/sections/FeatureSystem";
 import FeatureSectionVideo from "@/components/sections/FeatureSectionVideo";
 import FeatureValue from "@/components/sections/FeatureValue";
@@ -32,8 +33,9 @@ export default function HomePage() {
 
         {/* follow the path */}
         <CTASection />
-        {/* QR Code */}
-        <CTASection />
+        
+        {/* QR Code Section */}
+        <QRSection />
       </main>
 
       <Footer />

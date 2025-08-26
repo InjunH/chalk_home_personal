@@ -1,121 +1,167 @@
 import { siteContent } from "@/lib/content";
+import Image from "next/image";
 
+// Footer 스타일 상수들
+const STYLES = {
+  footer: {
+    copyright: {
+      fontFamily: "Suisse Intl",
+      fontSize: "12px",
+      fontWeight: 400,
+      letterSpacing: "-0.24px",
+      lineHeight: "120%",
+    },
+    heading: {
+      fontFamily: "Suisse Intl",
+      fontSize: "14px",
+      fontWeight: 600,
+      letterSpacing: "-0.42px",
+      lineHeight: "110%",
+    },
+    body: {
+      fontFamily: "Suisse Intl",
+      fontSize: "12px",
+      fontWeight: 400,
+      letterSpacing: "-0.24px",
+      lineHeight: "120%",
+    },
+    korean: {
+      fontFamily: "Pretendard",
+      fontSize: "12px",
+      fontWeight: 500,
+      letterSpacing: "-0.24px",
+      lineHeight: "107%",
+    },
+    menu: {
+      fontFamily: "Suisse Intl",
+      fontSize: "14px",
+      fontWeight: 700,
+      letterSpacing: "-0.28px",
+      lineHeight: "110%",
+    },
+  },
+} as const;
+
+// Footer 컴포넌트
 export default function Footer() {
-  const { footer } = siteContent;
+  const { company, links, menu, copyright } = siteContent.footer;
 
   return (
-    <footer className="relative bg-[#0C0C0C] text-white overflow-hidden">
-      <div className="flex flex-row justify-between mx-auto px-6 py-16">
-        {/* CHALK Logo - Figma 기반 */}
-        <div className="mb-12 flex flex-col justify-between">
-          <div className="text-white text-[74px] font-bold">CHALK</div>
-          <div className="text-white text-xs font-normal text-gray-500 tracking-tight leading-relaxed mt-auto">
-            {footer.copyright}
-          </div>
-        </div>
+    <footer className="py-12" style={{ backgroundColor: "#1C1C1C" }}>
+      <div className="container mx-auto px-6">
+        <div className="flex flex-row justify-between">
+          {/* 좌측 - 로고 + 저작권 */}
+          <div className="flex flex-col justify-between">
+            {/* CHALK 로고 */}
+            <div className="flex flex-col">
+              <Image
+                src="/images/chalk_logo.svg"
+                alt="CHALK Logo"
+                width={292}
+                height={61}
+                className="text-white w-72"
+              />
+            </div>
 
-        {/* Main Footer Content - Figma 정확한 구조 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {/* ADDRESS Section - Figma 명세: 14px Semibold, -0.42px spacing */}
-          <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-white tracking-tight">
-              ADDRESS
-            </h3>
-            <div className="space-y-2">
-              {/* Figma 명세: 12px Regular, -0.24px spacing */}
-              <p className="text-xs font-normal text-gray-400 leading-relaxed tracking-tight">
-                {footer.company.address_kr.split(' ').slice(0, 3).join(' ')} <br />
-                {footer.company.address_kr.split(' ').slice(3).join(' ')}
-              </p>
-              <p className="text-xs font-normal text-gray-400 leading-relaxed tracking-tight">
-                {footer.company.address_us.split(',')[0]} <br />
-                {footer.company.address_us.split(',').slice(1).join(',')}
-              </p>
-            </div>
+            {/* 저작권 */}
+            <p className="text-white" style={STYLES.footer.copyright}>
+              {copyright}
+            </p>
           </div>
-          {/* CONTACT Section - Figma 명세: 14px Semibold, -0.42px spacing */}
-          <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-white tracking-tight">
-              CONTACT
-            </h3>
-            <div className="space-y-3">
-              {/* Figma 명세: 12px Regular, -0.24px spacing */}
-              <a
-                href={`mailto:${footer.company.email}`}
-                className="block text-xs font-normal text-gray-400 hover:text-white transition-colors leading-relaxed tracking-tight"
-              >
-                {footer.company.email}
-              </a>
-              {/* <a
-                href="#"
-                className="block text-xs font-normal text-gray-400 hover:text-white transition-colors leading-relaxed tracking-tight"
-              >
-                COMPANY INTRODUCTION
-              </a>
-              <a
-                href="#"
-                className="block text-xs font-normal text-gray-400 hover:text-white transition-colors leading-relaxed tracking-tight"
-              >
-                Download
-              </a> */}
-            </div>
-            {/* FOLLOW US Section - Figma 명세: 14px Semibold, -0.42px spacing */}
-            <div className="space-y-4">
-              <h3 className="text-sm font-semibold text-white tracking-tight">
-                FOLLOW US
-              </h3>
-              <div className="space-y-2">
-                {/* Figma 명세: 12px Regular, -0.24px spacing */}
-                <a
-                  href="#"
-                  className="block text-xs font-normal text-gray-400 hover:text-white transition-colors leading-relaxed tracking-tight"
-                >
-                  {footer.links.linkedin}
-                </a>
+
+          {/* 중앙 - 회사 정보 */}
+          <div className="flex flex-row" style={{ gap: "60px" }}>
+            {/* 첫 번째 컬럼 - 주소, 회사정보, 다운로드 */}
+            <div className="flex flex-col" style={{ gap: "36px" }}>
+              {/* 주소 정보 */}
+              <div className="flex flex-col" style={{ gap: "8px" }}>
+                <h4 className="text-white" style={STYLES.footer.heading}>
+                  ADDRESS
+                </h4>
+                <div className="flex flex-col" style={{ gap: "12px" }}>
+                  <p className="text-white" style={STYLES.footer.body}>
+                    {company.address_kr}
+                  </p>
+                  <p className="text-white" style={STYLES.footer.body}>
+                    {company.address_us}
+                  </p>
+                </div>
+              </div>
+
+              {/* 회사 정보 */}
+              <div className="flex flex-col" style={{ gap: "8px" }}>
+                <h4 className="text-white" style={STYLES.footer.heading}>
+                  INFO
+                </h4>
+                <div className="text-white" style={STYLES.footer.korean}>
+                  {company.registration}
+                  <br />
+                  {company.ceo}
+                </div>
+              </div>
+
+              {/* 회사 소개 + 다운로드 */}
+              <div className="flex flex-col" style={{ gap: "12px" }}>
+                <h4 className="text-white" style={STYLES.footer.heading}>
+                  {links.company_intro}
+                </h4>
+                <div className="px-5 py-3.5 bg-white/5 rounded-lg backdrop-blur-lg inline-flex justify-start items-center gap-2">
+                  <div className="justify-start text-zinc-300 text-xs font-normal font-['Suisse_Intl'] leading-none">
+                    {links.download}
+                  </div>
+                  <div className="w-3 h-3 relative overflow-hidden">
+                    <Image
+                      src="/icons/download.svg"
+                      alt="Download"
+                      width={12}
+                      height={12}
+                      className="text-zinc-300"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* FOLLOW US Section - Figma 명세: 14px Semibold, -0.42px spacing */}
-          <div className="space-y-4">
-            <div className="space-y-2">
-              {/* Figma 명세: 12px Regular, -0.24px spacing */}
-              {footer.menu.map((item) => (
+            {/* 두 번째 컬럼 - 연락처 + 소셜 */}
+            <div className="flex flex-col" style={{ gap: "32px" }}>
+              {/* 연락처 */}
+              <div className="flex flex-col" style={{ gap: "8px" }}>
+                <h4 className="text-white" style={STYLES.footer.heading}>
+                  CONTACT
+                </h4>
+                <p className="text-white" style={STYLES.footer.body}>
+                  {company.email}
+                </p>
+              </div>
+
+              {/* 소셜 미디어 */}
+              <div className="flex flex-col" style={{ gap: "8px" }}>
+                <h4 className="text-white" style={STYLES.footer.heading}>
+                  FOLLOW US
+                </h4>
+                <div className="flex flex-row" style={{ gap: "12px" }}>
+                  <p className="text-white" style={STYLES.footer.body}>
+                    {links.linkedin}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 세 번째 컬럼 - 메뉴 */}
+            <div
+              className="flex flex-col"
+              style={{ gap: "12px", width: "164px" }}
+            >
+              {menu.map((item, index) => (
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase().replace(' ', '-')}`}
-                  className="block text-xs font-normal text-gray-400 hover:text-white transition-colors leading-relaxed tracking-tight"
+                  key={index}
+                  href={`#${item.toLowerCase().replace(" ", "-")}`}
+                  className="text-white"
+                  style={STYLES.footer.menu}
                 >
                   {item}
                 </a>
               ))}
-            </div>
-          </div>
-
-          {/* INFO Section - Figma 명세: 14px Semibold, -0.42px spacing */}
-          <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-white tracking-tight">
-              INFO
-            </h3>
-            <div className="space-y-2">
-              {/* Figma 명세: 12px Regular, -0.24px spacing */}
-              <p className="text-xs font-normal text-gray-400 leading-relaxed tracking-tight">
-                {footer.company.registration}
-              </p>
-              <p className="text-xs font-normal text-gray-400 leading-relaxed tracking-tight">
-                {footer.company.ceo}
-              </p>
-            </div>
-            <h3 className="text-sm font-semibold text-white tracking-tight">
-              {footer.links.company_intro}
-            </h3>
-            <div className="bg-gray-900 rounded-[8px] px-4 py-2 flex justify-center">
-              <a
-                href="#"
-                className="block text-xs font-normal text-gray-400 hover:text-white transition-colors leading-relaxed tracking-tight"
-              >
-                {footer.links.download}
-              </a>
             </div>
           </div>
         </div>
