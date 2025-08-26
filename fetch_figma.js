@@ -2,7 +2,7 @@
 import fs from 'fs/promises';
 
 const FIGMA_FILE_KEY = '69XfrgBGWnxwUFYemMP1U9';
-const NODE_ID = '5052-5873'; // URL에서 추출한 노드 ID
+const NODE_ID = '5052:6037'; // URL에서 추출한 노드 ID - FeatureSystem 섹션
 
 // Figma Personal Access Token이 필요합니다
 // https://www.figma.com/developers/api#access-tokens 에서 생성 가능

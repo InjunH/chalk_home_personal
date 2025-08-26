@@ -29,7 +29,7 @@
   },
 
   "features": {
-    "section1": {
+    "value": {
       "title": "The New Paradigm",
       "subtitle": "Your new Companion",
       "stats": [
@@ -56,7 +56,7 @@
       ]
     },
 
-    "section2": {
+    "experience": {
       "title": "Just Chalk it up",
       "content": {
         "top": "EXPERIENCE",
@@ -67,25 +67,29 @@
       "features": []
     },
 
-    "section3": {
+    "video": {
       "title": "Into the New Future",
       "subtitle": "Be Ready for the Next Big Thing",
       "features": [
         {
           "title": "나만을 위한 최적의 경로,\n패스트 트랙 파인더",
-          "description": "사용자 데이터를 기반으로 학습 패턴과 수준을 분석해,\n목표까지의 가장 효율적인 경로를 설계하여 제시합니다."
+          "description": "사용자 데이터를 기반으로 학습 패턴과 수준을 분석해,\n목표까지의 가장 효율적인 경로를 설계하여 제시합니다.",
+          "image": "/images/section_6_image_1.png"
         },
         {
           "title": "이제 강의도 맞춤형으로,\n수준과 스타일에 맞춘 강의",
-          "description": "학습자의 성향과 패턴을 데이터로 분석해, 최적의 강의 스타일을 제공합니다.\n또한, 원하는 강사의 목소리를 설정해 학습자의 취향에 맞춘 맞춤형 학습을 경험합니다."
+          "description": "학습자의 성향과 패턴을 데이터로 분석해, 최적의 강의 스타일을 제공합니다.\n또한, 원하는 강사의 목소리를 설정해 학습자의 취향에 맞춘 맞춤형 학습을 경험합니다.",
+          "image": "/images/section_6_image_2.png"
         },
         {
           "title": "완벽한 데이터 분석 엔진",
-          "description": "학습자의 시기별 약점 개념, 유형 그리고 사고 과정에서의 부족한 부분을 데이터로 분석해 현재 필요한 학습 콘텐츠를 적시에 제공합니다."
+          "description": "학습자의 시기별 약점 개념, 유형 그리고 사고 과정에서의 부족한 부분을 데이터로 분석해 현재 필요한 학습 콘텐츠를 적시에 제공합니다.",
+          "image": "/images/section_6_image_3.png"
         },
         {
           "title": "해야하는 공부에서,\n하고싶은 공부로 만드는 비결",
-          "description": "스스로 쌓아가는 지식과 그 과정에서 얻는\n성취의 보상을 눈으로 확인하는 경험을 제공합니다."
+          "description": "스스로 쌓아가는 지식과 그 과정에서 얻는\n성취의 보상을 눈으로 확인하는 경험을 제공합니다.",
+          "image": "/images/section_6_image_4.png"
         }
       ]
     },

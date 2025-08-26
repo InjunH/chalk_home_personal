@@ -40,7 +40,7 @@ export default function FeatureValue() {
                 lineHeight: "1",
               }}
             >
-              {features.section1.subtitle}
+              {features.value.subtitle}
             </p>
             <h2 className="text-center leading-tight">
               <div className="flex flex-row items-center justify-center">
@@ -98,7 +98,7 @@ export default function FeatureValue() {
 
           {/* Stats Cards */}
           <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            {features.section1.stats.map((stat, index) => (
+            {features.value.stats.map((stat, index) => (
               <div
                 key={index}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"

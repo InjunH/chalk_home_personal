@@ -1,94 +1,139 @@
 import { siteContent } from "@/lib/content";
-import { ASSETS } from "@/lib/assets";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import Image from "next/image";
 
+// 스타일 상수들
+const STYLES = {
+  header: {
+    subtitle: {
+      fontFamily: "Suisse Intl",
+      fontSize: "24px",
+      letterSpacing: "-0.48px",
+    },
+    mainTitle: {
+      fontFamily: "Suisse Intl", 
+      fontSize: "96px",
+      letterSpacing: "-2.88px",
+      lineHeight: "67%",
+    },
+    highlightTitle: {
+      fontFamily: "'NN Konrad', serif",
+      fontSize: "94px", 
+      letterSpacing: "-2.82px",
+      lineHeight: "100%",
+    }
+  },
+  feature: {
+    title: {
+      fontFamily: "Pretendard",
+      fontSize: "42px",
+      letterSpacing: "0px", 
+      lineHeight: "92%",
+    },
+    description: {
+      fontFamily: "Pretendard",
+      fontSize: "18px",
+      letterSpacing: "-0.18px",
+      lineHeight: "94%",
+    }
+  }
+} as const;
+
+// 헤더 컴포넌트
+function SectionHeader() {
+  const { features } = siteContent;
+  
+  return (
+    <div className="text-center flex flex-col" style={{ gap: "54px" }}>
+      <p
+        className="text-white/60 text-center opacity-60 font-semibold"
+        style={STYLES.header.subtitle}
+      >
+        {features.video.title}
+      </p>
+
+      <h2
+        className="text-white font-bold uppercase text-center"
+        style={STYLES.header.mainTitle}
+      >
+        BE READY FOR THE
+      </h2>
+
+      <h3
+        className="text-white font-bold text-center"
+        style={STYLES.header.highlightTitle}
+      >
+        Next Big Thing
+      </h3>
+    </div>
+  );
+}
+
+// 피처 카드 컴포넌트
+interface FeatureCardProps {
+  title: string;
+  description: string;
+  image?: string;
+  index: number;
+}
+
+function FeatureCard({ title, description, image, index }: FeatureCardProps) {
+  return (
+    <div className="flex flex-row items-center justify-between" style={{ gap: "120px" }}>
+      {/* 텍스트 영역 */}
+      <div className="flex-1 flex flex-col" style={{ gap: "24px" }}>
+        <h3
+          className="text-white font-bold uppercase"
+          style={STYLES.feature.title}
+        >
+          {title}
+        </h3>
+
+        <p
+          className="text-white/80 font-bold"
+          style={STYLES.feature.description}
+        >
+          {description}
+        </p>
+      </div>
+
+      {/* 이미지 영역 */}
+      {image && (
+        <div className="flex-1">
+          <Image
+            src={image}
+            alt={title}
+            width={800}
+            height={400}
+            className="w-full h-auto"
+            priority={index < 2} // 첫 2개 이미지는 우선 로딩
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// 메인 컴포넌트
 export default function FeatureSectionVideo() {
   const { features } = siteContent;
 
   return (
     <section className="min-h-screen py-20 bg-[#0a0a0a] overflow-hidden">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto">
         <div className="space-y-32">
+          <SectionHeader />
           
-          {/* Section Header */}
-          <div className="text-center space-y-6">
-            <h2 
-              className="text-white font-bold leading-tight"
-              style={{
-                fontFamily: "Suisse Intl, Pretendard",
-                fontSize: "clamp(2rem, 4vw, 3.5rem)",
-                letterSpacing: "-0.02em",
-                fontWeight: 700,
-              }}
-            >
-              {features.section3.title}
-            </h2>
-            <p 
-              className="text-white/60"
-              style={{
-                fontFamily: "Suisse Intl, Pretendard",
-                fontSize: "18px",
-                fontWeight: 600,
-                letterSpacing: "-0.01em",
-              }}
-            >
-              {features.section3.subtitle}
-            </p>
-          </div>
-
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            {features.section3.features.map((feature, index) => (
-              <div key={index} className="space-y-6">
-                {/* Feature Card */}
-                <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 space-y-4">
-                  <h3 
-                    className="text-white font-bold leading-tight"
-                    style={{
-                      fontFamily: "Pretendard",
-                      fontSize: "clamp(1.25rem, 2vw, 1.5rem)",
-                      letterSpacing: "-0.01em",
-                      fontWeight: 700,
-                    }}
-                  >
-                    {feature.title}
-                  </h3>
-                  
-                  <p 
-                    className="text-white/70 leading-relaxed"
-                    style={{
-                      fontFamily: "Pretendard",
-                      fontSize: "15px",
-                      lineHeight: "1.6",
-                      fontWeight: 400,
-                    }}
-                  >
-                    {feature.description}
-                  </p>
-
-                  {/* Small decoration */}
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-green-400 to-blue-400 rounded-full opacity-60 animate-pulse"></div>
-                </div>
-              </div>
+          <div className="w-full flex flex-col" style={{ gap: "120px" }}>
+            {features.video.features.map((feature, index) => (
+              <FeatureCard
+                key={index}
+                title={feature.title}
+                description={feature.description}
+                image={feature.image}
+                index={index}
+              />
             ))}
           </div>
-
-          {/* Bottom CTA Section */}
-          <div className="text-center space-y-8">
-            <div className="inline-flex items-center bg-green-500/20 rounded-full px-6 py-3">
-              <span 
-                className="text-green-300 font-semibold"
-                style={{
-                  fontFamily: "Suisse Intl, Pretendard",
-                  fontSize: "16px",
-                  fontWeight: 600,
-                }}
-              >
-                혁신적인 학습 경험을 시작하세요
-              </span>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>

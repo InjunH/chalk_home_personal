@@ -19,7 +19,7 @@ export default function FeatureExperience() {
                 letterSpacing: "-0.26px",
               }}
             >
-              {features.section2.title}
+              {features.experience.title}
             </span>
             <span
               className="text-white/50"
@@ -30,11 +30,11 @@ export default function FeatureExperience() {
                 letterSpacing: "-0.26px",
               }}
             >
-              {features.section2.content.top}
+              {features.experience.content.top}
             </span>
 
             <OptimizedImage
-              src={features.section2.content.middle_image}
+              src={features.experience.content.middle_image}
               alt="feature"
             />
 
@@ -48,7 +48,7 @@ export default function FeatureExperience() {
                 textAlign: "center",
               }}
             >
-              {features.section2.content.bottom}
+              {features.experience.content.bottom}
             </h2>
           </div>
         </div>

@@ -28,7 +28,7 @@ export interface ReviewContent {
 }
 
 export interface FeatureContent {
-  section1: {
+  value: {
     title: string;
     subtitle: string;
     stats: Array<{
@@ -40,7 +40,7 @@ export interface FeatureContent {
       icon: string;
     }>;
   };
-  section2: {
+  experience: {
     title: string;
     content: {
       top: string;
@@ -54,12 +54,13 @@ export interface FeatureContent {
       bubble: string;
     }>;
   };
-  section3: {
+  video: {
     title: string;
     subtitle: string;
     features: Array<{
       title: string;
       description: string;
+      image?: string;
     }>;
   };
   system: {
