@@ -1,61 +1,98 @@
-import { ASSETS } from '@/lib/assets'
-import { siteContent } from '@/lib/content'
-import OptimizedImage from '@/components/ui/OptimizedImage'
+import { ASSETS } from "@/lib/assets";
+import { siteContent } from "@/lib/content";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 export default function IntroSection() {
-  const { intro, review } = siteContent
+  const { intro, review } = siteContent;
+
+  // 공통 스타일
+  const mainHeadingStyle = {
+    fontSize: "72px",
+    lineHeight: "72px",
+    fontFamily: "Pretendard",
+    fontWeight: 700,
+    textAlign: "center" as const,
+  };
+
+  const quoteStyle = {
+    fontSize: "36px",
+    lineHeight: "39.6px",
+    letterSpacing: "-0.36px",
+    fontFamily: "Pretendard",
+    fontWeight: 700,
+    textAlign: "center" as const,
+  };
+
+  // 겹쳐진 이미지 공통 스타일
+  const imageCommonClass = "w-64 h-auto drop-shadow-2xl";
+
+  // 메인 제목들
+  const descriptions = [
+    intro.description1,
+    intro.description2,
+    intro.description3,
+  ];
+
+  // 프리뷰 이미지들 - 겹쳐진 배치 설정
+  const previewImages = [
+    {
+      src: ASSETS.images.intro.figmaImg1,
+      alt: "CHALK Preview 1",
+      position: "absolute z-30 left-1/3",
+    },
+    {
+      src: ASSETS.images.intro.figmaImg2,
+      alt: "CHALK Preview 2",
+      position: "relative z-20",
+    },
+    {
+      src: ASSETS.images.intro.figmaImg3,
+      alt: "CHALK Preview 3",
+      position: "absolute z-10 right-1/3",
+    },
+  ];
 
   return (
-    <section id="intro" className="py-20 bg-[#0d0d0d]">
+    <section
+      id="intro"
+      className="min-h-[80vh] max-h-[100vh] py-20 bg-[#0d0d0d] overflow-hidden"
+    >
       <div className="container mx-auto px-6">
         <div className="text-center space-y-16">
           {/* Main Copy */}
-          <div className="space-y-6">
-            <h2 className="font-bold leading-tight bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent" 
-                style={{
-                  fontSize: '72px',
-                  lineHeight: '72px',
-                  fontFamily: 'Pretendard',
-                  fontWeight: 700,
-                  textAlign: 'center'
-                }}>
-              {intro.description}
-            </h2>
-            
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+          <div className="flex flex-col items-center justify-center max-w-4xl mx-auto">
+            {descriptions.map((description, index) => (
+              <h2
+                key={index}
+                className="font-bold leading-tight bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent"
+                style={mainHeadingStyle}
+              >
+                {description}
+              </h2>
+            ))}
           </div>
 
           {/* Review Section */}
-          <div className="space-y-8 max-w-4xl mx-auto">
+          <div className="mx-auto">
             {/* First Quote */}
             <div className="text-white">
-              <p className="font-bold uppercase" 
-                 style={{
-                   fontSize: '36px',
-                   lineHeight: '39.6px',
-                   letterSpacing: '-0.36px',
-                   fontFamily: 'Pretendard',
-                   fontWeight: 700,
-                   textAlign: 'center'
-                 }}>
-                {review.testimonial.quote1}
+              <p className="font-bold uppercase" style={quoteStyle}>
+                &ldquo;{review.testimonial.quote1}&rdquo;
               </p>
             </div>
 
             {/* Second Quote */}
             <div className="text-white opacity-70">
-              <p className="font-bold" 
-                 style={{
-                   fontFamily: 'Pretendard',
-                   fontWeight: 700,
-                   textAlign: 'center'
-                 }}>
+              <p className="font-bold" style={quoteStyle}>
                 {review.testimonial.quote2}
+              </p>
+              <p className="font-bold" style={quoteStyle}>
+                {review.testimonial.quote3}
               </p>
             </div>
 
             {/* Reviewer Info */}
-            <div className="text-white/70 text-center space-y-2">
+            <div className="text-white/70 text-center space-y-2 mt-10">
               <p className="text-sm font-semibold uppercase tracking-wide">
                 {review.testimonial.reviewer.title}
               </p>
@@ -65,50 +102,20 @@ export default function IntroSection() {
             </div>
           </div>
 
-          {/* Preview Images */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <OptimizedImage 
-                  src={ASSETS.images.intro.introImg1} 
-                  alt="CHALK Preview 1"
-                  className="w-full h-64 object-cover"
+          {/* Overlapping Device Images */}
+          <div className="relative flex justify-center items-center h-96">
+            {previewImages.map((image, index) => (
+              <div key={index} className={image.position}>
+                <OptimizedImage
+                  src={image.src}
+                  alt={image.alt}
+                  className={imageCommonClass}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-            </div>
-
-            <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <OptimizedImage 
-                  src={ASSETS.images.intro.introImg2} 
-                  alt="CHALK Preview 2"
-                  className="w-full h-64 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-              </div>
-            </div>
-
-            <div className="group cursor-pointer">
-              <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <OptimizedImage 
-                  src={ASSETS.images.intro.preview1} 
-                  alt="CHALK Preview 3"
-                  className="w-full h-64 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-              </div>
-            </div>
-          </div>
-
-          {/* Description */}
-          <div className="max-w-2xl mx-auto">
-            <p className="text-lg md:text-xl text-gray-600 leading-relaxed whitespace-pre-line">
-              {intro.description}
-            </p>
+            ))}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
