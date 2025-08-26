@@ -2,7 +2,7 @@ import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import IntroSection from "@/components/sections/IntroSection";
-import ReviewSection from "@/components/sections/ReviewSection";
+
 import FeatureSection1 from "@/components/sections/FeatureSection1";
 import FeatureSection2 from "@/components/sections/FeatureSection2";
 import FeatureSection3 from "@/components/sections/FeatureSection3";
@@ -18,7 +18,7 @@ export default function HomePage() {
       <main>
         <HeroSection />
         <IntroSection />
-        <ReviewSection />
+
         <FeatureSection1 />
         <FeatureSection2 />
         <FeatureSection3 />

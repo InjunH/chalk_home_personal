@@ -8,23 +8,26 @@
     "sub_title": "Hyper-Personalized Learning Solution",
     "intro_badge": "INTRO : INTO THE CHALK"
   },
-  
+
   "intro": {
     "main_copy": "대치동에서도 볼 수 없던 최고의 선생님을 만나보세요.",
-    "description": "대치동에서도 볼 수 없던\n최고의 선생님을\n만나보세요."
+    "description1": "대치동에서도 볼 수 없던",
+    "description2": "최고의 선생님을",
+    "description3": "만나보세요."
   },
-  
+
   "review": {
     "testimonial": {
       "quote1": "인터넷 강의의 다음은 다 이렇게 만들어지지 않을까요?",
-      "quote2": "현재로서는 이 제품이 가장 발전된 형태가 아닐까 싶어요. 아이들이 좋아하는 강의라든지, 문제를 풀때 필요한 모든 정보가 다 담겨있다든지.",
+      "quote2": "현재로서는 이 제품이 가장 발전된 형태가 아닐까 싶어요. 아이들이",
+      "quote3": "좋아하는 강의라든지, 문제를 풀때 필요한 모든 정보가 다 담겨있다든지.",
       "reviewer": {
         "title": "REVIEWER",
         "name": "베타 학부모"
       }
     }
   },
-  
+
   "features": {
     "section1": {
       "title": "The New Paradigm",
@@ -32,17 +35,27 @@
       "stats": [
         {
           "label": "CHALK 사용시 완강률",
-          "note": "*기존학원 완강률 10%"
+          "note": "*기존학원 완강률 10%",
+          "value": "76.4",
+          "unit": "%",
+          "sub_label": "*기존학원 완강률 10%",
+          "icon": "/images/section_3_icon_1.svg"
         },
         {
-          "label": "하루평균 공부시간"
+          "label": "하루평균 공부시간",
+          "value": "110",
+          "unit": "h",
+          "icon": "/images/section_3_icon_2.svg"
         },
         {
-          "label": "2개월 내 평균상승 점수"
+          "label": "2개월 내 평균상승 점수",
+          "value": "15",
+          "unit": "p",
+          "icon": "/images/section_3_icon_3.svg"
         }
       ]
     },
-    
+
     "section2": {
       "title": "Just Chalk it up",
       "subtitle": "Experience in Every Way",
@@ -64,7 +77,7 @@
         }
       ]
     },
-    
+
     "section3": {
       "title": "Into the New Future",
       "subtitle": "Be Ready for the Next Big Thing",
@@ -88,7 +101,7 @@
       ]
     }
   },
-  
+
   "cta": {
     "title": {
       "line1": "follow the path",
@@ -108,7 +121,7 @@
       }
     ]
   },
-  
+
   "footer": {
     "copyright": "© 2025 Copyright firsthabit All Rights Reserved.",
     "company": {
@@ -129,7 +142,7 @@
     },
     "menu": ["HOME", "CHALK AI", "G-LMS"]
   },
-  
+
   "navigation": {
     "right_menu": ["CHALK AI", "G-LMS"],
     "language": "KR"

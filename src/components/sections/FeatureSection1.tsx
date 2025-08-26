@@ -1,67 +1,151 @@
-import { siteContent } from '@/lib/content'
+import { siteContent } from "@/lib/content";
+import OptimizedImage from "../ui/OptimizedImage";
+import { ASSETS } from "@/lib/assets";
 
 export default function FeatureSection1() {
-  const { features } = siteContent
+  const { features } = siteContent;
+
+  // 공통 스타일
+  const numberStyle = {
+    fontWeight: 700,
+    fontSize: "clamp(3rem, 6vw, 7rem)",
+    letterSpacing: "-0.05em",
+    lineHeight: "0.9",
+  };
+
+  const labelStyle = {
+    fontFamily: "Pretendard",
+    fontWeight: 700,
+    fontSize: "18px",
+    letterSpacing: "-0.5px",
+  };
 
   return (
-    <section id="features" className="py-20 bg-black text-white">
+    <section
+      id="features"
+      className="min-h-[80vh] max-h-[100vh] py-20 bg-black text-white overflow-hidden"
+    >
       <div className="container mx-auto px-6">
         <div className="text-center space-y-16">
-          {/* Section Header */}
+          {/* Section Header - Figma 스펙 적용 */}
           <div className="space-y-6">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold">
-              {features.section1.title}
-            </h2>
-            <p className="text-xl md:text-2xl text-white/80">
+            <p
+              className="text-white/60"
+              style={{
+                fontFamily: "Suisse Intl",
+                fontWeight: 600,
+                fontSize: "24px",
+                letterSpacing: "-0.48px",
+                textAlign: "center",
+                lineHeight: "1",
+              }}
+            >
               {features.section1.subtitle}
             </p>
+            <h2 className="text-center leading-tight">
+              <div className="flex flex-row items-center justify-center">
+                {/* "The" - 일반 텍스트 */}
+                <span
+                  className="text-white"
+                  style={{
+                    fontFamily: "Suisse Intl",
+                    fontWeight: 700,
+                    fontSize: "96px",
+                    letterSpacing: "-2.88px",
+                    lineHeight: "1",
+                  }}
+                >
+                  The
+                </span>
+
+                {/* "New" - NN Konrad + 그라데이션 */}
+                <span
+                  className="bg-gradient-to-r from-[#b4b4b4] via-white to-[#9a9a9a] bg-clip-text text-transparent pl-4"
+                  style={{
+                    fontFamily: "'NN Konrad', serif",
+                    fontWeight: 700,
+                    fontSize: "94px",
+                    letterSpacing: "-2.82px",
+                    lineHeight: "1",
+                  }}
+                >
+                  New
+                </span>
+              </div>
+
+              {/* "Paradigm" - UPPERCASE */}
+              <div className="flex flex-row items-center justify-center">
+                <span
+                  className="text-white uppercase"
+                  style={{
+                    fontFamily: "Suisse Intl",
+                    fontWeight: 700,
+                    fontSize: "96px",
+                    letterSpacing: "-2.88px",
+                    lineHeight: "1",
+                  }}
+                >
+                  Paradigm
+                </span>
+                <OptimizedImage
+                  src={ASSETS.images.features.mainImg}
+                  alt="feature"
+                  className="w-[96px] h-[96px]"
+                />
+              </div>
+            </h2>
           </div>
 
-          {/* Stats Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Stats Cards */}
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             {features.section1.stats.map((stat, index) => (
-              <div key={index} className="group space-y-6">
-                {/* Stat Number - 대형 숫자 */}
-                <div className="relative">
-                  <div className="text-8xl md:text-9xl font-black bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    {index === 0 ? '87%' : index === 1 ? '4.2h' : '+32'}
+              <div
+                key={index}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
+              >
+                {/* Number */}
+                <div className="text-left mb-6">
+                  <span className="text-white font-bold" style={numberStyle}>
+                    {stat.value}
+                  </span>
+                  <span
+                    className="text-white/60 ml-2"
+                    style={{
+                      ...numberStyle,
+                      fontSize: "clamp(1.5rem, 3vw, 3rem)",
+                    }}
+                  >
+                    {stat.unit}
+                  </span>
+                </div>
+
+                <div className="flex flex-col items-start justify-start">
+                  <div className="text-4xl opacity-70">
+                    <OptimizedImage
+                      src={stat.icon}
+                      alt={stat.label}
+                      className="w-10 h-10"
+                    />
                   </div>
-                  
-                  {/* Floating decorative elements */}
-                  <div className="absolute -top-4 -right-4 w-4 h-4 bg-yellow-400 rounded-full opacity-60 group-hover:animate-pulse"></div>
-                </div>
-
-                {/* Stat Description */}
-                <div className="space-y-2">
-                  <p className="text-lg font-semibold text-white">
-                    {stat.label}
-                  </p>
-                  {stat.note && (
-                    <p className="text-sm text-white/60">
-                      {stat.note}
+                  {/* Label */}
+                  <div className="flex flex-row text-center text-sm items-center">
+                    <p className="text-white/80" style={labelStyle}>
+                      {stat.label}
                     </p>
-                  )}
-                </div>
-
-                {/* Progress bar visual */}
-                <div className="w-full h-1 bg-white/20 rounded-full overflow-hidden">
-                  <div 
-                    className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-1000 delay-300"
-                    style={{ width: index === 0 ? '87%' : index === 1 ? '70%' : '85%' }}
-                  ></div>
+                    {stat.sub_label && (
+                      <p className="text-white/60 ml-2 text-xs">
+                        {stat.sub_label}
+                      </p>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Bottom CTA */}
-          <div className="pt-8">
-            <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105">
-              자세히 알아보기
-            </button>
-          </div>
+          {/* Bottom CTA 제거 - Figma에 없음 */}
         </div>
       </div>
     </section>
-  )
+  );
 }

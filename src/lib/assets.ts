@@ -22,20 +22,24 @@ export const ASSETS = {
       placeholder: "/images/hero/placeholder-hero.svg",
     },
     intro: {
+      // 기존 이미지들
       introImg1: "/images/intro/intro-img-1.png",
       introImg2: "/images/intro/intro-img-2.png",
       preview1: "/images/intro/preview-1.svg",
       preview2: "/images/intro/preview-2.svg",
       preview3: "/images/intro/preview-3.svg",
+      // Figma에서 다운로드한 새 이미지들
+      figmaImg1: "/images/intro/intro_img_1.png",
+      figmaImg2: "/images/intro/intro_img_2.png",
+      figmaImg3: "/images/intro/intro_img_3.png",
     },
     features: {
-      featureImg1: "/images/features/feature-img-1.png",
-      featureImg2: "/images/features/feature-img-2.png",
+      mainImg: "/images/section_3_main_icon.svg",
+      featureImg1: "/images/section_3_icon_1.svg",
+      featureImg2: "/images/section_3_icon_2.svg",
+      featureImg3: "/images/section_3_icon_3.svg",
     },
-    review: {
-      reviewImg1: "/images/review/review-img-1.png",
-      reviewImg2: "/images/review/review-img-2.png",
-    },
+
     content: {
       contentImg1: "/images/content/content-img-1.png",
       contentImg2: "/images/content/content-img-2.png",
