@@ -42,10 +42,10 @@ export interface FeatureContent {
   };
   section2: {
     title: string;
-    subtitle: string;
-    intro: {
-      badge: string;
-      description: string;
+    content: {
+      top: string;
+      middle_image: string;
+      bottom: string;
     };
     features: Array<{
       title: string;
@@ -60,6 +60,17 @@ export interface FeatureContent {
     features: Array<{
       title: string;
       description: string;
+    }>;
+  };
+  system: {
+    cards: Array<{
+      id: string;
+      title: string;
+      subtitle?: string;
+      description: string;
+      image?: string;
+      media?: string;
+      type: "image" | "video";
     }>;
   };
 }

@@ -58,24 +58,13 @@
 
     "section2": {
       "title": "Just Chalk it up",
-      "subtitle": "Experience in Every Way",
-      "intro": {
-        "badge": "Intro : I'm BOLD.",
-        "description": "CHALK만의 학습 효율의 차이를\n1분 만에 경험하세요🔥"
+      "content": {
+        "top": "EXPERIENCE",
+        "middle_image": "/images/section_4_main_icon.svg",
+        "bottom": "in Every Way"
       },
-      "features": [
-        {
-          "title": "Hyper-Personalized Learning Solution",
-          "description": "초개인화로 학생의 상태와 목표, 성향과 선호도를 정확히 파악하고\n개개인의 수준과 선호에 맞는 맞춤형 콘텐츠를 제작합니다.",
-          "bubble": "Try checking this out!\nIt's just what you need right now!"
-        },
-        {
-          "title": "G-LMS",
-          "subtitle": "Gamified Learning Management System",
-          "description": "공부는 머릿속에 지식을 쌓아가는 과정입니다.\n초크를 통해 우리는 성취를 눈으로 보고, 지식을 쌓아갑니다.\n쌓여가는 지식과 성취되는 보상속에서, 공부는\n'해야 하는 것'에서 '하고 싶은 것'이 됩니다.",
-          "bubble": "Finish the course, earn rewards!"
-        }
-      ]
+
+      "features": []
     },
 
     "section3": {
@@ -97,6 +86,27 @@
         {
           "title": "해야하는 공부에서,\n하고싶은 공부로 만드는 비결",
           "description": "스스로 쌓아가는 지식과 그 과정에서 얻는\n성취의 보상을 눈으로 확인하는 경험을 제공합니다."
+        }
+      ]
+    },
+
+    "system": {
+      "cards": [
+        {
+          "id": "hyper_personalized",
+          "title": "Hyper-Personalized",
+          "subtitle": "Learning Solution",
+          "description": "수 천만명의 학습자 데이터 분석, 개인의 시간과 효율을 높이는 초개인화된 기능으로 수학 영역의 새로운 접근을 시작합니다.",
+          "image": "featureSystemImg",
+          "type": "image"
+        },
+        {
+          "id": "glms",
+          "title": "G-LMS",
+          "subtitle": "Gamified Learning Management System",
+          "description": "게임의 재미와 학습의 효율성을 결합한 혁신적인 학습 시스템입니다.\n즉각적 피드백과 리워드를 통해 지속적인 학습 동기를 부여하고,\n개인화된 학습 경로를 통해 최적의 학습 효과를 달성합니다.",
+          "media": "featureVideo",
+          "type": "video"
         }
       ]
     }

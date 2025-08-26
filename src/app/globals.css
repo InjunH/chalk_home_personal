@@ -10,6 +10,23 @@
        url('/fonts/nn-konrad/NNKonrad-Bold.woff') format('woff');
 }
 
+/* Suisse Intl Font - UI 및 헤더 텍스트용 */
+@font-face {
+  font-family: 'Suisse Intl';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/suisse-intl/SuisseIntl-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/suisse-intl/SuisseIntl-Semibold.ttf') format('truetype');
+}
+
 /* CHALK Brand Colors & Custom Styles */
 :root {
   /* Brand Colors */

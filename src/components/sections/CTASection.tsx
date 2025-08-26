@@ -18,7 +18,7 @@ export default function CTASection() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-black via-purple-900 to-black text-white overflow-hidden">
+    <section id="contact" className="min-h-[80vh] max-h-[100vh] py-20 bg-gradient-to-br from-black via-purple-900 to-black text-white overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* CTA Content */}

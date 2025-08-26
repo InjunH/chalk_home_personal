@@ -2,7 +2,7 @@ import { siteContent } from "@/lib/content";
 import OptimizedImage from "../ui/OptimizedImage";
 import { ASSETS } from "@/lib/assets";
 
-export default function FeatureSection1() {
+export default function FeatureValue() {
   const { features } = siteContent;
 
   // 공통 스타일
@@ -142,8 +142,6 @@ export default function FeatureSection1() {
               </div>
             ))}
           </div>
-
-          {/* Bottom CTA 제거 - Figma에 없음 */}
         </div>
       </div>
     </section>

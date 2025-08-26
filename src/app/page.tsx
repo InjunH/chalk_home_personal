@@ -3,10 +3,12 @@ import Footer from "@/components/common/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import IntroSection from "@/components/sections/IntroSection";
 
-import FeatureSection1 from "@/components/sections/FeatureSection1";
-import FeatureSection2 from "@/components/sections/FeatureSection2";
-import FeatureSection3 from "@/components/sections/FeatureSection3";
+import FeatureExperience from "@/components/sections/FeatureExperience";
 import CTASection from "@/components/sections/CTASection";
+import FeatureSection3 from "@/components/sections/FeatureSystem";
+import FeatureSectionVideo from "@/components/sections/FeatureSectionVideo";
+import FeatureSystem from "@/components/sections/FeatureSystem";
+import FeatureValue from "@/components/sections/FeatureValue";
 
 export default function HomePage() {
   return (
@@ -16,12 +18,31 @@ export default function HomePage() {
       </div>
 
       <main>
+        {/* WE ALL DREAM DIFFERENTLY */}
         <HeroSection />
+
+        {/* 대치동에서도 볼 수 없던 최고의 선생님을 만나보세요. */}
         <IntroSection />
 
-        <FeatureSection1 />
-        <FeatureSection2 />
+        {/* THE NEW PARADIGM */}
+        <FeatureValue />
+
+        {/* Experience chalk in everyway */}
+        <FeatureExperience />
+
+        {/* Video Case */}
+        <FeatureSectionVideo />
+
+        {/* Hyper-Personalized Learning Solution */}
+        <FeatureSystem />
+
+        {/* Next Big Thing  */}
         <FeatureSection3 />
+
+        {/* follow the path */}
+        <CTASection />
+
+        {/* QR Code */}
         <CTASection />
       </main>
 

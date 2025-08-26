@@ -38,6 +38,8 @@ export const ASSETS = {
       featureImg1: "/images/section_3_icon_1.svg",
       featureImg2: "/images/section_3_icon_2.svg",
       featureImg3: "/images/section_3_icon_3.svg",
+      featureVideo: "/images/section_5_video.mp4",
+      featureSystemImg: "/images/section_5_icon.svg",
     },
 
     content: {
