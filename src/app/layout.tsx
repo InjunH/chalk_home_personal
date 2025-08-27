@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-black">
+    <html lang="en" className="bg-[#0C0C0C]">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
         style={{ overscrollBehavior: "none" }}

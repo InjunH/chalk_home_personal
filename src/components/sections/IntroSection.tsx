@@ -1,32 +1,13 @@
 import { ASSETS } from "@/lib/assets";
 import { siteContent } from "@/lib/content";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import IntroMainTitle from "@/components/ui/IntroMainTitle";
+import IntroTestimonial from "@/components/ui/IntroTestimonial";
+import IntroImages from "@/components/ui/IntroImages";
 
 export default function IntroSection() {
   const { intro, review } = siteContent;
 
-  // 공통 스타일
-  const mainHeadingStyle = {
-    fontSize: "72px",
-    lineHeight: "72px",
-    fontFamily: "Pretendard",
-    fontWeight: 700,
-    textAlign: "center" as const,
-  };
-
-  const quoteStyle = {
-    fontSize: "36px",
-    lineHeight: "39.6px",
-    letterSpacing: "-0.36px",
-    fontFamily: "Pretendard",
-    fontWeight: 700,
-    textAlign: "center" as const,
-  };
-
-  // 겹쳐진 이미지 공통 스타일
-  const imageCommonClass = "w-64 h-auto drop-shadow-2xl";
-
-  // 메인 제목들
+  // 메인 제목들 - 기존 데이터 구조 유지
   const descriptions = [
     intro.description1,
     intro.description2,
@@ -53,66 +34,19 @@ export default function IntroSection() {
   ];
 
   return (
-    <section
-      id="intro"
-      className="min-h-[80vh] max-h-[100vh] py-20 bg-[#0d0d0d] overflow-hidden"
-    >
+    <section id="intro" className="py-40 bg-[#0C0C0C] overflow-hidden relative">
       <div className="container mx-auto px-6">
-        <div className="text-center space-y-16">
-          {/* Main Copy */}
-          <div className="flex flex-col items-center justify-center max-w-4xl mx-auto">
-            {descriptions.map((description, index) => (
-              <h2
-                key={index}
-                className="font-bold leading-tight bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent"
-                style={mainHeadingStyle}
-              >
-                {description}
-              </h2>
-            ))}
-          </div>
+        <div className="text-center flex-col-gap-80">
+          {/* Main Copy - IntroMainTitle 컴포넌트 사용 */}
+          <IntroMainTitle descriptions={descriptions} />
 
-          {/* Review Section */}
-          <div className="mx-auto">
-            {/* First Quote */}
-            <div className="text-white">
-              <p className="font-bold uppercase" style={quoteStyle}>
-                &ldquo;{review.testimonial.quote1}&rdquo;
-              </p>
-            </div>
+          {/* Review Section - IntroTestimonial과 IntroImages 컴포넌트 사용 */}
+          <div className="mx-auto flex-col-gap-60">
+            {/* Testimonial Section */}
+            <IntroTestimonial testimonial={review.testimonial} />
 
-            {/* Second Quote */}
-            <div className="text-white opacity-70">
-              <p className="font-bold" style={quoteStyle}>
-                {review.testimonial.quote2}
-              </p>
-              <p className="font-bold" style={quoteStyle}>
-                {review.testimonial.quote3}
-              </p>
-            </div>
-
-            {/* Reviewer Info */}
-            <div className="text-white/70 text-center space-y-2 mt-10">
-              <p className="text-sm font-semibold uppercase tracking-wide">
-                {review.testimonial.reviewer.title}
-              </p>
-              <p className="text-lg font-medium">
-                {review.testimonial.reviewer.name}
-              </p>
-            </div>
-          </div>
-
-          {/* Overlapping Device Images */}
-          <div className="relative flex justify-center items-center h-96">
-            {previewImages.map((image, index) => (
-              <div key={index} className={image.position}>
-                <OptimizedImage
-                  src={image.src}
-                  alt={image.alt}
-                  className={imageCommonClass}
-                />
-              </div>
-            ))}
+            {/* Images Section */}
+            <IntroImages images={previewImages} />
           </div>
         </div>
       </div>
