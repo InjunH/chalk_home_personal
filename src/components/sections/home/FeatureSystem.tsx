@@ -1,6 +1,6 @@
-import AILogoCard from '@/components/sections/home/FeatureSystem/AILogoCard';
-import TextCard from '@/components/sections/home/FeatureSystem/TextCard';
-import PassportCard from '@/components/sections/home/FeatureSystem/PassportCard';
+import AILogoCard from "@/components/sections/home/FeatureSystem/AILogoCard";
+import TextCard from "@/components/sections/home/FeatureSystem/TextCard";
+import PassportCard from "@/components/sections/home/FeatureSystem/PassportCard";
 
 export default function FeatureSystem() {
   return (
@@ -9,7 +9,7 @@ export default function FeatureSystem() {
         {/* 첫 번째 행 - AI 로고 카드 + Hyper-Personalized Learning Solution */}
         <div className="flex card-gap row-gap">
           <AILogoCard />
-          
+
           <TextCard
             title={
               <>
@@ -52,9 +52,8 @@ export default function FeatureSystem() {
             }
             hasSubtitle={true}
           />
-          
-          <PassportCard
- />
+
+          <PassportCard />
         </div>
       </div>
     </section>
