@@ -1,70 +1,29 @@
 import { siteContent } from "@/lib/content";
 import Image from "next/image";
+import FeatureTitleSection from "@/components/ui/FeatureTitleSection";
+import NNKonradTitle from "@/components/ui/NNKonradTitle";
 
-// 스타일 상수들
-const STYLES = {
-  header: {
-    subtitle: {
-      fontFamily: "Suisse Intl",
-      fontSize: "24px",
-      letterSpacing: "-0.48px",
-    },
-    mainTitle: {
-      fontFamily: "Suisse Intl",
-      fontSize: "96px",
-      letterSpacing: "-2.88px",
-      lineHeight: "67%",
-    },
-    highlightTitle: {
-      fontFamily: "'NN Konrad', serif",
-      fontSize: "94px",
-      letterSpacing: "-2.82px",
-      lineHeight: "100%",
-    },
-  },
-  feature: {
-    title: {
-      fontFamily: "Pretendard",
-      fontSize: "42px",
-      letterSpacing: "0px",
-      lineHeight: "92%",
-    },
-    description: {
-      fontFamily: "Pretendard",
-      fontSize: "18px",
-      letterSpacing: "-0.18px",
-      lineHeight: "94%",
-    },
-  },
-} as const;
+import SectionSubtitle from "../ui/SectionSubtitle";
 
 // 헤더 컴포넌트
 function SectionHeader() {
   const { features } = siteContent;
 
   return (
-    <div className="text-center flex flex-col" style={{ gap: "54px" }}>
-      <p
-        className="text-white/60 text-center opacity-60 font-semibold"
-        style={STYLES.header.subtitle}
-      >
+    <>
+      <SectionSubtitle className="mb-[3.8rem]">
         {features.video.title}
-      </p>
+      </SectionSubtitle>
+      <FeatureTitleSection layout="vertical">
+        <h2 className="text-white font-bold uppercase text-center feature-video-main-title">
+          BE READY FOR THE
+        </h2>
 
-      <h2
-        className="text-white font-bold uppercase text-center"
-        style={STYLES.header.mainTitle}
-      >
-        BE READY FOR THE
-      </h2>
-
-      <h3
-        className="text-white font-bold text-center"
-        style={STYLES.header.highlightTitle}
-      >
-        Next Big Thing
-      </h3>
-    </div>
+        <NNKonradTitle variant="gold" className="text-cta-subtitle">
+          Next Big Thing
+        </NNKonradTitle>
+      </FeatureTitleSection>
+    </>
   );
 }
 
@@ -78,23 +37,14 @@ interface FeatureCardProps {
 
 function FeatureCard({ title, description, image, index }: FeatureCardProps) {
   return (
-    <div
-      className="flex flex-row items-start justify-between"
-      style={{ gap: "120px" }}
-    >
+    <div className="flex flex-row items-start justify-between gap-120">
       {/* 텍스트 영역 */}
-      <div className="flex-1 flex flex-col" style={{ gap: "24px" }}>
-        <h3
-          className="text-white font-bold uppercase"
-          style={STYLES.feature.title}
-        >
+      <div className="flex-1 flex flex-col gap-24">
+        <h3 className="text-white font-bold uppercase feature-video-card-title">
           {title}
         </h3>
 
-        <p
-          className="text-white/80 font-bold"
-          style={STYLES.feature.description}
-        >
+        <p className="text-white/80 font-bold feature-video-card-description">
           {description}
         </p>
       </div>
@@ -126,7 +76,7 @@ export default function FeatureSectionVideo() {
         <div className="space-y-32">
           <SectionHeader />
 
-          <div className="w-full flex flex-col" style={{ gap: "120px" }}>
+          <div className="w-full flex flex-col gap-120">
             {features.video.features.map((feature, index) => (
               <FeatureCard
                 key={index}

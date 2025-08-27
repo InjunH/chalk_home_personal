@@ -36,26 +36,12 @@ export default function IntroSection() {
   return (
     <section id="intro" className="py-40 bg-[#0C0C0C] overflow-hidden relative">
       <div className="container mx-auto px-6">
-        <div
-          className="text-center"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "80px", // 간격 축소
-          }}
-        >
+        <div className="text-center flex-col-gap-80">
           {/* Main Copy - IntroMainTitle 컴포넌트 사용 */}
           <IntroMainTitle descriptions={descriptions} />
 
           {/* Review Section - IntroTestimonial과 IntroImages 컴포넌트 사용 */}
-          <div
-            className="mx-auto"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "60px", // 간격 축소
-            }}
-          >
+          <div className="mx-auto flex-col-gap-60">
             {/* Testimonial Section */}
             <IntroTestimonial testimonial={review.testimonial} />
 

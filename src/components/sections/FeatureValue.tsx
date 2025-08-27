@@ -9,23 +9,15 @@ export default function FeatureValue() {
   return (
     <section
       id="features"
-      className="bg-[#0C0C0C] text-white overflow-hidden"
-      style={{
-        paddingBottom: "120px",
-      }}
+      className="bg-[#0C0C0C] text-white overflow-hidden pb-[120px]"
     >
       <div className="px-6">
         {/* Figma 스펙: VERTICAL gap: 240px */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "240px" }}>
+        <div className="flex-col-gap-240">
           {/* 첫 번째 섹션: 타이틀 + 통계 카드 - Figma gap: 120px */}
-          <div
-            style={{ display: "flex", flexDirection: "column", gap: "120px" }}
-          >
+          <div className="flex-col-gap-120">
             {/* 타이틀 영역 - Figma 높이: 267px */}
-            <div
-              className="text-center"
-              style={{ gap: "54px", display: "flex", flexDirection: "column" }}
-            >
+            <div className="text-center flex-col-gap-54">
               {/* 서브타이틀 - "Your new Companion" */}
               <SectionSubtitle>{features.value.subtitle}</SectionSubtitle>
 

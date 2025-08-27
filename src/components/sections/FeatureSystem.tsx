@@ -1,32 +1,13 @@
 import AILogoCard from './FeatureSystem/AILogoCard';
 import TextCard from './FeatureSystem/TextCard';
 import PassportCard from './FeatureSystem/PassportCard';
-import { LAYOUT_CONFIG } from './FeatureSystem/styles';
 
 export default function FeatureSystem() {
   return (
-    <section
-      className="bg-[#0C0C0C] overflow-hidden"
-      style={{
-        paddingTop: LAYOUT_CONFIG.sectionPadding,
-        paddingBottom: LAYOUT_CONFIG.sectionPadding,
-      }}
-    >
-      <div
-        className="max-w-[1920px] mx-auto"
-        style={{ 
-          paddingLeft: LAYOUT_CONFIG.containerPadding, 
-          paddingRight: LAYOUT_CONFIG.containerPadding 
-        }}
-      >
+    <section className="bg-[#0C0C0C] overflow-hidden section-padding">
+      <div className="max-w-[1920px] mx-auto container-padding">
         {/* 첫 번째 행 - AI 로고 카드 + Hyper-Personalized Learning Solution */}
-        <div 
-          className="flex" 
-          style={{ 
-            gap: LAYOUT_CONFIG.cardGap, 
-            marginBottom: LAYOUT_CONFIG.rowGap 
-          }}
-        >
+        <div className="flex card-gap row-gap">
           <AILogoCard />
           
           <TextCard
@@ -48,7 +29,7 @@ export default function FeatureSystem() {
         </div>
 
         {/* 두 번째 행 - G-LMS + Passport 이미지 */}
-        <div className="flex" style={{ gap: LAYOUT_CONFIG.cardGap }}>
+        <div className="flex card-gap">
           <TextCard
             title="G-LMS"
             subtitle={

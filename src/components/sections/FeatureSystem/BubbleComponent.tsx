@@ -1,5 +1,4 @@
 import { BubbleProps } from './types';
-import { BUBBLE_TEXT_STYLE } from './styles';
 
 export default function BubbleComponent({ 
   text, 
@@ -9,16 +8,14 @@ export default function BubbleComponent({
 }: BubbleProps) {
   return (
     <div
-      className="absolute bg-white/12 z-10"
+      className="absolute bg-white/12 z-10 bubble-standard"
       style={{
         ...position,
         width,
         height,
-        borderRadius: "12px",
-        padding: "13px 14px",
       }}
     >
-      <div className="text-white text-center" style={BUBBLE_TEXT_STYLE}>
+      <div className="text-white text-center bubble-text">
         {text}
       </div>
     </div>

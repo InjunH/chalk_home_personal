@@ -13,12 +13,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden w-full"
-      style={{
-        backgroundColor: "#0D0D0D", // Figma: r: 0.053, g: 0.053, b: 0.053
-        maxHeight: "1442px", // Figma 원본 높이
-        height: "100vh", // 뷰포트 높이
-      }}
+      className="relative overflow-hidden w-full bg-[#0D0D0D] h-screen max-h-[1442px]"
     >
       {/* 라이트 배경 효과 */}
       <HeroBackground />

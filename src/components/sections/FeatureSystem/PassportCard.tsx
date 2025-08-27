@@ -26,7 +26,7 @@ export default function PassportCard() {
 
         {/* Passport 이미지/비디오 */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative" style={{ width: "568px", height: "556px" }}>
+          <div className="relative passport-video-container">
             <video
               src={ASSETS.images.features.featureVideo}
               className="w-full h-full object-cover"
