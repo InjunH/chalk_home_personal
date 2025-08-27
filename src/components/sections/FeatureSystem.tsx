@@ -1,6 +1,6 @@
-import AILogoCard from './FeatureSystem/AILogoCard';
-import TextCard from './FeatureSystem/TextCard';
-import PassportCard from './FeatureSystem/PassportCard';
+import AILogoCard from '@/components/sections/home/FeatureSystem/AILogoCard';
+import TextCard from '@/components/sections/home/FeatureSystem/TextCard';
+import PassportCard from '@/components/sections/home/FeatureSystem/PassportCard';
 
 export default function FeatureSystem() {
   return (

@@ -1,5 +1,5 @@
 import { ASSETS } from "@/lib/assets";
-import OptimizedImage from "../../ui/OptimizedImage";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 import SystemCard from "./SystemCard";
 

@@ -3,7 +3,7 @@ import Image from "next/image";
 import FeatureTitleSection from "@/components/ui/FeatureTitleSection";
 import NNKonradTitle from "@/components/ui/NNKonradTitle";
 
-import SectionSubtitle from "../ui/SectionSubtitle";
+import SectionSubtitle from "@/components/ui/SectionSubtitle";
 
 // 헤더 컴포넌트
 function SectionHeader() {

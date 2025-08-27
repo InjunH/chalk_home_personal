@@ -1,10 +1,10 @@
 import { Metadata } from 'next'
 import Header from "@/components/common/Header"
-import ChalkAIHeroSection from "@/components/sections/ChalkAIHeroSection"
-import ChalkAIDescriptionSection from "@/components/sections/ChalkAIDescriptionSection"
-import ChalkAIFeatureSection from "@/components/sections/ChalkAIFeatureSection"
-import ChalkAIOntologySection from "@/components/sections/ChalkAIOntologySection"
-import ChalkAITechSection from "@/components/sections/ChalkAITechSection"
+import ChalkAIHeroSection from "@/components/sections/chalk-ai/ChalkAIHeroSection"
+import ChalkAIDescriptionSection from "@/components/sections/chalk-ai/ChalkAIDescriptionSection"
+import ChalkAIFeatureSection from "@/components/sections/chalk-ai/ChalkAIFeatureSection"
+import ChalkAIOntologySection from "@/components/sections/chalk-ai/ChalkAIOntologySection"
+import ChalkAITechSection from "@/components/sections/chalk-ai/ChalkAITechSection"
 
 export const metadata: Metadata = {
   title: 'CHALK AI - 개인 맞춤형 AI 학습 솔루션',

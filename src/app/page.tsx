@@ -1,14 +1,13 @@
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
-import HeroSection from "@/components/sections/HeroSection";
-import IntroSection from "@/components/sections/IntroSection";
-
-import FeatureExperience from "@/components/sections/FeatureExperience";
-import CTASection from "@/components/sections/CTASection";
-import QRSection from "@/components/sections/QRSection";
+import HeroSection from "@/components/sections/home/HeroSection";
+import IntroSection from "@/components/sections/home/IntroSection";
+import FeatureExperience from "@/components/sections/home/FeatureExperience";
+import CTASection from "@/components/sections/home/CTASection";
+import QRSection from "@/components/sections/home/QRSection";
 import FeatureSystem from "@/components/sections/FeatureSystem";
-import FeatureSectionVideo from "@/components/sections/FeatureSectionVideo";
-import FeatureValue from "@/components/sections/FeatureValue";
+import FeatureSectionVideo from "@/components/sections/home/FeatureSectionVideo";
+import FeatureValue from "@/components/sections/home/FeatureValue";
 
 export default function HomePage() {
   return (

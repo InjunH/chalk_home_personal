@@ -1,7 +1,7 @@
 import { siteContent } from "@/lib/content";
-import SectionSubtitle from "../ui/SectionSubtitle";
-import FeatureMainTitle from "../features/FeatureMainTitle";
-import StatCardList from "../features/StatCardList";
+import SectionSubtitle from "@/components/ui/SectionSubtitle";
+import FeatureMainTitle from "@/components/features/FeatureMainTitle";
+import StatCardList from "@/components/features/StatCardList";
 
 export default function FeatureValue() {
   const { features } = siteContent;

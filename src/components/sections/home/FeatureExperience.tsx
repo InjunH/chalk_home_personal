@@ -1,6 +1,6 @@
 import OptimizedImage from "@/components/ui/OptimizedImage";
 import { siteContent } from "@/lib/content";
-import SectionSubtitle from "../ui/SectionSubtitle";
+import SectionSubtitle from "@/components/ui/SectionSubtitle";
 import NNKonradTitle from "@/components/ui/NNKonradTitle";
 
 export default function FeatureExperience() {
