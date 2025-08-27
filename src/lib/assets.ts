@@ -16,7 +16,6 @@ export const ASSETS = {
       heroImg2: "/images/hero/hero-img-2.png",
       heroImg3: "/images/hero/hero-img-3.png",
       ipadMockup: "/images/hero/ipad-mockup.svg",
-      // ipadMockupReal: '/images/hero/ipad-mockup-real.png',
       ipadMockupReal: "/images/hero/ipad-mockup-realx4.png",
       appScreenshot: "/images/hero/app-screenshot.png",
       placeholder: "/images/hero/placeholder-hero.svg",
