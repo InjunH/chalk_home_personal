@@ -1,4 +1,5 @@
 import { siteContent } from "@/lib/content";
+import Link from "next/link";
 
 export default function Header() {
   const { navigation } = siteContent;
@@ -12,15 +13,18 @@ export default function Header() {
 
           {/* Right Menu - 우측 */}
           <div className="flex items-center space-x-8">
-            {navigation.right_menu.map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-white text-sm font-medium hover:text-white/80 transition-colors"
-              >
-                {item}
-              </a>
-            ))}
+            {navigation.right_menu.map((item) => {
+              const href = item === "CHALK AI" ? "/chalk-ai" : "#";
+              return (
+                <Link
+                  key={item}
+                  href={href}
+                  className="text-white text-sm font-medium hover:text-white/80 transition-colors"
+                >
+                  {item}
+                </Link>
+              );
+            })}
 
             {/* Language - Figma 명세: 20px, Semibold, -0.8 letter-spacing, #D9D9D9 */}
             <div className="bg-gray-800 rounded-[16px] px-4 py-2">
