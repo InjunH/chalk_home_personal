@@ -31,7 +31,7 @@ export default function ChalkAIFeatureSection() {
   return (
     <section className="min-h-screen py-20 bg-black overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="w-full flex flex-col" style={{ gap: "120px" }}>
+        <div className="w-full flex flex-col chalk-ai-feature-section-gap">
           {/* 상단 타이틀 섹션 */}
           <ChalkAITitleSection />
 

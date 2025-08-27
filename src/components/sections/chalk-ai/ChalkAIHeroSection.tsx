@@ -7,10 +7,7 @@ export default function ChalkAIHeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[500px]">
           {/* Left Side - Hyper-Personalized Solutions Text */}
           <div className="text-left space-y-2">
-            <h1
-              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight"
-              style={{ fontFamily: "Suisse Intl, sans-serif" }}
-            >
+            <h1 className="chalk-ai-hero-title text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
               <span className="text-white">Hyper-</span>
               <br />
               <span className="bg-gradient-to-r from-green-400 via-green-500 to-purple-600 bg-clip-text text-transparent">

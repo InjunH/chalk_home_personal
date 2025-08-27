@@ -1,29 +1,5 @@
 import OptimizedImage from "@/components/ui/OptimizedImage";
 
-// 스타일 상수들
-const STYLES = {
-  feature: {
-    title: {
-      fontFamily: "Suisse Intl",
-      fontSize: "80px",
-      letterSpacing: "-3.2px",
-      lineHeight: "100%",
-    },
-    subtitle: {
-      fontFamily: "Pretendard",
-      fontSize: "42px",
-      letterSpacing: "0px",
-      lineHeight: "92%",
-    },
-    description: {
-      fontFamily: "Pretendard",
-      fontSize: "18px",
-      letterSpacing: "-0.18px",
-      lineHeight: "94%",
-      wordBreak: "keep-all",
-    },
-  },
-} as const;
 
 // Feature Card 컴포넌트 Props
 export interface ChalkAIFeatureCardProps {
@@ -41,14 +17,9 @@ export default function ChalkAIFeatureCard({
   index,
 }: ChalkAIFeatureCardProps) {
   return (
-    <div
-      className={`flex flex-row`}
-      style={{
-        gap: "64px",
-      }}
-    >
-      <div className="flex-1 flex flex-col " style={{ gap: "46px" }}>
-        <h2 className="text-white font-bold" style={STYLES.feature.subtitle}>
+    <div className="flex flex-row chalk-ai-feature-card-gap">
+      <div className="flex-1 flex flex-col chalk-ai-feature-card-content-gap">
+        <h2 className="chalk-ai-feature-subtitle text-white">
           {title.split("\n").map((line, i) => (
             <span key={i}>
               {line}
@@ -57,10 +28,7 @@ export default function ChalkAIFeatureCard({
           ))}
         </h2>
 
-        <p
-          className="text-white/70 font-bold"
-          style={STYLES.feature.description}
-        >
+        <p className="chalk-ai-feature-description text-white/70">
           {description.split("\n").map((line, i) => (
             <span key={i}>
               {line}

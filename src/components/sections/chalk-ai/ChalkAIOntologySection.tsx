@@ -26,15 +26,7 @@ export default function ChalkAIOntologySection() {
         <div className="space-y-16">
           {/* 타이틀 영역 */}
           <div className="text-center">
-            <h2
-              className="text-white font-bold uppercase"
-              style={{
-                fontFamily: "Suisse Intl, sans-serif",
-                fontSize: "80px",
-                letterSpacing: "-3.2px",
-                lineHeight: "100%",
-              }}
-            >
+            <h2 className="chalk-ai-ontology-title text-white uppercase">
               <span className="block">ONTOLOGY</span>
               <span className="block mt-2">BASED LEARNING</span>
             </h2>
@@ -62,21 +54,10 @@ export default function ChalkAIOntologySection() {
                 {FEATURES.map((feature) => (
                   <div
                     key={feature.id}
-                    className="bg-white/[0.04] backdrop-blur-sm rounded-[32px] p-14 flex items-center justify-between hover:bg-white/[0.06] transition-colors duration-300"
-                    style={{
-                      border: "2px solid rgba(255, 255, 255, 0.04)",
-                    }}
+                    className="chalk-ai-ontology-card bg-white/[0.04] backdrop-blur-sm rounded-[32px] p-14 flex items-center justify-between hover:bg-white/[0.06] transition-colors duration-300"
                   >
                     {/* 텍스트 */}
-                    <h3
-                      className="text-white font-bold"
-                      style={{
-                        fontFamily: "Pretendard, sans-serif",
-                        fontSize: "28px",
-                        letterSpacing: "-0.28px",
-                        lineHeight: "120%",
-                      }}
-                    >
+                    <h3 className="chalk-ai-ontology-feature-title text-white">
                       {feature.title}
                     </h3>
 

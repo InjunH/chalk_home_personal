@@ -12,72 +12,30 @@ export default function ChalkAITechSection() {
         <div className="space-y-20">
           {/* 상단 텍스트 */}
           <div className="text-center">
-            <p
-              className="text-white text-xs font-normal"
-              style={{
-                fontFamily: "Pretendard, sans-serif",
-                fontSize: "11px",
-                letterSpacing: "-0.22px",
-                lineHeight: "140%",
-              }}
-            >
+            <p className="chalk-ai-tech-hint-text text-white">
               👀 퍼스트해빗의 기술에 대해 더 알고싶다면?
             </p>
           </div>
 
           {/* 메인 콘텐츠 영역 */}
-          <div
-            className="flex flex-col items-center justify-center"
-            style={{ gap: "44px" }}
-          >
+          <div className="flex flex-col items-center justify-center chalk-ai-tech-content-gap">
             <div className="relative flex-1">
-              <h2
-                className="text-center font-bold uppercase transform"
-                style={{
-                  fontFamily: "Suisse Intl, sans-serif",
-                  fontSize: "80px",
-                  letterSpacing: "-3.2px",
-                  lineHeight: "100%",
-                  background:
-                    "linear-gradient(90deg, #B4B4B4 0%, #FFFFFF 34.5%, #9A9A9A 100%)",
-                  WebkitBackgroundClip: "text",
-                  backgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  color: "transparent",
-                }}
-              >
+              <h2 className="chalk-ai-tech-main-title text-center uppercase transform">
                 <span className="block">UNLOCK THE</span>
                 <span className="block">TECHNOLOGY</span>
               </h2>
             </div>
 
-            <div className="flex flex-row" style={{ gap: "32px" }}>
+            <div className="flex flex-row chalk-ai-tech-button-gap">
               {/* FIRSTHABIT TECH PAGE 버튼 */}
               <a href="#" className="group">
-                <div
-                  className="bg-white rounded-full px-9 py-5 flex items-center gap-2 hover:bg-gray-100 transition-colors duration-300"
-                  style={{
-                    borderRadius: "3212px",
-                    paddingLeft: "25px",
-                    paddingRight: "36px",
-                    paddingTop: "22px",
-                    paddingBottom: "22px",
-                  }}
-                >
+                <div className="chalk-ai-tech-button bg-white flex items-center gap-2 hover:bg-gray-100 transition-colors duration-300">
                   {/* 로고 아이콘 */}
                   <div className="w-10 h-10 flex items-center justify-center">
                     <div className="w-8 h-9 bg-black rounded-sm" />
                   </div>
 
-                  <span
-                    className="text-black font-bold"
-                    style={{
-                      fontFamily: "Suisse Intl, sans-serif",
-                      fontSize: "28px",
-                      letterSpacing: "-1.12px",
-                      lineHeight: "103%",
-                    }}
-                  >
+                  <span className="chalk-ai-tech-button-text text-black">
                     FIRSTHABIT TECH PAGE
                   </span>
                 </div>
@@ -85,16 +43,7 @@ export default function ChalkAITechSection() {
 
               {/* FIRSTHABIT TECH BLOG 버튼 */}
               <a href="#" className="group">
-                <div
-                  className="bg-white rounded-full px-9 py-5 flex items-center gap-2 hover:bg-gray-100 transition-colors duration-300"
-                  style={{
-                    borderRadius: "3212px",
-                    paddingLeft: "25px",
-                    paddingRight: "36px",
-                    paddingTop: "22px",
-                    paddingBottom: "22px",
-                  }}
-                >
+                <div className="chalk-ai-tech-button bg-white flex items-center gap-2 hover:bg-gray-100 transition-colors duration-300">
                   {/* 네이버 로고 아이콘 */}
                   <div className="w-10 h-10 flex items-center justify-center">
                     <svg
@@ -111,15 +60,7 @@ export default function ChalkAITechSection() {
                     </svg>
                   </div>
 
-                  <span
-                    className="text-black font-bold"
-                    style={{
-                      fontFamily: "Suisse Intl, sans-serif",
-                      fontSize: "28px",
-                      letterSpacing: "-1.12px",
-                      lineHeight: "103%",
-                    }}
-                  >
+                  <span className="chalk-ai-tech-button-text text-black">
                     FIRSTHABIT TECH BLOG
                   </span>
                 </div>
