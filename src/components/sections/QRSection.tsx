@@ -29,7 +29,7 @@ export default function QRSection() {
 
   return (
     <section
-      className="relative overflow-hidden bg-[#0a0a0a]"
+      className="relative overflow-hidden bg-[#0d0d0d]"
       style={{
         paddingTop: "270px", // 상단 여백
         paddingBottom: "354px", // 하단 여백 (Footer까지의 간격)

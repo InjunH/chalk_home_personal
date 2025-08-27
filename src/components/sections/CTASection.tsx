@@ -16,7 +16,7 @@ export default function CTASection() {
   return (
     <section
       id="contact"
-      className="min-h-screen py-20 bg-[#0a0a0a] text-white overflow-hidden"
+      className="min-h-screen py-20 bg-[#0d0d0d] text-white overflow-hidden"
     >
       <div className="container mx-auto px-6">
         {/* Figma 레이아웃: VERTICAL, gap: 10px */}

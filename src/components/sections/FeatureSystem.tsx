@@ -108,7 +108,7 @@ export default function FeatureSystem() {
   };
 
   return (
-    <section className="min-h-screen py-20 bg-[#000] overflow-hidden">
+    <section className="min-h-screen py-20 bg-[#0d0d0d] overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 gap-8 max-w-6xl mx-auto">
           {system.cards.map((card) => renderCard(card))}

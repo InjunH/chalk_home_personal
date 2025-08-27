@@ -10,23 +10,23 @@ const STYLES = {
       letterSpacing: "-0.48px",
     },
     mainTitle: {
-      fontFamily: "Suisse Intl", 
+      fontFamily: "Suisse Intl",
       fontSize: "96px",
       letterSpacing: "-2.88px",
       lineHeight: "67%",
     },
     highlightTitle: {
       fontFamily: "'NN Konrad', serif",
-      fontSize: "94px", 
+      fontSize: "94px",
       letterSpacing: "-2.82px",
       lineHeight: "100%",
-    }
+    },
   },
   feature: {
     title: {
       fontFamily: "Pretendard",
       fontSize: "42px",
-      letterSpacing: "0px", 
+      letterSpacing: "0px",
       lineHeight: "92%",
     },
     description: {
@@ -34,14 +34,14 @@ const STYLES = {
       fontSize: "18px",
       letterSpacing: "-0.18px",
       lineHeight: "94%",
-    }
-  }
+    },
+  },
 } as const;
 
 // 헤더 컴포넌트
 function SectionHeader() {
   const { features } = siteContent;
-  
+
   return (
     <div className="text-center flex flex-col" style={{ gap: "54px" }}>
       <p
@@ -78,7 +78,10 @@ interface FeatureCardProps {
 
 function FeatureCard({ title, description, image, index }: FeatureCardProps) {
   return (
-    <div className="flex flex-row items-center justify-between" style={{ gap: "120px" }}>
+    <div
+      className="flex flex-row items-start justify-between"
+      style={{ gap: "120px" }}
+    >
       {/* 텍스트 영역 */}
       <div className="flex-1 flex flex-col" style={{ gap: "24px" }}>
         <h3
@@ -118,11 +121,11 @@ export default function FeatureSectionVideo() {
   const { features } = siteContent;
 
   return (
-    <section className="min-h-screen py-20 bg-[#0a0a0a] overflow-hidden">
+    <section className="min-h-screen py-20 bg-[#0d0d0d] overflow-hidden">
       <div className="container mx-auto">
         <div className="space-y-32">
           <SectionHeader />
-          
+
           <div className="w-full flex flex-col" style={{ gap: "120px" }}>
             {features.video.features.map((feature, index) => (
               <FeatureCard
