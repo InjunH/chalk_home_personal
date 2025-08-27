@@ -1,4 +1,5 @@
 import { siteContent } from "@/lib/content";
+import Link from "next/link";
 
 export default function Header() {
   const { navigation } = siteContent;
@@ -11,7 +12,7 @@ export default function Header() {
           CHALK
         </div>
 
-        {/* Right Menu - 우측 */}
+ {/* Right Menu - 우측 */}
         <div className="flex items-center header-menu-gap">
           {/* Menu Items */}
           <div className="flex items-center header-items-gap">
