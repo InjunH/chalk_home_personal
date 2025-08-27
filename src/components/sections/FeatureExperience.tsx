@@ -6,7 +6,7 @@ export default function FeatureExperience() {
   const { features } = siteContent;
   return (
     <section
-      className="bg-[#0d0d0d] text-white overflow-hidden"
+      className="bg-[#0C0C0C] text-white overflow-hidden"
       style={{ paddingTop: "120px", paddingBottom: "120px" }}
     >
       <div>

@@ -34,7 +34,7 @@ export default function IntroSection() {
   ];
 
   return (
-    <section id="intro" className="py-40 bg-[#0d0d0d] overflow-hidden relative">
+    <section id="intro" className="py-40 bg-[#0C0C0C] overflow-hidden relative">
       <div className="container mx-auto px-6">
         <div
           className="text-center"

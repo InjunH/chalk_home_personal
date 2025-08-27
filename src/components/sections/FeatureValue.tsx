@@ -9,9 +9,8 @@ export default function FeatureValue() {
   return (
     <section
       id="features"
-      className="bg-[#0d0d0d] text-white overflow-hidden"
+      className="bg-[#0C0C0C] text-white overflow-hidden"
       style={{
-        paddingTop: "120px", // Figma: 섹션 간격
         paddingBottom: "120px",
       }}
     >

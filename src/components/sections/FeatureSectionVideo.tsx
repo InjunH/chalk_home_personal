@@ -121,7 +121,7 @@ export default function FeatureSectionVideo() {
   const { features } = siteContent;
 
   return (
-    <section className="min-h-screen py-20 bg-[#0d0d0d] overflow-hidden">
+    <section className="min-h-screen py-20 bg-[#0C0C0C] overflow-hidden">
       <div className="container mx-auto">
         <div className="space-y-32">
           <SectionHeader />
