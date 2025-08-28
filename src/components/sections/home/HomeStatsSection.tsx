@@ -9,23 +9,23 @@ export default function HomeStatsSection() {
   return (
     <section
       id="features"
-      className="text-white overflow-hidden pb-[120px]"
+      className="text-white overflow-hidden py-8 md:py-20 lg:py-24"
     >
-      <div className="px-6">
-        {/* Figma 스펙: VERTICAL gap: 240px */}
-        <div className="flex-col-gap-240">
-          {/* 첫 번째 섹션: 타이틀 + 통계 카드 - Figma gap: 120px */}
-          <div className="flex-col-gap-120">
-            {/* 타이틀 영역 - Figma 높이: 267px */}
-            <div className="text-center flex-col-gap-54">
-              {/* 서브타이틀 - "Your new Companion" */}
+      <div className="features-container">
+        {/* 반응형 수직 간격 */}
+        <div className="space-y-8 md:space-y-24 lg:space-y-32">
+          {/* 첫 번째 섹션: 타이틀 + 통계 카드 */}
+          <div className="space-y-6 md:space-y-16 lg:space-y-20">
+            {/* 타이틀 영역 */}
+            <div className="text-center space-y-4 md:space-y-8 lg:space-y-10">
+              {/* 서브타이틀 */}
               <SectionSubtitle>{features.value.subtitle}</SectionSubtitle>
 
-              {/* 메인 타이틀 - Figma 정확한 구조 */}
+              {/* 메인 타이틀 */}
               <FeatureMainTitle />
             </div>
 
-            {/* 통계 카드 목록 - Figma: HORIZONTAL gap: 28px, 높이: 542px */}
+            {/* 통계 카드 목록 */}
             <StatCardList stats={features.value.stats} />
           </div>
         </div>

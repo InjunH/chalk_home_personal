@@ -12,11 +12,11 @@ export default function IntroMainTitle({
       className={`flex flex-col items-center justify-center max-w-4xl mx-auto ${className}`}
     >
       {/* 모바일: 2줄 처리 */}
-      <div className="block md:hidden">
-        <h2 className="font-bold bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent text-xl leading-tight mb-2 text-center">
+      <div className="block md:hidden text-[1.5rem]">
+        <h2 className="font-bold bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent leading-tight mb-2 text-center">
           {descriptions[0]}
         </h2>
-        <h2 className="font-bold bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent text-xl leading-tight mb-2 text-center">
+        <h2 className="font-bold bg-gradient-to-b from-white to-[#999999] bg-clip-text text-transparent leading-tight mb-2 text-center">
           {descriptions[1]} {descriptions[2]}
         </h2>
       </div>

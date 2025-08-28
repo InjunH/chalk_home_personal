@@ -23,16 +23,27 @@ export default function IntroTestimonial({
       <div className="block md:hidden">
         <div className="flex flex-col gap-24">
           {/* Quote Section */}
-          <div className="flex flex-col gap-0">
+          <div
+            className="flex flex-col gap-0 text-[0.875rem]"
+            style={{
+              wordBreak: "keep-all",
+            }}
+          >
             {/* First Quote */}
             <div className="text-white">
-              <p className="text-sm text-center leading-relaxed">&ldquo;{testimonial.quote1}&rdquo;</p>
+              <p className="text-center leading-relaxed">
+                &ldquo;{testimonial.quote1}&rdquo;
+              </p>
             </div>
 
             {/* Second Quote */}
-            <div className="text-white">
-              <p className="text-sm text-center leading-relaxed">{testimonial.quote2}</p>
-              <p className="text-sm text-center leading-relaxed">{testimonial.quote3}</p>
+            <div className="text-white/80">
+              <p className="text-center leading-relaxed">
+                {testimonial.quote2}
+              </p>
+              <p className="text-center leading-relaxed">
+                {testimonial.quote3}
+              </p>
             </div>
           </div>
 
@@ -51,7 +62,9 @@ export default function IntroTestimonial({
           <div className="flex flex-col gap-0">
             {/* First Quote */}
             <div className="text-white">
-              <p className="testimonial-quote">&ldquo;{testimonial.quote1}&rdquo;</p>
+              <p className="testimonial-quote">
+                &ldquo;{testimonial.quote1}&rdquo;
+              </p>
             </div>
 
             {/* Second Quote */}
@@ -64,7 +77,9 @@ export default function IntroTestimonial({
           {/* Reviewer Info - Figma 정확한 위치 */}
           <div className="text-white/70 text-center space-y-1">
             <p className="testimonial-reviewer">{testimonial.reviewer.title}</p>
-            <p className="testimonial-reviewer-name">{testimonial.reviewer.name}</p>
+            <p className="testimonial-reviewer-name">
+              {testimonial.reviewer.name}
+            </p>
           </div>
         </div>
       </div>

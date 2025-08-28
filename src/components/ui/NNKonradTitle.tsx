@@ -44,19 +44,33 @@ export default function NNKonradTitle({
   };
 
   return (
-    <Component
-      className={`${className}`}
-      style={{
-        fontFamily: "'NN Konrad', serif",
-        fontSize: "6rem" /* 96px / 16 = 6rem */,
-        fontWeight: 700,
-        letterSpacing: "-0.18rem" /* -2.88px / 16 = -0.18rem */,
-        lineHeight: "1.0",
-        textAlign: "center",
-        ...getVariantStyles(),
-      }}
-    >
-      {children}
-    </Component>
+    <>
+      {/* 모바일: 2.25rem 크기 */}
+      <Component
+        className={`block md:hidden mobile-title-nn ${className}`}
+        style={{
+          fontFamily: "'NN Konrad', serif",
+          ...getVariantStyles(),
+        }}
+      >
+        {children}
+      </Component>
+
+      {/* PC: 기존 스타일 그대로 유지 */}
+      <Component
+        className={`hidden md:block ${className}`}
+        style={{
+          fontFamily: "'NN Konrad', serif",
+          fontSize: "6rem" /* 96px / 16 = 6rem */,
+          fontWeight: 700,
+          letterSpacing: "-0.18rem" /* -2.88px / 16 = -0.18rem */,
+          lineHeight: "1.0",
+          textAlign: "center",
+          ...getVariantStyles(),
+        }}
+      >
+        {children}
+      </Component>
+    </>
   );
 }

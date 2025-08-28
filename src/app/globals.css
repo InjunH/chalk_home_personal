@@ -1,9 +1,14 @@
 @import "tailwindcss";
 
 /* 기본 배경색과 텍스트 색상 설정 - 모든 섹션에서 bg-black, text-white 기본값 */
-html, body {
+html,
+body {
   background-color: #000000; /* black */
   color: #ffffff; /* white */
+}
+
+h2 {
+  margin: 0;
 }
 
 /* section 태그의 기본 배경색과 텍스트 색상도 설정 */
@@ -56,58 +61,62 @@ section {
      RESPONSIVE BREAKPOINTS - Stripe Style
      ======================================== */
   /* Breakpoint 시스템 - Mobile First 접근법 */
-  --bp-mobile-max: 599px;     /* 모바일 최대 너비 */
-  --bp-tablet-min: 600px;     /* 태블릿 시작 */
-  --bp-tablet-max: 899px;     /* 태블릿 최대 너비 */
-  --bp-desktop-min: 900px;    /* 데스크탑 시작 */
-  --bp-large-min: 1112px;     /* 라지 데스크탑 시작 */
-  --bp-xlarge-min: 1440px;    /* XL 데스크탑 시작 */
+  --bp-mobile-max: 599px; /* 모바일 최대 너비 */
+  --bp-tablet-min: 600px; /* 태블릿 시작 */
+  --bp-tablet-max: 899px; /* 태블릿 최대 너비 */
+  --bp-desktop-min: 900px; /* 데스크탑 시작 */
+  --bp-large-min: 1112px; /* 라지 데스크탑 시작 */
+  --bp-xlarge-min: 1440px; /* XL 데스크탑 시작 */
 
   /* Viewport Width 변수 - Fluid 계산용 */
-  --viewport-min: 375;        /* 최소 뷰포트 (iPhone SE) */
-  --viewport-max: 1440;       /* 최대 뷰포트 (데스크탑) */
+  --viewport-min: 375; /* 최소 뷰포트 (iPhone SE) */
+  --viewport-max: 1440; /* 최대 뷰포트 (데스크탑) */
 
   /* Layout Constants - Fluid System (Stripe Style) */
   /* Section Padding: 모바일 3rem (48px) → 데스크탑 7.5rem (120px) */
   --section-padding: clamp(3rem, 8vw, 7.5rem);
-  
+
   /* Container Padding: 모바일 1rem (16px) → 데스크탑 7.125rem (114px) */
   --container-padding: clamp(1rem, 6vw, 7.125rem);
-  
+  --container-sm-padding: clamp(0.5rem, 6vw, 0);
+
   /* Card Gap: 모바일 1rem (16px) → 데스크탑 1.75rem (28px) */
   --card-gap: clamp(1rem, 2vw, 1.75rem);
-  
+
   /* Row Gap: 모바일 1rem (16px) → 데스크탑 1.5rem (24px) */
   --row-gap: clamp(1rem, 1.5vw, 1.5rem);
-  
+
   /* Card Height: 모바일 20rem (320px) → 데스크탑 35rem (560px) */
   --card-height: clamp(20rem, 35vw, 35rem);
-  
+
   /* Card Border Radius: 모바일 1rem (16px) → 데스크탑 2rem (32px) */
   --card-border-radius: clamp(1rem, 2vw, 2rem);
-  
+
   /* Card Inner Padding: 모바일 1.5rem (24px) → 데스크탑 3.375rem (54px) */
   --card-inner-padding: clamp(1.5rem, 4vw, 3.375rem);
-  
+
   /* Title Gap: 모바일 1.5rem (24px) → 데스크탑 2.75rem (44px) */
   --title-gap: clamp(1.5rem, 3vw, 2.75rem);
-  
+
   /* Subtitle Gap: 모바일 0.5rem (8px) → 데스크탑 0.625rem (10px) */
   --subtitle-gap: clamp(0.5rem, 1vw, 0.625rem);
 
   /* Typography Constants - Fluid System (Stripe Style) */
   /* Hero Title: 모바일 4rem (64px) → 데스크탑 11.375rem (182px) */
   --font-size-hero: clamp(4rem, 8vw, 11.375rem);
-  
-  /* Main Title: 모바일 2.5rem (40px) → 데스크탑 4.5rem (72px) */  
+
+  /* Main Title: 모바일 2.5rem (40px) → 데스크탑 4.5rem (72px) */
   --font-size-title: clamp(2.5rem, 6vw, 4.5rem);
-  
+
+  /* Mobile Title: 모바일 전용 타이틀 사이즈 2.25rem (36px) */
+  --font-size-mobile-title: 2.25rem;
+
   /* Subtitle: 모바일 1.125rem (18px) → 데스크탑 1.5rem (24px) */
   --font-size-subtitle: clamp(1.125rem, 2.5vw, 1.5rem);
-  
+
   /* Body Text: 모바일 1rem (16px) → 데스크탑 1.125rem (18px) */
   --font-size-body: clamp(1rem, 1.5vw, 1.125rem);
-  
+
   /* Caption: 모바일 0.875rem (14px) → 데스크탑 0.75rem (12px) - 역전 */
   --font-size-caption: clamp(0.75rem, 1vw, 0.875rem);
 
@@ -122,11 +131,11 @@ section {
   /* CTA Title: 모바일 3rem (48px) → 데스크탑 6rem (96px) */
   --cta-title-size: clamp(3rem, 6vw, 6rem);
   --cta-title-spacing: -0.18rem; /* -2.88px / 16 = -0.18rem */
-  
+
   /* CTA Subtitle: 모바일 2.5rem (40px) → 데스크탑 5.875rem (94px) */
   --cta-subtitle-size: clamp(2.5rem, 5.5vw, 5.875rem);
   --cta-subtitle-spacing: -0.176rem; /* -2.82px / 16 = -0.176rem */
-  
+
   /* CTA Input: 모바일 1.25rem (20px) → 데스크탑 1.75rem (28px) */
   --cta-input-size: clamp(1.25rem, 2vw, 1.75rem);
   --cta-input-spacing: -0.07rem; /* -1.12px / 16 = -0.07rem */
@@ -134,19 +143,19 @@ section {
   /* Feature Card Variables - Fluid System */
   /* Feature Card Small: 모바일 100% → 데스크탑 25.75rem (412px) */
   --feature-card-small: clamp(100%, 40vw, 25.75rem);
-  
+
   /* Feature Card Large: 모바일 100% → 데스크탑 45.813rem (733px) */
   --feature-card-large: clamp(100%, 60vw, 45.813rem);
-  
+
   /* Feature Card Height: 모바일 20rem (320px) → 데스크탑 34.375rem (550px) */
   --feature-card-height: clamp(20rem, 35vw, 34.375rem);
-  
+
   /* Feature Card Radius: 모바일 1rem (16px) → 데스크탑 1.75rem (28px) */
   --feature-card-radius: clamp(1rem, 2vw, 1.75rem);
-  
+
   /* Feature Card Gap: 모바일 0.5rem (8px) → 데스크탑 0.916rem (14.66px) */
   --feature-card-gap: clamp(0.5rem, 1.5vw, 0.916rem);
-  
+
   /* Feature Row Gap: 모바일 0.75rem (12px) → 데스크탑 0.938rem (15px) */
   --feature-row-gap: clamp(0.75rem, 1.5vw, 0.938rem);
 
@@ -444,11 +453,33 @@ body {
   background-clip: text;
 }
 
+/* 모바일용 그라데이션 타이틀 */
+.gradient-title-mobile {
+  font-family: "Suisse Intl";
+  font-size: 1.75rem; /* 28px / 16 = 1.75rem */
+  font-weight: 700;
+  letter-spacing: -0.07rem; /* -1.12px / 16 = -0.07rem */
+  line-height: 1.07;
+  background: linear-gradient(180deg, #ffffff 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .subtitle-text {
   font-family: "Suisse Intl";
   font-size: 1.5rem; /* 24px / 16 = 1.5rem */
   font-weight: 600;
   letter-spacing: -0.06rem; /* -0.96px / 16 = -0.06rem */
+  line-height: 1.5;
+}
+
+/* 모바일용 서브타이틀 텍스트 */
+.subtitle-text-mobile {
+  font-family: "Suisse Intl";
+  font-size: 0.8125rem; /* 13px / 16 = 0.8125rem */
+  font-weight: 600;
+  letter-spacing: -0.0325rem; /* -0.52px / 16 = -0.0325rem */
   line-height: 1.5;
 }
 
@@ -640,8 +671,9 @@ body {
   .hero-title-position {
     top: 20vh;
   }
-  
-  .hero-title-main, .hero-title-dream {
+
+  .hero-title-main,
+  .hero-title-dream {
     line-height: 0.9;
   }
 }
@@ -651,11 +683,11 @@ body {
   .hero-title-position {
     top: 25vh;
   }
-  
+
   .hero-title-main {
     font-size: clamp(4rem, 10vw, 6rem);
   }
-  
+
   .hero-title-dream {
     font-size: clamp(3.5rem, 8vw, 5rem);
   }
@@ -795,6 +827,14 @@ body {
   height: var(--card-height);
   border-radius: var(--card-border-radius);
   padding: var(--card-inner-padding);
+}
+
+/* 모바일용 시스템 카드 */
+.system-card-mobile {
+  height: auto;
+  min-height: 20rem; /* 320px - 모바일에서 적절한 최소 높이 */
+  border-radius: 1rem; /* 16px - 모바일에서 작은 둥글기 */
+  padding: 1.5rem; /* 24px - 모바일에서 작은 패딩 */
 }
 
 /* Experience Components Classes */
@@ -1322,7 +1362,7 @@ body {
   font-weight: 700;
   line-height: 100%;
   letter-spacing: -0.2rem; /* -3.2px / 16 = -0.2rem */
-  background: linear-gradient(90deg, #B4B4B4 0%, #FFFFFF 34.5%, #9A9A9A 100%);
+  background: linear-gradient(90deg, #b4b4b4 0%, #ffffff 34.5%, #9a9a9a 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1355,53 +1395,81 @@ body {
    ======================================== */
 
 /* 기본 Gap Classes - 공통으로 자주 사용되는 간격들 */
-.gap-2xs { gap: 0.5rem; }    /* 8px - 매우 작은 간격 (버튼 내부, 아이콘 등) */
-.gap-xs { gap: 0.75rem; }    /* 12px - 작은 간격 */
-.gap-sm { gap: 1rem; }       /* 16px - 기본 간격 */
-.gap-md { gap: 1.5rem; }     /* 24px - 중간 간격 (카드 내부 요소) */
-.gap-lg { gap: 2rem; }       /* 32px - 큰 간격 (버튼 그룹, 폼 요소) */
-.gap-xl { gap: 2.875rem; }   /* 46px - 매우 큰 간격 (카드 콘텐츠) */
-.gap-2xl { gap: 4rem; }      /* 64px - 초대형 간격 (카드 간격) */
-.gap-3xl { gap: 7.5rem; }    /* 120px - 섹션 내부 간격 */
-.gap-4xl { gap: 15rem; }     /* 240px - 섹션 간 간격 */
-.gap-5xl { gap: 28.75rem; }  /* 460px - 타이틀 섹션 좌우 간격 */
+.gap-2xs {
+  gap: 0.5rem;
+} /* 8px - 매우 작은 간격 (버튼 내부, 아이콘 등) */
+.gap-xs {
+  gap: 0.75rem;
+} /* 12px - 작은 간격 */
+.gap-sm {
+  gap: 1rem;
+} /* 16px - 기본 간격 */
+.gap-md {
+  gap: 1.5rem;
+} /* 24px - 중간 간격 (카드 내부 요소) */
+.gap-lg {
+  gap: 2rem;
+} /* 32px - 큰 간격 (버튼 그룹, 폼 요소) */
+.gap-xl {
+  gap: 2.875rem;
+} /* 46px - 매우 큰 간격 (카드 콘텐츠) */
+.gap-2xl {
+  gap: 4rem;
+} /* 64px - 초대형 간격 (카드 간격) */
+.gap-3xl {
+  gap: 7.5rem;
+} /* 120px - 섹션 내부 간격 */
+.gap-4xl {
+  gap: 15rem;
+} /* 240px - 섹션 간 간격 */
+.gap-5xl {
+  gap: 28.75rem;
+} /* 460px - 타이틀 섹션 좌우 간격 */
 
 /* 특수 목적 Gap Classes */
-.gap-section-title { gap: 28.75rem; } /* 460px - 섹션 타이틀 좌우 간격 (ChalkAI, G-LMS) */
-.gap-feature-card { gap: 4rem; }      /* 64px - 피처 카드 텍스트-이미지 간격 */
-.gap-feature-content { gap: 2.875rem; } /* 46px - 피처 카드 내부 콘텐츠 간격 */
-.gap-section-items { gap: 7.5rem; }   /* 120px - 섹션 내 아이템들 간격 */
+.gap-section-title {
+  gap: 28.75rem;
+} /* 460px - 섹션 타이틀 좌우 간격 (ChalkAI, G-LMS) */
+.gap-feature-card {
+  gap: 4rem;
+} /* 64px - 피처 카드 텍스트-이미지 간격 */
+.gap-feature-content {
+  gap: 2.875rem;
+} /* 46px - 피처 카드 내부 콘텐츠 간격 */
+.gap-section-items {
+  gap: 7.5rem;
+} /* 120px - 섹션 내 아이템들 간격 */
 
 /* Flex Direction별 Gap Classes */
-.gap-row-sm { 
-  display: flex; 
-  flex-direction: row; 
+.gap-row-sm {
+  display: flex;
+  flex-direction: row;
   gap: 1rem; /* 16px */
 }
-.gap-row-md { 
-  display: flex; 
-  flex-direction: row; 
+.gap-row-md {
+  display: flex;
+  flex-direction: row;
   gap: 2rem; /* 32px */
 }
-.gap-row-lg { 
-  display: flex; 
-  flex-direction: row; 
+.gap-row-lg {
+  display: flex;
+  flex-direction: row;
   gap: 4rem; /* 64px */
 }
 
-.gap-col-sm { 
-  display: flex; 
-  flex-direction: column; 
+.gap-col-sm {
+  display: flex;
+  flex-direction: column;
   gap: 1rem; /* 16px */
 }
-.gap-col-md { 
-  display: flex; 
-  flex-direction: column; 
+.gap-col-md {
+  display: flex;
+  flex-direction: column;
   gap: 2rem; /* 32px */
 }
-.gap-col-lg { 
-  display: flex; 
-  flex-direction: column; 
+.gap-col-lg {
+  display: flex;
+  flex-direction: column;
   gap: 4rem; /* 64px */
 }
 
@@ -1416,6 +1484,13 @@ body {
   margin: 0 auto;
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
+}
+.features-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: var(--container-sm-padding);
+  padding-right: var(--container-sm-padding);
 }
 
 /* 섹션 컨테이너 - 상하 패딩 포함 */
@@ -1502,36 +1577,78 @@ body {
 
 /* Mobile First Media Queries - Stripe Style */
 @media (max-width: 599px) {
-  .mobile-only { display: block !important; }
-  .tablet-up { display: none !important; }
-  .desktop-up { display: none !important; }
-  .large-up { display: none !important; }
+  .mobile-only {
+    display: block !important;
+  }
+  .tablet-up {
+    display: none !important;
+  }
+  .desktop-up {
+    display: none !important;
+  }
+  .large-up {
+    display: none !important;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 899px) {
-  .mobile-only { display: none !important; }
-  .tablet-only { display: block !important; }
-  .tablet-up { display: block !important; }
-  .desktop-up { display: none !important; }
-  .large-up { display: none !important; }
+  .mobile-only {
+    display: none !important;
+  }
+  .tablet-only {
+    display: block !important;
+  }
+  .tablet-up {
+    display: block !important;
+  }
+  .desktop-up {
+    display: none !important;
+  }
+  .large-up {
+    display: none !important;
+  }
 }
 
 @media (min-width: 900px) and (max-width: 1111px) {
-  .mobile-only { display: none !important; }
-  .tablet-only { display: none !important; }
-  .tablet-up { display: block !important; }
-  .desktop-only { display: block !important; }
-  .desktop-up { display: block !important; }
-  .large-up { display: none !important; }
+  .mobile-only {
+    display: none !important;
+  }
+  .tablet-only {
+    display: none !important;
+  }
+  .tablet-up {
+    display: block !important;
+  }
+  .desktop-only {
+    display: block !important;
+  }
+  .desktop-up {
+    display: block !important;
+  }
+  .large-up {
+    display: none !important;
+  }
 }
 
 @media (min-width: 1112px) {
-  .mobile-only { display: none !important; }
-  .tablet-only { display: none !important; }
-  .desktop-only { display: none !important; }
-  .tablet-up { display: block !important; }
-  .desktop-up { display: block !important; }
-  .large-up { display: block !important; }
+  .mobile-only {
+    display: none !important;
+  }
+  .tablet-only {
+    display: none !important;
+  }
+  .desktop-only {
+    display: none !important;
+  }
+  .tablet-up {
+    display: block !important;
+  }
+  .desktop-up {
+    display: block !important;
+  }
+  .large-up {
+    display: block !important;
+  }
 }
 
 /* ========================================
@@ -1543,11 +1660,11 @@ body {
   .grid-2-cols {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .grid-3-cols {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .grid-4-cols {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1558,7 +1675,7 @@ body {
   .grid-3-cols {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .grid-4-cols {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1588,21 +1705,49 @@ body {
     flex-direction: row;
     align-items: center;
   }
-  
+
   .flex-responsive-start {
     flex-direction: row;
     align-items: flex-start;
   }
-  
+
   .flex-responsive-center {
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
-  
+
   .flex-responsive-between {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
+}
+
+/* ========================================
+   MOBILE TITLE CLASSES
+   ======================================== */
+
+/* 모바일 전용 타이틀 클래스 */
+.mobile-title {
+  font-size: var(--font-size-mobile-title);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+/* 모바일 타이틀 + NN Konrad 폰트 */
+.mobile-title-nn {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+.mobile-feature-title {
+  font-family: "Suisse Intl";
+  font-weight: 700;
+  font-size: 2.25rem;
+  letter-spacing: -0.18rem;
+  line-height: 1;
 }

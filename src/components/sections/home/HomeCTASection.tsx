@@ -18,100 +18,105 @@ export default function HomeCTASection() {
   return (
     <section
       id="contact"
-      className="py-20 text-white overflow-hidden"
+      className="py-12 md:py-20 lg:py-24 text-white overflow-hidden"
     >
-      <div className="container mx-auto px-6">
-        {/* Figma 레이아웃: VERTICAL, gap: 10px */}
-        {/* Join Section - Figma 스펙 (VERTICAL, gap: 120px) */}
-        <div className="flex flex-col text-center flex-col-gap-120">
-          {/* Title Section - Figma 스펙 (VERTICAL, gap: -13px) */}
+      <div className="container">
+        {/* Join Section */}
+        <div className="flex flex-col text-center space-y-16 md:space-y-20 lg:space-y-24">
+          {/* Title Section */}
           <FeatureTitleSection gap="gap-0">
-            {/* "follow the path" - Figma 스펙: Suisse Intl 700 96px */}
-            <h2 className="text-white font-bold uppercase text-cta-title">
+            {/* "follow the path" */}
+            <h2 className="text-white font-bold uppercase text-3xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight">
               follow the path
             </h2>
 
-            {/* "Find the New" - Figma 스펙: NN Konrad 700 94px */}
+            {/* "Find the New" */}
             <NNKonradTitle
               variant="silver"
               as="h3"
-              className="text-cta-subtitle"
+              className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl"
             >
               Find the New
             </NNKonradTitle>
           </FeatureTitleSection>
 
-          {/* Email Form - Figma 스펙: 검은 배경, 둥근 모서리 */}
+          {/* Email Form */}
           <form
             onSubmit={handleSubmit}
-            className="flex items-center justify-center"
+            className="flex items-center justify-center px-4"
           >
-            <div className="flex items-center bg-black rounded-full cta-form-container">
+            <div className="flex items-center bg-black rounded-full w-full max-w-md md:max-w-lg lg:max-w-xl px-4 md:px-6 py-3 md:py-4">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="ENTER YOUR EMAIL"
-                className="flex-1 px-8 bg-transparent text-white placeholder-white font-bold text-lg border-none outline-none text-cta-input"
+                className="flex-1 bg-transparent text-white placeholder-white font-bold text-sm md:text-base lg:text-lg border-none outline-none"
                 required
               />
               <button
                 type="submit"
-                className="bg-white text-black font-bold rounded-full mr-4 cta-button text-cta-input"
+                className="bg-white text-black font-bold rounded-full px-4 md:px-6 py-2 md:py-3 ml-2 text-sm md:text-base hover:bg-gray-100 transition-colors"
               >
                 JOIN
               </button>
             </div>
           </form>
 
-          {/* Stream Section - Figma 스펙: 2행, 각 행에 2개 카드 */}
-          <div className="w-full max-w-[1160px] mx-auto">
-            {/* Figma 레이아웃: VERTICAL, gap: 15px */}
-            <div className="flex flex-col feature-rows-gap">
-              {/* Row 1 - Figma 스펙: HORIZONTAL, gap: 14.66px */}
-              <div className="flex feature-cards-gap">
-                {/* Feature 1 - "The Optimal Path for Me" (412 x 550) */}
-                <div className="bg-black relative overflow-hidden flex-shrink-0 feature-card-small">
-                  <Image
-                    src="/images/feature1.png"
-                    alt="The Optimal Path for Me"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+          {/* Stream Section - 반응형 카드 그리드 */}
+          <div className="w-full max-w-7xl mx-auto px-4">
+            {/* 모바일: 첫 번째 이미지만 표시 */}
+            <div className="block md:hidden">
+              <div className="bg-black relative overflow-hidden rounded-lg aspect-[4/5] group">
+                <Image
+                  src="/images/feature1.png"
+                  alt="The Optimal Path for Me"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+            </div>
 
-                {/* Feature 2 - Large card (733 x 550) */}
-                <div className="bg-black relative overflow-hidden flex-shrink-0 feature-card-large">
-                  <Image
-                    src="/images/feature2.png"
-                    alt="The Future of Learning"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+            {/* PC: 기존 2x2 그리드 그대로 유지 */}
+            <div className="hidden md:grid grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+              {/* Feature 1 - "The Optimal Path for Me" */}
+              <div className="bg-black relative overflow-hidden rounded-lg md:rounded-xl aspect-[4/5] md:aspect-[412/550] group">
+                <Image
+                  src="/images/feature1.png"
+                  alt="The Optimal Path for Me"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
 
-              {/* Row 2 - Figma 스펙: HORIZONTAL, gap: 14.66px */}
-              <div className="flex feature-cards-gap">
-                {/* Feature 3 - Large card (733 x 550) */}
-                <div className="bg-black relative overflow-hidden flex-shrink-0 feature-card-large">
-                  <Image
-                    src="/images/feature3.png"
-                    alt="The Future of Learning"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+              {/* Feature 2 - Large card */}
+              <div className="bg-black relative overflow-hidden rounded-lg md:rounded-xl aspect-[4/5] md:aspect-[733/550] group">
+                <Image
+                  src="/images/feature2.png"
+                  alt="The Future of Learning"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
 
-                {/* Feature 4 - "We all Dream differently" (412 x 550) */}
-                <div className="bg-black relative overflow-hidden flex-shrink-0 feature-card-small">
-                  <Image
-                    src="/images/feature4.png"
-                    alt="We all Dream differently"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+              {/* Feature 3 - Large card */}
+              <div className="bg-black relative overflow-hidden rounded-lg md:rounded-xl aspect-[4/5] md:aspect-[733/550] group">
+                <Image
+                  src="/images/feature3.png"
+                  alt="The Future of Learning"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+
+              {/* Feature 4 - "We all Dream differently" */}
+              <div className="bg-black relative overflow-hidden rounded-lg md:rounded-xl aspect-[4/5] md:aspect-[412/550] group">
+                <Image
+                  src="/images/feature4.png"
+                  alt="We all Dream differently"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
             </div>
           </div>

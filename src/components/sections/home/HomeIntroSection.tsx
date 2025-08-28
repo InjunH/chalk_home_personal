@@ -19,7 +19,7 @@ export default function IntroSection() {
     {
       src: ASSETS.images.intro.figmaImg1,
       alt: "CHALK Preview 1",
-      position: "absolute z-30 left-1/3",
+      position: "absolute z-30 right-1/3",
     },
     {
       src: ASSETS.images.intro.figmaImg2,
@@ -29,24 +29,26 @@ export default function IntroSection() {
     {
       src: ASSETS.images.intro.figmaImg3,
       alt: "CHALK Preview 3",
-      position: "absolute z-10 right-1/3",
+      position: "absolute z-10 left-1/3",
     },
   ];
 
   return (
-    <section id="intro" className="py-40 overflow-hidden relative">
-      <div className="container mx-auto px-6">
-        <div className="text-center flex-col-gap-80">
+    <section id="intro" className="section-container overflow-hidden relative">
+      <div className="container">
+        <div className="text-center gap-3xl">
           {/* Main Copy - IntroMainTitle 컴포넌트 사용 */}
           <IntroMainTitle descriptions={descriptions} />
 
           {/* Review Section - IntroTestimonial과 IntroImages 컴포넌트 사용 */}
-          <div className="mx-auto flex-col-gap-60">
+          <div className="mx-auto gap-2xl">
             {/* Testimonial Section */}
             <IntroTestimonial testimonial={review.testimonial} />
 
-            {/* Images Section */}
-            <IntroImages images={previewImages} />
+            {/* Images Section - 모바일에서 스케일링 */}
+            <div className="px-4 md:px-0">
+              <IntroImages images={previewImages} />
+            </div>
           </div>
         </div>
       </div>
