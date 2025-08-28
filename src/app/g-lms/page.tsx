@@ -1,12 +1,11 @@
 import { Metadata } from "next";
-import Header from "@/components/common/Header";
-import Footer from "@/components/common/Footer";
-import { 
-  GLMSHeroSection, 
-  GLMSDescriptionSection, 
+import PageLayout from "@/components/layout/PageLayout";
+import {
+  GLMSHeroSection,
+  GLMSDescriptionSection,
   GLMSGamificationSection,
   GLMSProgressSection,
-  GLMSMotivationSection 
+  GLMSMotivationSection,
 } from "@/components/sections/glms";
 
 export const metadata: Metadata = {
@@ -17,32 +16,18 @@ export const metadata: Metadata = {
 
 export default function GLMSPage() {
   return (
-    <div className="min-h-screen">
-      {/* Header */}
-      <div className="fixed top-0 left-0 w-full z-50">
-        <Header />
-      </div>
-
-      <main className="pt-20"> {/* Header 높이만큼 상단 여백 추가 */}
-        {/* Figma 기반 G-LMS Hero Section (Node ID: 5094:6987) */}
-        <GLMSHeroSection />
-        
-        {/* G-LMS Description Section */}
-        <GLMSDescriptionSection />
-
-        {/* Figma 기반 G-LMS Gamification Section (Node ID: 5193:7295) */}
-        <GLMSGamificationSection />
-
-        {/* Figma 기반 G-LMS Progress Section (Node ID: 5094:6995) */}
-        <GLMSProgressSection />
-
-        {/* Figma 기반 G-LMS Motivation Section (Node ID: 5094:6995) */}
-        <GLMSMotivationSection />
-
-        {/* 추가 섹션들은 여기에 구현 예정 */}
-      </main>
-      
-      <Footer />
-    </div>
+    <PageLayout>
+      {/* Figma 기반 G-LMS Hero Section (Node ID: 5094:6987) */}
+      <GLMSHeroSection />
+      {/* G-LMS Description Section */}
+      <GLMSDescriptionSection />
+      {/* Figma 기반 G-LMS Gamification Section (Node ID: 5193:7295) */}
+      <GLMSGamificationSection />
+      {/* Figma 기반 G-LMS Progress Section (Node ID: 5094:6995) */}
+      <GLMSProgressSection />
+      {/* Figma 기반 G-LMS Motivation Section (Node ID: 5094:6995) */}
+      <GLMSMotivationSection />
+      {/* 추가 섹션들은 여기에 구현 예정 */}
+    </PageLayout>
   );
 }

@@ -1,11 +1,10 @@
 import { Metadata } from "next";
-import Header from "@/components/common/Header";
+import PageLayout from "@/components/layout/PageLayout";
 import ChalkAIHeroSection from "@/components/sections/chalk-ai/ChalkAIHeroSection";
 import ChalkAIDescriptionSection from "@/components/sections/chalk-ai/ChalkAIDescriptionSection";
 import ChalkAIFeatureSection from "@/components/sections/chalk-ai/ChalkAIFeatureSection";
 import ChalkAIOntologySection from "@/components/sections/chalk-ai/ChalkAIOntologySection";
 import ChalkAITechSection from "@/components/sections/chalk-ai/ChalkAITechSection";
-import Footer from "@/components/common/Footer";
 
 export const metadata: Metadata = {
   title: "CHALK AI - 개인 맞춤형 AI 학습 솔루션",
@@ -15,29 +14,17 @@ export const metadata: Metadata = {
 
 export default function ChalkAiPage() {
   return (
-    <div className="min-h-screen">
-      {/* Header */}
-      <div className="fixed top-0 left-0 w-full z-50">
-        <Header />
-      </div>
-
-      <main className="min-h-screen">
-        {/* Hero Section */}
-        <ChalkAIHeroSection />
-
-        {/* Description Section */}
-        <ChalkAIDescriptionSection />
-
-        {/* Feature Section */}
-        <ChalkAIFeatureSection />
-
-        {/* Ontology Section */}
-        <ChalkAIOntologySection />
-
-        {/* Tech Section - UNLOCK THE TECHNOLOGY */}
-        <ChalkAITechSection />
-      </main>
-      <Footer />
-    </div>
+    <PageLayout mainClassName="min-h-screen">
+      {/* Hero Section */}
+      <ChalkAIHeroSection />
+      {/* Description Section */}
+      <ChalkAIDescriptionSection />
+      {/* Feature Section */}
+      <ChalkAIFeatureSection />
+      {/* Ontology Section */}
+      <ChalkAIOntologySection />
+      {/* Tech Section - UNLOCK THE TECHNOLOGY */}
+      <ChalkAITechSection />
+    </PageLayout>
   );
 }
