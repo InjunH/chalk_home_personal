@@ -29,7 +29,7 @@ const FEATURES = [
 // 메인 섹션 컴포넌트
 export default function ChalkAIFeatureSection() {
   return (
-    <section className="min-h-screen py-20 bg-black overflow-hidden">
+    <section className="min-h-screen py-20 overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="w-full flex flex-col gap-3xl">
           {/* 상단 타이틀 섹션 */}

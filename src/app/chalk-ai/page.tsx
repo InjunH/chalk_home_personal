@@ -15,13 +15,13 @@ export const metadata: Metadata = {
 
 export default function ChalkAiPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen">
       {/* Header */}
       <div className="fixed top-0 left-0 w-full z-50">
         <Header />
       </div>
 
-      <main className="min-h-screen bg-black text-white">
+      <main className="min-h-screen">
         {/* Hero Section */}
         <ChalkAIHeroSection />
 

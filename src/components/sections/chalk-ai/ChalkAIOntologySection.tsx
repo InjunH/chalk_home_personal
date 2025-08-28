@@ -21,7 +21,7 @@ export default function ChalkAIOntologySection() {
   ];
 
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="space-y-16">
           {/* 타이틀 영역 */}

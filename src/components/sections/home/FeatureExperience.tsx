@@ -6,7 +6,7 @@ import NNKonradTitle from "@/components/ui/NNKonradTitle";
 export default function FeatureExperience() {
   const { features } = siteContent;
   return (
-    <section className="bg-[#0C0C0C] text-white overflow-hidden feature-experience-section">
+    <section className="text-white overflow-hidden feature-experience-section">
       <div>
         <div className="container mx-auto px-6 feature-experience-container">
           {/* 타이틀 영역 */}

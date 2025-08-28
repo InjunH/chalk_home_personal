@@ -2,7 +2,7 @@ import OptimizedImage from "@/components/ui/OptimizedImage";
 
 export default function ChalkAITechSection() {
   return (
-    <section className="py-20 bg-black relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
       {/* 배경 그라디언트 효과 */}
       <div className="absolute inset-0">
         <div className="w-full h-full bg-gradient-to-br from-white/[0.02] to-gray-600/[0.02] rounded-[48px]" />

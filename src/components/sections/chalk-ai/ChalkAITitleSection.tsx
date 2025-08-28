@@ -7,7 +7,7 @@ export default function ChalkAITitleSection() {
       {/* 왼쪽: 24/7 MANAGEMENT 타이틀 */}
       <div className="flex flex-col chalk-ai-section-gap-small">
         <div className="flex flex-row items-center chalk-ai-section-gap-small">
-          <h2 className="chalk-ai-title-large text-white uppercase">
+          <h2 className="chalk-ai-title-large uppercase">
             24/7
           </h2>
 
@@ -29,7 +29,7 @@ export default function ChalkAITitleSection() {
             ))}
           </div>
         </div>
-        <h2 className="chalk-ai-title-large text-white uppercase">
+        <h2 className="chalk-ai-title-large uppercase">
           MANAGEMENT
         </h2>
       </div>

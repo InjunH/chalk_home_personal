@@ -18,7 +18,7 @@ export default function CTASection() {
   return (
     <section
       id="contact"
-      className="py-20 bg-[#0C0C0C] text-white overflow-hidden"
+      className="py-20 text-white overflow-hidden"
     >
       <div className="container mx-auto px-6">
         {/* Figma 레이아웃: VERTICAL, gap: 10px */}
@@ -46,7 +46,7 @@ export default function CTASection() {
             onSubmit={handleSubmit}
             className="flex items-center justify-center"
           >
-            <div className="flex items-center bg-[#121212] rounded-full cta-form-container">
+            <div className="flex items-center bg-black rounded-full cta-form-container">
               <input
                 type="email"
                 value={email}
@@ -104,7 +104,7 @@ export default function CTASection() {
                 </div>
 
                 {/* Feature 4 - "We all Dream differently" (412 x 550) */}
-                <div className="bg-[#111111] relative overflow-hidden flex-shrink-0 feature-card-small">
+                <div className="bg-black relative overflow-hidden flex-shrink-0 feature-card-small">
                   <Image
                     src="/images/feature4.png"
                     alt="We all Dream differently"

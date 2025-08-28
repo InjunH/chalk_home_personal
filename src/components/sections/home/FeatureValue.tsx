@@ -9,7 +9,7 @@ export default function FeatureValue() {
   return (
     <section
       id="features"
-      className="bg-[#0C0C0C] text-white overflow-hidden pb-[120px]"
+      className="text-white overflow-hidden pb-[120px]"
     >
       <div className="px-6">
         {/* Figma 스펙: VERTICAL gap: 240px */}

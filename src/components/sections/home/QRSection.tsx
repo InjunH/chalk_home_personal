@@ -9,7 +9,7 @@ export default function QRSection() {
   const { app_info } = siteContent.footer;
 
   return (
-    <section className="relative overflow-hidden bg-[#0C0C0C] qr-section">
+    <section className="relative overflow-hidden qr-section">
       {/* Light SVG 배경 - 하단에만 위치 */}
       <div className="absolute qr-light-bg">
         <Image

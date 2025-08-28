@@ -1,6 +1,6 @@
 export default function ChalkAIDescriptionSection() {
   return (
-    <section className="py-[22.5rem] px-6 bg-black">
+    <section className="py-[22.5rem] px-6">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center">
           <h2 className="chalk-ai-description-title text-white">

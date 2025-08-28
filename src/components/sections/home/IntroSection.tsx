@@ -34,7 +34,7 @@ export default function IntroSection() {
   ];
 
   return (
-    <section id="intro" className="py-40 bg-[#0C0C0C] overflow-hidden relative">
+    <section id="intro" className="py-40 overflow-hidden relative">
       <div className="container mx-auto px-6">
         <div className="text-center flex-col-gap-80">
           {/* Main Copy - IntroMainTitle 컴포넌트 사용 */}

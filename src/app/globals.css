@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+/* 기본 배경색과 텍스트 색상 설정 - 모든 섹션에서 bg-black, text-white 기본값 */
+html, body {
+  background-color: #000000; /* black */
+  color: #ffffff; /* white */
+}
+
+/* section 태그의 기본 배경색과 텍스트 색상도 설정 */
+section {
+  background-color: #000000; /* black */
+  color: #ffffff; /* white */
+}
+
 /* NN Konrad Font - Dream 텍스트 전용 */
 @font-face {
   font-family: "NN Konrad";

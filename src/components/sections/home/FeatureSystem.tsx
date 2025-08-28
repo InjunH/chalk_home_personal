@@ -4,7 +4,7 @@ import PassportCard from "@/components/sections/home/FeatureSystem/PassportCard"
 
 export default function FeatureSystem() {
   return (
-    <section className="bg-[#0C0C0C] overflow-hidden section-padding">
+    <section className="overflow-hidden section-padding">
       <div className="max-w-[1920px] mx-auto container-padding">
         {/* 첫 번째 행 - AI 로고 카드 + Hyper-Personalized Learning Solution */}
         <div className="flex card-gap row-gap">
