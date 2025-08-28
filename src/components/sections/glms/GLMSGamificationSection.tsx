@@ -2,7 +2,7 @@ import GLMSGamificationTitle from "./GLMSGamificationTitle";
 import GLMSCarousel from "./GLMSCarousel";
 import GLMSCityBuildingCard from "./GLMSCityBuildingCard";
 import { GLMS_GAMIFICATION_LAYOUT_CONFIG } from "./styles";
-import GLMSProgressFeatureCard from "./GLMSProgressFeatureCard";
+import FeatureCard from "@/components/ui/FeatureCard";
 
 export default function GLMSGamificationSection() {
   // 첫 번째 feature card (일반 레이아웃)
@@ -53,13 +53,14 @@ export default function GLMSGamificationSection() {
           </div>
 
           {/* 기능 설명 카드들 (Figma Node: 5201:1731, 5214:1611) */}
-          <div className="flex flex-col w-full" style={{ gap: "120px" }}>
+          <div className="flex flex-col w-full gap-3xl">
             {/* 첫 번째 카드: 일반 레이아웃 */}
             <div className="w-full flex justify-center">
-              <GLMSProgressFeatureCard
+              <FeatureCard
                 title={firstFeatureCard.title}
                 description={firstFeatureCard.description}
-                imageSrc={firstFeatureCard.imageSrc}
+                image={firstFeatureCard.imageSrc}
+                index={0}
               />
             </div>
 

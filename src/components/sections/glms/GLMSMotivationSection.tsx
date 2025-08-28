@@ -1,5 +1,5 @@
 import GLMSMotivationTitleSection from "./GLMSMotivationTitleSection";
-import GLMSProgressFeatureCard from "./GLMSProgressFeatureCard";
+import FeatureCard from "@/components/ui/FeatureCard";
 
 // Motivation System 섹션 데이터 (Figma CHALK PC sub 인스턴스 기반)
 const MOTIVATION_FEATURES = [
@@ -24,17 +24,18 @@ export default function GLMSMotivationSection() {
   return (
     <section className="min-h-screen py-20 bg-black overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="w-full flex flex-col" style={{ gap: "120px" }}>
+        <div className="w-full flex flex-col gap-3xl">
           {/* 상단 타이틀 섹션 */}
           <GLMSMotivationTitleSection />
 
           {/* Feature 카드들 */}
-          {MOTIVATION_FEATURES.map((feature) => (
-            <GLMSProgressFeatureCard
+          {MOTIVATION_FEATURES.map((feature, index) => (
+            <FeatureCard
               key={feature.id}
               title={feature.title}
               description={feature.description}
-              imageSrc={feature.imageSrc}
+              image={feature.imageSrc}
+              index={index}
             />
           ))}
         </div>

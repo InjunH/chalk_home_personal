@@ -1,5 +1,5 @@
 import ChalkAITitleSection from "./ChalkAITitleSection";
-import ChalkAIFeatureCard from "./ChalkAIFeatureCard";
+import FeatureCard from "@/components/ui/FeatureCard";
 
 // Feature 데이터 (Figma CHALK PC sub 인스턴스 기반)
 const FEATURES = [
@@ -31,17 +31,17 @@ export default function ChalkAIFeatureSection() {
   return (
     <section className="min-h-screen py-20 bg-black overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="w-full flex flex-col chalk-ai-feature-section-gap">
+        <div className="w-full flex flex-col gap-3xl">
           {/* 상단 타이틀 섹션 */}
           <ChalkAITitleSection />
 
           {/* Feature 카드들 */}
           {FEATURES.map((feature, index) => (
-            <ChalkAIFeatureCard
+            <FeatureCard
               key={feature.id}
               title={feature.title}
               description={feature.description}
-              imageRef={feature.imageRef}
+              image={`/images/chalk-ai/section_${index + 1}.png`}
               index={index}
             />
           ))}

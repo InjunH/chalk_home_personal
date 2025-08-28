@@ -4,7 +4,6 @@ import HeroSection from "@/components/sections/home/HeroSection";
 import IntroSection from "@/components/sections/home/IntroSection";
 import FeatureExperience from "@/components/sections/home/FeatureExperience";
 import CTASection from "@/components/sections/home/CTASection";
-import QRSection from "@/components/sections/home/QRSection";
 
 import FeatureSectionVideo from "@/components/sections/home/FeatureSectionVideo";
 import FeatureValue from "@/components/sections/home/FeatureValue";

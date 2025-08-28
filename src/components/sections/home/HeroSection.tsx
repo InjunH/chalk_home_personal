@@ -13,7 +13,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden w-full bg-[#0D0D0D] h-screen max-h-[1442px]"
+      className="relative overflow-hidden w-full bg-[#0D0D0D] h-screen max-h-[1000px]"
     >
       {/* 라이트 배경 효과 */}
       <HeroBackground />
