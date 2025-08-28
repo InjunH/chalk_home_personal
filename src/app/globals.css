@@ -52,23 +52,64 @@ section {
   --background: #ffffff;
   --foreground: #171717;
 
-  /* Layout Constants - Figma 기반 정확한 값들 (rem 변환) */
-  --section-padding: 7.5rem; /* 120px / 16 = 7.5rem */
-  --container-padding: 7.125rem; /* 114px / 16 = 7.125rem */
-  --card-gap: 1.75rem; /* 28px / 16 = 1.75rem */
-  --row-gap: 1.5rem; /* 24px / 16 = 1.5rem */
-  --card-height: 35rem; /* 560px / 16 = 35rem */
-  --card-border-radius: 2rem; /* 32px / 16 = 2rem */
-  --card-inner-padding: 3.375rem; /* 54px / 16 = 3.375rem */
-  --title-gap: 2.75rem; /* 44px / 16 = 2.75rem */
-  --subtitle-gap: 0.625rem; /* 10px / 16 = 0.625rem */
+  /* ========================================
+     RESPONSIVE BREAKPOINTS - Stripe Style
+     ======================================== */
+  /* Breakpoint 시스템 - Mobile First 접근법 */
+  --bp-mobile-max: 599px;     /* 모바일 최대 너비 */
+  --bp-tablet-min: 600px;     /* 태블릿 시작 */
+  --bp-tablet-max: 899px;     /* 태블릿 최대 너비 */
+  --bp-desktop-min: 900px;    /* 데스크탑 시작 */
+  --bp-large-min: 1112px;     /* 라지 데스크탑 시작 */
+  --bp-xlarge-min: 1440px;    /* XL 데스크탑 시작 */
 
-  /* Typography Constants (rem 변환) */
-  --font-size-hero: 11.375rem; /* 182px / 16 = 11.375rem */
-  --font-size-title: 4.5rem; /* 72px / 16 = 4.5rem */
-  --font-size-subtitle: 1.5rem; /* 24px / 16 = 1.5rem */
-  --font-size-body: 1.125rem; /* 18px / 16 = 1.125rem */
-  --font-size-caption: 0.75rem; /* 12px / 16 = 0.75rem */
+  /* Viewport Width 변수 - Fluid 계산용 */
+  --viewport-min: 375;        /* 최소 뷰포트 (iPhone SE) */
+  --viewport-max: 1440;       /* 최대 뷰포트 (데스크탑) */
+
+  /* Layout Constants - Fluid System (Stripe Style) */
+  /* Section Padding: 모바일 3rem (48px) → 데스크탑 7.5rem (120px) */
+  --section-padding: clamp(3rem, 8vw, 7.5rem);
+  
+  /* Container Padding: 모바일 1rem (16px) → 데스크탑 7.125rem (114px) */
+  --container-padding: clamp(1rem, 6vw, 7.125rem);
+  
+  /* Card Gap: 모바일 1rem (16px) → 데스크탑 1.75rem (28px) */
+  --card-gap: clamp(1rem, 2vw, 1.75rem);
+  
+  /* Row Gap: 모바일 1rem (16px) → 데스크탑 1.5rem (24px) */
+  --row-gap: clamp(1rem, 1.5vw, 1.5rem);
+  
+  /* Card Height: 모바일 20rem (320px) → 데스크탑 35rem (560px) */
+  --card-height: clamp(20rem, 35vw, 35rem);
+  
+  /* Card Border Radius: 모바일 1rem (16px) → 데스크탑 2rem (32px) */
+  --card-border-radius: clamp(1rem, 2vw, 2rem);
+  
+  /* Card Inner Padding: 모바일 1.5rem (24px) → 데스크탑 3.375rem (54px) */
+  --card-inner-padding: clamp(1.5rem, 4vw, 3.375rem);
+  
+  /* Title Gap: 모바일 1.5rem (24px) → 데스크탑 2.75rem (44px) */
+  --title-gap: clamp(1.5rem, 3vw, 2.75rem);
+  
+  /* Subtitle Gap: 모바일 0.5rem (8px) → 데스크탑 0.625rem (10px) */
+  --subtitle-gap: clamp(0.5rem, 1vw, 0.625rem);
+
+  /* Typography Constants - Fluid System (Stripe Style) */
+  /* Hero Title: 모바일 4rem (64px) → 데스크탑 11.375rem (182px) */
+  --font-size-hero: clamp(4rem, 8vw, 11.375rem);
+  
+  /* Main Title: 모바일 2.5rem (40px) → 데스크탑 4.5rem (72px) */  
+  --font-size-title: clamp(2.5rem, 6vw, 4.5rem);
+  
+  /* Subtitle: 모바일 1.125rem (18px) → 데스크탑 1.5rem (24px) */
+  --font-size-subtitle: clamp(1.125rem, 2.5vw, 1.5rem);
+  
+  /* Body Text: 모바일 1rem (16px) → 데스크탑 1.125rem (18px) */
+  --font-size-body: clamp(1rem, 1.5vw, 1.125rem);
+  
+  /* Caption: 모바일 0.875rem (14px) → 데스크탑 0.75rem (12px) - 역전 */
+  --font-size-caption: clamp(0.75rem, 1vw, 0.875rem);
 
   /* Letter Spacing (rem 변환) */
   --letter-spacing-hero: -0.114rem; /* -1.82px / 16 = -0.114rem */
@@ -77,21 +118,37 @@ section {
   --letter-spacing-body: -0.011rem; /* -0.18px / 16 = -0.011rem */
   --letter-spacing-caption: 0.0075rem; /* 0.12px / 16 = 0.0075rem */
 
-  /* CTA Section Variables (rem 변환) */
-  --cta-title-size: 6rem; /* 96px / 16 = 6rem */
+  /* CTA Section Variables - Fluid System */
+  /* CTA Title: 모바일 3rem (48px) → 데스크탑 6rem (96px) */
+  --cta-title-size: clamp(3rem, 6vw, 6rem);
   --cta-title-spacing: -0.18rem; /* -2.88px / 16 = -0.18rem */
-  --cta-subtitle-size: 5.875rem; /* 94px / 16 = 5.875rem */
+  
+  /* CTA Subtitle: 모바일 2.5rem (40px) → 데스크탑 5.875rem (94px) */
+  --cta-subtitle-size: clamp(2.5rem, 5.5vw, 5.875rem);
   --cta-subtitle-spacing: -0.176rem; /* -2.82px / 16 = -0.176rem */
-  --cta-input-size: 1.75rem; /* 28px / 16 = 1.75rem */
+  
+  /* CTA Input: 모바일 1.25rem (20px) → 데스크탑 1.75rem (28px) */
+  --cta-input-size: clamp(1.25rem, 2vw, 1.75rem);
   --cta-input-spacing: -0.07rem; /* -1.12px / 16 = -0.07rem */
 
-  /* Feature Card Variables (rem 변환) */
-  --feature-card-small: 25.75rem; /* 412px / 16 = 25.75rem */
-  --feature-card-large: 45.813rem; /* 733px / 16 = 45.813rem */
-  --feature-card-height: 34.375rem; /* 550px / 16 = 34.375rem */
-  --feature-card-radius: 1.75rem; /* 28px / 16 = 1.75rem */
-  --feature-card-gap: 0.916rem; /* 14.66px / 16 = 0.916rem */
-  --feature-row-gap: 0.938rem; /* 15px / 16 = 0.938rem */
+  /* Feature Card Variables - Fluid System */
+  /* Feature Card Small: 모바일 100% → 데스크탑 25.75rem (412px) */
+  --feature-card-small: clamp(100%, 40vw, 25.75rem);
+  
+  /* Feature Card Large: 모바일 100% → 데스크탑 45.813rem (733px) */
+  --feature-card-large: clamp(100%, 60vw, 45.813rem);
+  
+  /* Feature Card Height: 모바일 20rem (320px) → 데스크탑 34.375rem (550px) */
+  --feature-card-height: clamp(20rem, 35vw, 34.375rem);
+  
+  /* Feature Card Radius: 모바일 1rem (16px) → 데스크탑 1.75rem (28px) */
+  --feature-card-radius: clamp(1rem, 2vw, 1.75rem);
+  
+  /* Feature Card Gap: 모바일 0.5rem (8px) → 데스크탑 0.916rem (14.66px) */
+  --feature-card-gap: clamp(0.5rem, 1.5vw, 0.916rem);
+  
+  /* Feature Row Gap: 모바일 0.75rem (12px) → 데스크탑 0.938rem (15px) */
+  --feature-row-gap: clamp(0.75rem, 1.5vw, 0.938rem);
 
   /* QR Section Variables (rem 변환) */
   --qr-section-height: 55.875rem; /* 894px / 16 = 55.875rem */
@@ -554,25 +611,61 @@ body {
   width: 10.25rem; /* 164px / 16 = 10.25rem */
 }
 
-/* Hero Title Classes */
+/* Hero Title Classes - Responsive */
 .hero-title-position {
-  top: clamp(2rem, 20vh, 6rem);
+  top: clamp(15vh, 25vh, 30vh);
 }
 
 .hero-title-main {
   font-family: "Suisse Intl";
-  font-size: clamp(2rem, 8vw, 11.375rem); /* 182px / 16 = 11.375rem */
+  /* 모바일: 3rem (48px) → 태블릿: 6rem (96px) → 데스크탑: 11.375rem (182px) */
+  font-size: clamp(3rem, 12vw, 11.375rem);
   font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 0.7;
+  letter-spacing: clamp(-0.03rem, -0.02em, -0.01em);
+  line-height: clamp(0.8, 0.75, 0.7);
+  text-transform: uppercase;
 }
 
 .hero-title-dream {
   font-family: "NN Konrad";
-  font-size: clamp(2rem, 8vw, 11.375rem); /* 182px / 16 = 11.375rem */
+  /* Dream 텍스트는 약간 더 작게 */
+  font-size: clamp(2.5rem, 10vw, 9rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 0.74;
+  letter-spacing: clamp(-0.04rem, -0.03em, -0.02em);
+  line-height: clamp(0.85, 0.8, 0.74);
+}
+
+/* 모바일 전용 추가 스타일 */
+@media (max-width: 599px) {
+  .hero-title-position {
+    top: 20vh;
+  }
+  
+  .hero-title-main, .hero-title-dream {
+    line-height: 0.9;
+  }
+}
+
+/* 태블릿 최적화 */
+@media (min-width: 600px) and (max-width: 899px) {
+  .hero-title-position {
+    top: 25vh;
+  }
+  
+  .hero-title-main {
+    font-size: clamp(4rem, 10vw, 6rem);
+  }
+  
+  .hero-title-dream {
+    font-size: clamp(3.5rem, 8vw, 5rem);
+  }
+}
+
+/* 데스크탑 최적화 */
+@media (min-width: 900px) {
+  .hero-title-position {
+    top: 30vh;
+  }
 }
 
 /* Video Thumbnail Card Classes */
@@ -1310,4 +1403,206 @@ body {
   display: flex; 
   flex-direction: column; 
   gap: 4rem; /* 64px */
+}
+
+/* ========================================
+   RESPONSIVE CONTAINER SYSTEM - Stripe Style
+   ======================================== */
+
+/* 기본 컨테이너 - 반응형 패딩과 최대 너비 */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* 섹션 컨테이너 - 상하 패딩 포함 */
+.section-container {
+  width: 100%;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+/* 풀 너비 컨테이너 - 제한 없음 */
+.container-full {
+  width: 100%;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* 컴팩트 컨테이너 - 모바일 최적화 */
+.container-compact {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  padding-left: clamp(1rem, 4vw, 2rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+}
+
+/* 와이드 컨테이너 - 대형 콘텐츠용 */
+.container-wide {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* ========================================
+   RESPONSIVE GRID SYSTEM
+   ======================================== */
+
+/* 기본 반응형 그리드 */
+.grid-responsive {
+  display: grid;
+  gap: var(--card-gap);
+  grid-template-columns: 1fr;
+}
+
+/* 2컬럼 그리드 - 태블릿 이상 */
+.grid-2-cols {
+  display: grid;
+  gap: var(--card-gap);
+  grid-template-columns: 1fr;
+}
+
+/* 3컬럼 그리드 - 데스크탑 이상 */
+.grid-3-cols {
+  display: grid;
+  gap: var(--card-gap);
+  grid-template-columns: 1fr;
+}
+
+/* 4컬럼 그리드 - 라지 데스크탑 */
+.grid-4-cols {
+  display: grid;
+  gap: var(--card-gap);
+  grid-template-columns: 1fr;
+}
+
+/* 자동 맞춤 그리드 */
+.grid-auto-fit {
+  display: grid;
+  gap: var(--card-gap);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* 자동 채움 그리드 */
+.grid-auto-fill {
+  display: grid;
+  gap: var(--card-gap);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+/* ========================================
+   RESPONSIVE UTILITY CLASSES
+   ======================================== */
+
+/* Mobile First Media Queries - Stripe Style */
+@media (max-width: 599px) {
+  .mobile-only { display: block !important; }
+  .tablet-up { display: none !important; }
+  .desktop-up { display: none !important; }
+  .large-up { display: none !important; }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .mobile-only { display: none !important; }
+  .tablet-only { display: block !important; }
+  .tablet-up { display: block !important; }
+  .desktop-up { display: none !important; }
+  .large-up { display: none !important; }
+}
+
+@media (min-width: 900px) and (max-width: 1111px) {
+  .mobile-only { display: none !important; }
+  .tablet-only { display: none !important; }
+  .tablet-up { display: block !important; }
+  .desktop-only { display: block !important; }
+  .desktop-up { display: block !important; }
+  .large-up { display: none !important; }
+}
+
+@media (min-width: 1112px) {
+  .mobile-only { display: none !important; }
+  .tablet-only { display: none !important; }
+  .desktop-only { display: none !important; }
+  .tablet-up { display: block !important; }
+  .desktop-up { display: block !important; }
+  .large-up { display: block !important; }
+}
+
+/* ========================================
+   GRID SYSTEM RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* 태블릿 이상: 2컬럼 */
+@media (min-width: 600px) {
+  .grid-2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-3-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 데스크탑 이상: 3-4컬럼 */
+@media (min-width: 900px) {
+  .grid-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-4-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 라지 데스크탑: 4컬럼 */
+@media (min-width: 1112px) {
+  .grid-4-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ========================================
+   FLEXBOX RESPONSIVE UTILITIES
+   ======================================== */
+
+/* 기본 플렉스 유틸리티 */
+.flex-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+}
+
+/* 태블릿 이상에서 가로 정렬 */
+@media (min-width: 600px) {
+  .flex-responsive {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .flex-responsive-start {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .flex-responsive-center {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .flex-responsive-between {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
