@@ -5,7 +5,7 @@ import Image from "next/image";
 
 
 // QR 코드 섹션 컴포넌트
-export default function QRSection() {
+export default function HomeQRSection() {
   const { app_info } = siteContent.footer;
 
   return (

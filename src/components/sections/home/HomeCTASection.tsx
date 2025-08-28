@@ -5,7 +5,7 @@ import Image from "next/image";
 import FeatureTitleSection from "@/components/ui/FeatureTitleSection";
 import NNKonradTitle from "@/components/ui/NNKonradTitle";
 
-export default function CTASection() {
+export default function HomeCTASection() {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {

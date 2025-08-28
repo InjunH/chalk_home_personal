@@ -1,4 +1,4 @@
-import ChalkAITitleSection from "./ChalkAITitleSection";
+import ChalkAIManagementSection from "./ChalkAIManagementSection";
 import FeatureCard from "@/components/ui/FeatureCard";
 
 // Feature 데이터 (Figma CHALK PC sub 인스턴스 기반)
@@ -33,7 +33,7 @@ export default function ChalkAIFeatureSection() {
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="w-full flex flex-col gap-3xl">
           {/* 상단 타이틀 섹션 */}
-          <ChalkAITitleSection />
+          <ChalkAIManagementSection />
 
           {/* Feature 카드들 */}
           {FEATURES.map((feature, index) => (

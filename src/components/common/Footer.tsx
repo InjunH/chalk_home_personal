@@ -1,6 +1,6 @@
 import { siteContent } from "@/lib/content";
 import Image from "next/image";
-import QRSection from "../sections/home/QRSection";
+import HomeQRSection from "../sections/home/HomeQRSection";
 
 // Footer 컴포넌트
 export default function Footer() {
@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <>
-      <QRSection />
+      <HomeQRSection />
       <footer className="py-12 footer-bg">
         <div className="container mx-auto px-6">
           <div className="flex flex-row justify-between">

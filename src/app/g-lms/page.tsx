@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import PageLayout from "@/components/layout/PageLayout";
 import {
   GLMSHeroSection,
-  GLMSDescriptionSection,
+  GLMSVisionSection,
   GLMSGamificationSection,
   GLMSProgressSection,
   GLMSMotivationSection,
@@ -19,8 +19,8 @@ export default function GLMSPage() {
     <PageLayout>
       {/* Figma 기반 G-LMS Hero Section (Node ID: 5094:6987) */}
       <GLMSHeroSection />
-      {/* G-LMS Description Section */}
-      <GLMSDescriptionSection />
+      {/* G-LMS Vision Section - 게임화 학습의 비전 */}
+      <GLMSVisionSection />
       {/* Figma 기반 G-LMS Gamification Section (Node ID: 5193:7295) */}
       <GLMSGamificationSection />
       {/* Figma 기반 G-LMS Progress Section (Node ID: 5094:6995) */}

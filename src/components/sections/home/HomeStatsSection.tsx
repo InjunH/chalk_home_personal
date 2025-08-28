@@ -3,7 +3,7 @@ import SectionSubtitle from "@/components/ui/SectionSubtitle";
 import FeatureMainTitle from "@/components/features/FeatureMainTitle";
 import StatCardList from "@/components/features/StatCardList";
 
-export default function FeatureValue() {
+export default function HomeStatsSection() {
   const { features } = siteContent;
 
   return (

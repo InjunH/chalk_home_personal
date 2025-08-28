@@ -2,7 +2,7 @@ import AILogoCard from "@/components/sections/home/FeatureSystem/AILogoCard";
 import TextCard from "@/components/sections/home/FeatureSystem/TextCard";
 import PassportCard from "@/components/sections/home/FeatureSystem/PassportCard";
 
-export default function FeatureSystem() {
+export default function HomeProductsSection() {
   return (
     <section className="overflow-hidden section-padding">
       <div className="max-w-[1920px] mx-auto container-padding">

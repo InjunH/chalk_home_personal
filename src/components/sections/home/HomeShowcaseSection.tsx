@@ -3,7 +3,7 @@ import { siteContent } from "@/lib/content";
 import SectionSubtitle from "@/components/ui/SectionSubtitle";
 import NNKonradTitle from "@/components/ui/NNKonradTitle";
 
-export default function FeatureExperience() {
+export default function HomeShowcaseSection() {
   const { features } = siteContent;
   return (
     <section className="text-white overflow-hidden feature-experience-section">

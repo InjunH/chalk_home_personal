@@ -1,7 +1,7 @@
 import OptimizedImage from "@/components/ui/OptimizedImage";
 
 // 상단 타이틀 섹션 컴포넌트 (Figma node 5052:6417)
-export default function ChalkAITitleSection() {
+export default function ChalkAIManagementSection() {
   return (
     <div className="w-full flex flex-row items-center justify-between chalk-ai-section-gap-large">
       {/* 왼쪽: 24/7 MANAGEMENT 타이틀 */}

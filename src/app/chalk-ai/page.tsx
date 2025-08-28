@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import PageLayout from "@/components/layout/PageLayout";
 import ChalkAIHeroSection from "@/components/sections/chalk-ai/ChalkAIHeroSection";
-import ChalkAIDescriptionSection from "@/components/sections/chalk-ai/ChalkAIDescriptionSection";
+import ChalkAIBenefitsSection from "@/components/sections/chalk-ai/ChalkAIBenefitsSection";
 import ChalkAIFeatureSection from "@/components/sections/chalk-ai/ChalkAIFeatureSection";
 import ChalkAIOntologySection from "@/components/sections/chalk-ai/ChalkAIOntologySection";
 import ChalkAITechSection from "@/components/sections/chalk-ai/ChalkAITechSection";
@@ -17,8 +17,8 @@ export default function ChalkAiPage() {
     <PageLayout mainClassName="min-h-screen">
       {/* Hero Section */}
       <ChalkAIHeroSection />
-      {/* Description Section */}
-      <ChalkAIDescriptionSection />
+      {/* Benefits Section - 개인 맞춤형 교육의 혁신 */}
+      <ChalkAIBenefitsSection />
       {/* Feature Section */}
       <ChalkAIFeatureSection />
       {/* Ontology Section */}

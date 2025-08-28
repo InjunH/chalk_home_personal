@@ -67,7 +67,7 @@ function FeatureCard({ title, description, image, index }: FeatureCardProps) {
 }
 
 // 메인 컴포넌트
-export default function FeatureSectionVideo() {
+export default function HomeFeaturesSection() {
   const { features } = siteContent;
 
   return (

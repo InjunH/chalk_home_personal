@@ -1,4 +1,4 @@
-export default function GLMSDescriptionSection() {
+export default function GLMSVisionSection() {
   return (
     <section className="py-[22.5rem] px-6">
       <div className="container mx-auto">

@@ -1,4 +1,4 @@
-export default function ChalkAIDescriptionSection() {
+export default function ChalkAIBenefitsSection() {
   return (
     <section className="py-[22.5rem] px-6">
       <div className="container mx-auto max-w-4xl">

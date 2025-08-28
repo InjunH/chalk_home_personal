@@ -1,29 +1,29 @@
 import PageLayout from "@/components/layout/PageLayout";
-import HeroSection from "@/components/sections/home/HeroSection";
-import IntroSection from "@/components/sections/home/IntroSection";
-import FeatureExperience from "@/components/sections/home/FeatureExperience";
-import CTASection from "@/components/sections/home/CTASection";
-import FeatureSectionVideo from "@/components/sections/home/FeatureSectionVideo";
-import FeatureValue from "@/components/sections/home/FeatureValue";
-import FeatureSystem from "@/components/sections/home/FeatureSystem";
+import HomeHeroSection from "@/components/sections/home/HomeHeroSection";
+import HomeIntroSection from "@/components/sections/home/HomeIntroSection";
+import HomeShowcaseSection from "@/components/sections/home/HomeShowcaseSection";
+import HomeCTASection from "@/components/sections/home/HomeCTASection";
+import HomeFeaturesSection from "@/components/sections/home/HomeFeaturesSection";
+import HomeStatsSection from "@/components/sections/home/HomeStatsSection";
+import HomeProductsSection from "@/components/sections/home/HomeProductsSection";
 
 export default function HomePage() {
   return (
     <PageLayout>
       {/* WE ALL DREAM DIFFERENTLY */}
-      <HeroSection />
+      <HomeHeroSection />
       {/* 대치동에서도 볼 수 없던 최고의 선생님을 만나보세요. */}
-      <IntroSection />
-      {/* THE NEW PARADIGM */}
-      <FeatureValue />
-      {/* Experience chalk in everyway */}
-      <FeatureExperience />
-      {/* Hyper-Personalized Learning Solution */}
-      <FeatureSystem />
-      {/* Video Case */}
-      <FeatureSectionVideo />
-      {/* follow the path */}
-      <CTASection />
+      <HomeIntroSection />
+      {/* THE NEW PARADIGM - 통계/성과 */}
+      <HomeStatsSection />
+      {/* Experience chalk in everyway - 쇼케이스 */}
+      <HomeShowcaseSection />
+      {/* Hyper-Personalized Learning Solution - 주요 제품 */}
+      <HomeProductsSection />
+      {/* Next Big Thing - 핵심 기능들 */}
+      <HomeFeaturesSection />
+      {/* follow the path - 행동 유도 */}
+      <HomeCTASection />
     </PageLayout>
   );
 }

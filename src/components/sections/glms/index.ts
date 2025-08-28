@@ -1,5 +1,5 @@
 export { default as GLMSHeroSection } from './GLMSHeroSection';
-export { default as GLMSDescriptionSection } from './GLMSDescriptionSection';
+export { default as GLMSVisionSection } from './GLMSVisionSection';
 export { default as GLMSGamificationSection } from './GLMSGamificationSection';
 export { default as GLMSProgressSection } from './GLMSProgressSection';
 export { default as GLMSMotivationSection } from './GLMSMotivationSection';
