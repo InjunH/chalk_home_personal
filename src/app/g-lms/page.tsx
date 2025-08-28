@@ -1,6 +1,13 @@
 import { Metadata } from "next";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
+import { 
+  GLMSHeroSection, 
+  GLMSDescriptionSection, 
+  GLMSGamificationSection,
+  GLMSProgressSection,
+  GLMSMotivationSection 
+} from "@/components/sections/glms";
 
 export const metadata: Metadata = {
   title: "G-LMS - 글로벌 학습 관리 시스템",
@@ -16,18 +23,21 @@ export default function GLMSPage() {
         <Header />
       </div>
 
-      <main className="min-h-screen bg-black text-white">
-        {/* G-LMS Hero Section */}
-        <section className="py-[22.5rem] px-6">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h1 className="text-6xl font-bold text-white mb-8">
-              G-LMS
-            </h1>
-            <p className="text-xl text-white/80">
-              글로벌 학습 관리 시스템
-            </p>
-          </div>
-        </section>
+      <main className="pt-20"> {/* Header 높이만큼 상단 여백 추가 */}
+        {/* Figma 기반 G-LMS Hero Section (Node ID: 5094:6987) */}
+        <GLMSHeroSection />
+        
+        {/* G-LMS Description Section */}
+        <GLMSDescriptionSection />
+
+        {/* Figma 기반 G-LMS Gamification Section (Node ID: 5193:7295) */}
+        <GLMSGamificationSection />
+
+        {/* Figma 기반 G-LMS Progress Section (Node ID: 5094:6995) */}
+        <GLMSProgressSection />
+
+        {/* Figma 기반 G-LMS Motivation Section (Node ID: 5094:6995) */}
+        <GLMSMotivationSection />
 
         {/* 추가 섹션들은 여기에 구현 예정 */}
       </main>
