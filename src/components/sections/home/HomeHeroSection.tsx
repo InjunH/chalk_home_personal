@@ -27,22 +27,26 @@ export default function HeroSection() {
       {/* 메인 타이틀 영역 */}
       <HeroTitle />
       {/* 하단 요소들 */}
-      <div className="absolute bottom-0 left-0 right-0 z-30 flex flex-row justify-between items-end w-full px-6 pb-4">
-        {/* 좌측 중앙 - 썸네일 카드 */}
-        <VideoThumbnailCard
-          imageSrc={ASSETS.images.hero.appScreenshot}
-          imageAlt="CHALK Preview"
-          badgeText={hero.intro_badge}
-          className="relative z-20 max-w-[90vw]"
-        />
+      <div className="absolute bottom-0 left-0 right-0 z-30 flex flex-row justify-center md:justify-between items-end w-full px-6 pb-4">
+        {/* 좌측 중앙 - 썸네일 카드 (데스크톱에서만 표시) */}
+        <div className="hidden md:block">
+          <VideoThumbnailCard
+            imageSrc={ASSETS.images.hero.appScreenshot}
+            imageAlt="CHALK Preview"
+            badgeText={hero.intro_badge}
+            className="relative z-20 max-w-[90vw]"
+          />
+        </div>
 
-        <div>
+        <div className="text-center">
           {/* 우측 하단 - 서브타이틀 */}
           <SubtitleText text="Hyper-Personalized Learning Solution" />
         </div>
 
         {/* 우측 하단 - CHALK 로고 */}
-        <HeroBottomLogo src="/images/logo_gray.svg" alt="CHALK Logo" />
+        <div className="hidden md:block">
+          <HeroBottomLogo src="/images/logo_gray.svg" alt="CHALK Logo" />
+        </div>
       </div>
     </section>
   );
