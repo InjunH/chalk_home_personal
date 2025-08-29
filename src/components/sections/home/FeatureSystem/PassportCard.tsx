@@ -64,7 +64,7 @@ export default function PassportCard() {
           <div className="hidden md:block relative passport-video-container">
             <video
               src={ASSETS.images.features.featureVideo}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover min-h-[500px]"
               autoPlay
               muted
               loop

@@ -6,7 +6,7 @@ import NNKonradTitle from "@/components/ui/NNKonradTitle";
 export default function HomeShowcaseSection() {
   const { features } = siteContent;
   return (
-    <section className="text-white overflow-hidden py-12 md:py-20 lg:py-24">
+    <section className="text-white overflow-hidden pt-12 md:pt-20 lg:pt-[15rem]">
       <div className="space-y-16 md:space-y-24 lg:space-y-32">
         <div className="container pb-24 md:pb-20 lg:pb-24">
           {/* 타이틀 영역 */}

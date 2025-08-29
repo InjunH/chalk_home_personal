@@ -563,6 +563,61 @@ src/
 - **TypeScript Strict**: 타입 안전성 최우선
 - **Performance**: 이미지 최적화, 번들 최적화, Core Web Vitals
 - **Accessibility**: WCAG 2.1 AA 기준 준수
+- **⚠️ 반응형 디자인 원칙**: PC와 모바일에서 완전히 다른 레이아웃으로 바뀌면 안됨. 기본 구조와 순서는 동일하게 유지하고, 폰트 사이즈, 간격, 크기만 반응형으로 조정
+
+## 🚨 반응형 디자인 절대 원칙 (CRITICAL)
+
+### 🔥 최우선 원칙: PC 버전은 절대 건드리지 않기
+- **PC 버전은 신성불가침**: 기존 PC 디자인과 동작을 절대 변경하면 안됨
+- **모바일만 별도 처리**: 모바일에서만 다르게 보여야 할 경우 별도 처리
+- **변경이 많을 경우**: `isMobile` 체크해서 완전히 다른 컴포넌트 사용
+
+### ✅ 허용되는 반응형 조정 (변경이 적을 때)
+- **폰트 사이즈**: `text-base md:text-4xl lg:text-6xl` (모바일 기준으로 시작)
+- **간격 조정**: `mb-2 md:mb-8 lg:mb-12` (모바일 기준으로 시작)
+- **이미지 크기**: `max-w-[200px] md:max-w-[400px] lg:max-w-[600px]` (모바일 기준으로 시작)
+- **패딩/마진**: `px-4 md:px-8 lg:px-12` (모바일 기준으로 시작)
+- **숨김/보임**: `block md:hidden` 또는 `hidden md:block`
+
+### 🚨 변경이 많을 경우: 별도 컴포넌트 분리
+```jsx
+// ✅ 올바른 예시: 변경이 많을 때는 완전히 분리
+{isMobile ? (
+  <MobileSpecificComponent />
+) : (
+  <DesktopComponent /> // 기존 PC 버전 그대로 유지
+)}
+```
+
+### ❌ 절대 금지: PC 기준으로 모바일 조정
+```jsx
+// ❌ 잘못된 예시: PC 기준에서 모바일로 조정 (기존 PC 망가짐)
+<h1 className="text-6xl md:text-8xl"> // PC가 더 커짐 (원래와 달라짐)
+<h1 className="text-4xl text-xl"> // 모바일이 더 작아짐 (PC 기준 변경)
+```
+
+### 📋 반응형 구현 체크리스트
+- [ ] **PC 버전이 기존과 100% 동일한가?** (최우선)
+- [ ] 모바일 버전만 별도로 조정되었는가?
+- [ ] 변경이 많다면 `isMobile` 체크로 완전 분리했는가?
+- [ ] PC 기준으로 더 키우는 방식은 사용하지 않았는가?
+
+### 올바른 반응형 구현 패턴
+```jsx
+// ✅ 패턴 1: 작은 변경 - 모바일 기준으로 시작
+<h1 className="text-xl md:text-4xl"> // 모바일 작게 → PC는 원래 크기
+  {title}
+</h1>
+
+// ✅ 패턴 2: 큰 변경 - 완전 분리
+{isMobile ? (
+  <div className="text-base leading-relaxed">
+    <p>{text}</p>
+  </div>
+) : (
+  <OriginalPCComponent /> // 기존 PC 컴포넌트 그대로
+)}
+```
 
 ## Common Commands
 

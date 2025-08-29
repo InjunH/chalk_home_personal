@@ -7,10 +7,7 @@ export default function HomeStatsSection() {
   const { features } = siteContent;
 
   return (
-    <section
-      id="features"
-      className="text-white overflow-hidden py-8 md:py-20 lg:py-24"
-    >
+    <section id="features" className="text-white overflow-hidden">
       <div className="features-container">
         {/* 반응형 수직 간격 */}
         <div className="space-y-8 md:space-y-24 lg:space-y-32">

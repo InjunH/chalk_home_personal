@@ -59,7 +59,7 @@ export default function IntroTestimonial({
       <div className="hidden md:block">
         <div className="flex flex-col gap-24">
           {/* Quote Section */}
-          <div className="flex flex-col gap-0">
+          <div className="flex flex-col">
             {/* First Quote */}
             <div className="text-white">
               <p className="testimonial-quote">

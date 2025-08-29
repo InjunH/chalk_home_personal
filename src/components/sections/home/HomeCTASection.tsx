@@ -20,7 +20,7 @@ export default function HomeCTASection() {
       id="contact"
       className="py-12 md:py-20 lg:py-24 text-white overflow-hidden"
     >
-      <div className="container">
+      <div className="max-w-[1200px] mx-auto container">
         {/* Join Section */}
         <div className="flex flex-col text-center space-y-16 md:space-y-20 lg:space-y-24">
           {/* Title Section */}
@@ -82,7 +82,7 @@ export default function HomeCTASection() {
           </form>
 
           {/* Stream Section - 모바일/PC 반응형 */}
-          <div className="w-full max-w-[1160px]">
+          <div className="w-full max-w-[1200px] mx-auto">
             {/* 모바일: 첫 번째 이미지만 표시 */}
             <div className="block md:hidden">
               <div className="bg-black relative overflow-hidden rounded-2xl aspect-[4/5]">

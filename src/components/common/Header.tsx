@@ -32,7 +32,7 @@ export default function Header() {
             : "bg-transparent"
         }`}
       >
-        <div className="container">
+        <div className="features-container">
           <div className="flex items-center justify-between h-full py-4">
             {/* Logo - 좌측 */}
             <div className="text-white font-semibold header-logo">
@@ -41,24 +41,23 @@ export default function Header() {
               </Link>
             </div>
 
-            {/* Desktop Navigation - 중앙 */}
-            <nav className="hidden md:flex items-center header-items-gap">
-              {navigation.right_menu.map((item) => {
-                const href = item === "CHALK AI" ? "/chalk-ai" : "/g-lms";
-                return (
-                  <Link
-                    key={item}
-                    href={href}
-                    className="text-white/80 hover:text-white font-medium transition-colors header-menu-item"
-                  >
-                    {item}
-                  </Link>
-                );
-              })}
-            </nav>
-
             {/* Right Section - 우측 */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center header-items-gap">
+              {/* Desktop Navigation - 중앙 */}
+              <nav className="hidden md:flex items-center header-items-gap">
+                {navigation.right_menu.map((item) => {
+                  const href = item === "CHALK AI" ? "/chalk-ai" : "/g-lms";
+                  return (
+                    <Link
+                      key={item}
+                      href={href}
+                      className="text-white/80 hover:text-white font-medium transition-colors header-menu-item"
+                    >
+                      {item}
+                    </Link>
+                  );
+                })}
+              </nav>
               {/* Language - Desktop & Tablet */}
               <div className="hidden sm:flex items-center justify-center header-lang">
                 <span className="header-lang-text">{navigation.language}</span>

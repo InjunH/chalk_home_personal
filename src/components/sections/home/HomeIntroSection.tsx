@@ -36,7 +36,7 @@ export default function IntroSection() {
   return (
     <section id="intro" className="section-container overflow-hidden relative">
       <div className="container">
-        <div className="text-center gap-3xl">
+        <div className="text-center gap-2xl">
           {/* Main Copy - IntroMainTitle 컴포넌트 사용 */}
           <IntroMainTitle descriptions={descriptions} />
 

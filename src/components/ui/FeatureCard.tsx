@@ -8,11 +8,11 @@ interface FeatureCardProps {
 }
 
 // 통합된 Feature Card 컴포넌트
-export default function FeatureCard({ 
-  title, 
-  description, 
-  image, 
-  index 
+export default function FeatureCard({
+  title,
+  description,
+  image,
+  index,
 }: FeatureCardProps) {
   return (
     <>
@@ -20,16 +20,16 @@ export default function FeatureCard({
       <div className="block md:hidden flex flex-col gap-6">
         {/* 텍스트 영역 */}
         <div className="flex flex-col gap-4">
-          <h3 className="text-white font-bold uppercase text-lg leading-tight">
-            {title.split(',').map((part, index) => (
+          <h3 className="text-white font-bold uppercase feature-video-card-title-mobile">
+            {title.split(",").map((part, index) => (
               <span key={index}>
                 {part.trim()}
-                {index < title.split(',').length - 1 && <br />}
+                {index < title.split(",").length - 1 && <br />}
               </span>
             ))}
           </h3>
 
-          <p className="text-white/80 font-medium text-sm leading-relaxed">
+          <p className="text-white/80 feature-video-card-description-mobile">
             {description}
           </p>
         </div>
@@ -54,10 +54,10 @@ export default function FeatureCard({
         {/* 텍스트 영역 */}
         <div className="flex-1 flex flex-col gap-md">
           <h3 className="text-white font-bold uppercase feature-video-card-title">
-            {title.split(',').map((part, index) => (
+            {title.split(",").map((part, index) => (
               <span key={index}>
                 {part.trim()}
-                {index < title.split(',').length - 1 && <br />}
+                {index < title.split(",").length - 1 && <br />}
               </span>
             ))}
           </h3>
