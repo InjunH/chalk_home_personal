@@ -1321,6 +1321,14 @@ body {
   letter-spacing: 0;
 }
 
+.chalk-ai-description-title-mobile {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.5rem; /* 32px / 16 = 2rem */
+  font-weight: 700;
+  line-height: 2.4rem; /* 38.4px / 16 = 2.4rem */
+  letter-spacing: -0.02rem;
+}
+
 /* CHALK AI Title Section Classes */
 .chalk-ai-title-large {
   font-family: "Suisse Intl", sans-serif;
@@ -1330,16 +1338,36 @@ body {
   letter-spacing: -0.2rem; /* -3.2px / 16 = -0.2rem */
 }
 
+.chalk-ai-title-large-mobile {
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 2.25rem; /* 36px / 16 = 2.25rem */
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.09rem; /* -1.44px / 16 = -0.09rem */
+}
+
 .chalk-ai-avatar-container {
   margin-left: -1.25rem; /* -20px / 16 = -1.25rem */
+}
+
+.chalk-ai-avatar-container-mobile {
+  margin-left: -0.75rem; /* -12px / 16 = -0.75rem */
 }
 
 .chalk-ai-section-gap-large {
   gap: 28.75rem; /* 460px / 16 = 28.75rem */
 }
 
+.chalk-ai-section-gap-large-mobile {
+  gap: 4rem; /* 64px / 16 = 4rem */
+}
+
 .chalk-ai-section-gap-small {
   gap: 0.5rem; /* 8px / 16 = 0.5rem */
+}
+
+.chalk-ai-section-gap-small-mobile {
+  gap: 0.375rem; /* 6px / 16 = 0.375rem */
 }
 
 /* CHALK AI Feature Card Classes */
@@ -1354,6 +1382,14 @@ body {
   letter-spacing: -0.2rem; /* -3.2px / 16 = -0.2rem */
 }
 
+.chalk-ai-ontology-title-mobile {
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 2.25rem; /* 36px / 16 = 2.25rem */
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.09rem; /* -1.44px / 16 = -0.09rem */
+}
+
 .chalk-ai-ontology-feature-title {
   font-family: "Pretendard", sans-serif;
   font-size: 1.75rem; /* 28px / 16 = 1.75rem */
@@ -1362,13 +1398,31 @@ body {
   letter-spacing: -0.0175rem; /* -0.28px / 16 = -0.0175rem */
 }
 
+.chalk-ai-ontology-feature-title-mobile {
+  font-family: "Pretendard", sans-serif;
+  font-size: 1.125rem; /* 18px / 16 = 1.125rem */
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.01125rem; /* -0.18px / 16 = -0.01125rem */
+}
+
 .chalk-ai-ontology-card {
   border: 2px solid rgba(255, 255, 255, 0.04);
+}
+
+.chalk-ai-ontology-card-mobile {
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 1rem; /* 16px / 16 = 1rem */
+  padding: 1.5rem; /* 24px / 16 = 1.5rem */
 }
 
 /* CHALK AI Hero Section Classes */
 .chalk-ai-hero-title {
   font-family: "Suisse Intl", sans-serif;
+}
+.chalk-ai-hero-title-mobile {
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 3rem;
 }
 
 /* CHALK AI Tech Section Classes */
@@ -1378,6 +1432,14 @@ body {
   font-weight: 400;
   line-height: 140%;
   letter-spacing: -0.01375rem; /* -0.22px / 16 = -0.01375rem */
+}
+
+.chalk-ai-tech-hint-text-mobile {
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.625rem; /* 10px / 16 = 0.625rem */
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.0125rem; /* -0.2px / 16 = -0.0125rem */
 }
 
 .chalk-ai-tech-main-title {
@@ -1393,17 +1455,43 @@ body {
   color: transparent;
 }
 
+.chalk-ai-tech-main-title-mobile {
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 2rem; /* 32px / 16 = 2rem */
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.08rem; /* -1.28px / 16 = -0.08rem */
+  background: linear-gradient(90deg, #b4b4b4 0%, #ffffff 34.5%, #9a9a9a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 .chalk-ai-tech-content-gap {
   gap: 2.75rem; /* 44px / 16 = 2.75rem */
+}
+
+.chalk-ai-tech-content-gap-mobile {
+  gap: 1.5rem; /* 24px / 16 = 1.5rem */
 }
 
 .chalk-ai-tech-button-gap {
   gap: 2rem; /* 32px / 16 = 2rem */
 }
 
+.chalk-ai-tech-button-gap-mobile {
+  gap: 1rem; /* 16px / 16 = 1rem */
+}
+
 .chalk-ai-tech-button {
   border-radius: 200.75rem; /* 3212px / 16 = 200.75rem */
   padding: 1.375rem 2.25rem 1.375rem 1.5625rem; /* 22px 36px 22px 25px */
+}
+
+.chalk-ai-tech-button-mobile {
+  border-radius: 200.75rem; /* 3212px / 16 = 200.75rem */
+  padding: 1rem 1.5rem 1rem 1.125rem; /* 16px 24px 16px 18px */
 }
 
 .chalk-ai-tech-button-text {
@@ -1412,6 +1500,14 @@ body {
   font-weight: 700;
   line-height: 103%;
   letter-spacing: -0.07rem; /* -1.12px / 16 = -0.07rem */
+}
+
+.chalk-ai-tech-button-text-mobile {
+  font-family: "Suisse Intl", sans-serif;
+  font-size: 1rem; /* 16px / 16 = 1rem */
+  font-weight: 700;
+  line-height: 103%;
+  letter-spacing: -0.04rem; /* -0.64px / 16 = -0.04rem */
 }
 
 /* ========================================

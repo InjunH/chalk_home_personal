@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function ChalkAiPage() {
   return (
-    <PageLayout mainClassName="min-h-screen">
+    <PageLayout>
       {/* Hero Section */}
       <ChalkAIHeroSection />
       {/* Benefits Section - 개인 맞춤형 교육의 혁신 */}
