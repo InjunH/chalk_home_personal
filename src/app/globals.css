@@ -660,7 +660,7 @@ body {
 .hero-title-dream {
   font-family: "NN Konrad";
   /* Dream 텍스트는 약간 더 작게 */
-  font-size: clamp(2.5rem, 10vw, 9rem);
+  font-size: clamp(3rem, 12vw, 11.375rem);
   font-weight: 700;
   letter-spacing: clamp(-0.04rem, -0.03em, -0.02em);
   line-height: clamp(0.85, 0.8, 0.74);
@@ -696,7 +696,7 @@ body {
 /* 데스크탑 최적화 */
 @media (min-width: 900px) {
   .hero-title-position {
-    top: 30vh;
+    top: 10vh;
   }
 }
 
