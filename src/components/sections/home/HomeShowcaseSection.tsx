@@ -68,7 +68,7 @@ export default function HomeShowcaseSection() {
 
         {/* 비디오 썸네일 영역 */}
         <div className="relative flex justify-center items-center">
-          <div className="relative w-full max-w-7xl">
+          <div className="relative w-full">
             <OptimizedImage
               src="/images/video-thumbnail.png"
               alt="CHALK Experience Video"

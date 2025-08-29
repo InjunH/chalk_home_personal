@@ -39,7 +39,7 @@ export default function StatCard({ stat }: StatCardProps) {
       </div>
 
       {/* PC: 기존 스타일 그대로 유지 */}
-      <div className="hidden md:block group relative transition-all duration-300 flex-1 min-w-[280px] max-w-[605px] stat-card-container flex flex-col justify-between">
+      <div className="hidden md:flex justify-between group relative transition-all duration-300 flex-1 min-w-[280px] max-w-[605px] stat-card-container flex flex-col justify-between">
         {/* 통계 숫자 영역 */}
         <div>
           <div className="flex items-baseline">

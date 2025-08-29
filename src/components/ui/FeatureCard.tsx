@@ -21,7 +21,12 @@ export default function FeatureCard({
         {/* 텍스트 영역 */}
         <div className="flex flex-col gap-4">
           <h3 className="text-white font-bold uppercase text-lg leading-tight">
-            {title}
+            {title.split(',').map((part, index) => (
+              <span key={index}>
+                {part.trim()}
+                {index < title.split(',').length - 1 && <br />}
+              </span>
+            ))}
           </h3>
 
           <p className="text-white/80 font-medium text-sm leading-relaxed">
@@ -49,7 +54,12 @@ export default function FeatureCard({
         {/* 텍스트 영역 */}
         <div className="flex-1 flex flex-col gap-md">
           <h3 className="text-white font-bold uppercase feature-video-card-title">
-            {title}
+            {title.split(',').map((part, index) => (
+              <span key={index}>
+                {part.trim()}
+                {index < title.split(',').length - 1 && <br />}
+              </span>
+            ))}
           </h3>
 
           <p className="text-white/80 font-bold feature-video-card-description">

@@ -5,7 +5,7 @@ import PassportCard from "@/components/sections/home/FeatureSystem/PassportCard"
 export default function HomeProductsSection() {
   return (
     <section className="overflow-hidden section-padding">
-      <div className="max-w-[1920px] mx-auto container-padding">
+      <div className="max-w-[1920px] mx-auto container">
         {/* 모바일: 세로 스택 레이아웃 */}
         <div className="block md:hidden space-y-8">
           <AILogoCard />

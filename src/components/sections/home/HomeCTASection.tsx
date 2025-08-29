@@ -45,14 +45,14 @@ export default function HomeCTASection() {
             onSubmit={handleSubmit}
             className="flex items-center justify-center px-4"
           >
-            <div 
+            <div
               className="flex items-center bg-[#121212] rounded-full w-full max-w-md md:max-w-lg lg:max-w-xl px-4 md:px-6 py-3 md:py-4"
               style={{
                 boxShadow: `
                   0 0 80px rgba(255, 255, 255, 0.2),
                   0 0 150px rgba(255, 255, 255, 0.15),
                   0 0 200px rgba(255, 255, 255, 0.1)
-                `
+                `,
               }}
             >
               <input
@@ -64,7 +64,7 @@ export default function HomeCTASection() {
                 style={{
                   fontFamily: "Suisse Intl",
                   fontWeight: 700,
-                  letterSpacing: "-0.02em"
+                  letterSpacing: "-0.02em",
                 }}
                 required
               />
@@ -73,7 +73,7 @@ export default function HomeCTASection() {
                 className="bg-white text-black font-bold rounded-full px-4 md:px-6 py-2 md:py-3 ml-2 text-sm md:text-base hover:bg-gray-100 transition-colors"
                 style={{
                   fontFamily: "Suisse Intl",
-                  fontWeight: 700
+                  fontWeight: 700,
                 }}
               >
                 JOIN
@@ -81,60 +81,106 @@ export default function HomeCTASection() {
             </div>
           </form>
 
-          {/* Stream Section - 반응형 카드 그리드 */}
-          <div className="w-full max-w-7xl mx-auto px-4">
+          {/* Stream Section - 모바일/PC 반응형 */}
+          <div className="w-full max-w-[1160px]">
             {/* 모바일: 첫 번째 이미지만 표시 */}
             <div className="block md:hidden">
-              <div className="bg-black relative overflow-hidden rounded-lg aspect-[4/5] group">
+              <div className="bg-black relative overflow-hidden rounded-2xl aspect-[4/5]">
                 <Image
                   src="/images/feature1.png"
                   alt="The Optimal Path for Me"
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="object-cover"
                 />
               </div>
             </div>
 
-            {/* PC: 기존 2x2 그리드 그대로 유지 */}
-            <div className="hidden md:grid grid-cols-2 gap-4 md:gap-6 lg:gap-8">
-              {/* Feature 1 - "The Optimal Path for Me" */}
-              <div className="bg-black relative overflow-hidden rounded-lg md:rounded-xl aspect-[4/5] md:aspect-[412/550] group">
-                <Image
-                  src="/images/feature1.png"
-                  alt="The Optimal Path for Me"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+            {/* PC: 2행 2열 레이아웃 - 비율 기반 */}
+            <div className="hidden md:flex flex-col gap-4">
+              {/* Row 1 */}
+              <div className="flex gap-4">
+                {/* Feature 1 - 작은 카드 (36% 너비) */}
+                <div
+                  className="bg-black rounded-[28px] relative overflow-hidden"
+                  style={{ flex: "0 0 36%" }}
+                >
+                  <div
+                    className="relative w-full"
+                    style={{ paddingBottom: "133.5%" }}
+                  >
+                    {" "}
+                    {/* 412/550 비율 */}
+                    <Image
+                      src="/images/feature1.png"
+                      alt="The Optimal Path for Me"
+                      fill
+                      className="object-cover absolute inset-0"
+                    />
+                  </div>
+                </div>
+
+                {/* Feature 2 - 큰 카드 (64% 너비) */}
+                <div
+                  className="bg-black rounded-[28px] relative overflow-hidden"
+                  style={{ flex: "0 0 64%" }}
+                >
+                  <div
+                    className="relative w-full"
+                    style={{ paddingBottom: "75%" }}
+                  >
+                    {" "}
+                    {/* 550/733 비율 */}
+                    <Image
+                      src="/images/feature2.png"
+                      alt="The Future of Learning"
+                      fill
+                      className="object-cover absolute inset-0"
+                    />
+                  </div>
+                </div>
               </div>
 
-              {/* Feature 2 - Large card */}
-              <div className="bg-black relative overflow-hidden rounded-lg md:rounded-xl aspect-[4/5] md:aspect-[733/550] group">
-                <Image
-                  src="/images/feature2.png"
-                  alt="The Future of Learning"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
+              {/* Row 2 */}
+              <div className="flex gap-4">
+                {/* Feature 3 - 큰 카드 (64% 너비) */}
+                <div
+                  className="bg-black rounded-[28px] relative overflow-hidden"
+                  style={{ flex: "0 0 64%" }}
+                >
+                  <div
+                    className="relative w-full"
+                    style={{ paddingBottom: "75%" }}
+                  >
+                    {" "}
+                    {/* 550/733 비율 */}
+                    <Image
+                      src="/images/feature3.png"
+                      alt="The Future of Learning"
+                      fill
+                      className="object-cover absolute inset-0"
+                    />
+                  </div>
+                </div>
 
-              {/* Feature 3 - Large card */}
-              <div className="bg-black relative overflow-hidden rounded-lg md:rounded-xl aspect-[4/5] md:aspect-[733/550] group">
-                <Image
-                  src="/images/feature3.png"
-                  alt="The Future of Learning"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-
-              {/* Feature 4 - "We all Dream differently" */}
-              <div className="bg-black relative overflow-hidden rounded-lg md:rounded-xl aspect-[4/5] md:aspect-[412/550] group">
-                <Image
-                  src="/images/feature4.png"
-                  alt="We all Dream differently"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                {/* Feature 4 - 작은 카드 (36% 너비) */}
+                <div
+                  className="bg-[#111111] rounded-[28px] relative overflow-hidden"
+                  style={{ flex: "0 0 36%" }}
+                >
+                  <div
+                    className="relative w-full"
+                    style={{ paddingBottom: "133.5%" }}
+                  >
+                    {" "}
+                    {/* 412/550 비율 */}
+                    <Image
+                      src="/images/feature4.png"
+                      alt="We all Dream differently"
+                      fill
+                      className="object-cover absolute inset-0"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
