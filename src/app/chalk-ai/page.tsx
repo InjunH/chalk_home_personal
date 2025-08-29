@@ -5,14 +5,17 @@ import ChalkAIBenefitsSection from "@/components/sections/chalk-ai/ChalkAIBenefi
 import ChalkAIFeatureSection from "@/components/sections/chalk-ai/ChalkAIFeatureSection";
 import ChalkAIOntologySection from "@/components/sections/chalk-ai/ChalkAIOntologySection";
 import ChalkAITechSection from "@/components/sections/chalk-ai/ChalkAITechSection";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { text as fallbackText } from "@/constants/text";
 
+// metadata는 서버사이드에서 실행되므로 fallback text 사용
 export const metadata: Metadata = {
-  title: "CHALK AI - 개인 맞춤형 AI 학습 솔루션",
-  description:
-    "CHALK AI의 혁신적인 개인 맞춤형 AI 학습 솔루션을 만나보세요. 대치동에서도 볼 수 없던 최고의 AI 선생님과 함께하세요.",
+  title: `CHALK AI - ${fallbackText.chalkAI.description.title}`,
+  description: `CHALK AI의 혁신적인 ${fallbackText.chalkAI.description.title}을 만나보세요. ${fallbackText.intro.mainCopy}`,
 };
 
 export default function ChalkAiPage() {
+  // 클라이언트사이드에서는 useLanguage hook 사용 (향후 컴포넌트에서 사용)
   return (
     <PageLayout>
       {/* Hero Section */}

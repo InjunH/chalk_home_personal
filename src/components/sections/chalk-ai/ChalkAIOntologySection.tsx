@@ -1,24 +1,13 @@
+"use client";
+
 import OptimizedImage from "@/components/ui/OptimizedImage";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ChalkAIOntologySection() {
-  // 특징 카드 데이터
-  const FEATURES = [
-    {
-      id: 1,
-      title: "정확한 답변 제공",
-      icon: "+",
-    },
-    {
-      id: 2,
-      title: "유연한 대응",
-      icon: "+",
-    },
-    {
-      id: 3,
-      title: "고난도 문제 해결",
-      icon: "+",
-    },
-  ];
+  const { text } = useLanguage();
+  
+  // 특징 카드 데이터 (Context에서 동적으로 가져오기)
+  const FEATURES = text.chalkAI.ontology.features;
 
   return (
     <section className="py-20">
@@ -39,7 +28,7 @@ export default function ChalkAIOntologySection() {
             <div className="relative h-[300px] rounded-2xl overflow-hidden">
               <OptimizedImage
                 src="/images/chalk-ai/ontolos.png"
-                alt="온톨로지 시스템 시각화"
+                alt={text.chalkAI.ontology.title}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -88,7 +77,7 @@ export default function ChalkAIOntologySection() {
               {/* 온톨로지 배경 이미지 */}
               <OptimizedImage
                 src="/images/chalk-ai/ontolos.png"
-                alt="온톨로지 시스템 시각화"
+                alt={text.chalkAI.ontology.title}
                 className="w-full h-full object-cover"
               />
             </div>

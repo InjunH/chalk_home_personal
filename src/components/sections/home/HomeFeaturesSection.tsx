@@ -1,4 +1,6 @@
-import { siteContent } from "@/lib/content";
+"use client";
+
+import { useLanguage } from "@/contexts/LanguageContext";
 import Image from "next/image";
 import FeatureTitleSection from "@/components/ui/FeatureTitleSection";
 import NNKonradTitle from "@/components/ui/NNKonradTitle";
@@ -8,7 +10,8 @@ import FeatureCard from "@/components/ui/FeatureCard";
 
 // 메인 컴포넌트
 export default function HomeFeaturesSection() {
-  const { features } = siteContent;
+  const { text } = useLanguage();
+  const { features } = text;
 
   return (
     <section className="min-h-screen py-12 md:py-20 overflow-hidden">

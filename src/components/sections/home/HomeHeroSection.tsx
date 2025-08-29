@@ -1,5 +1,7 @@
+"use client";
+
 import { ASSETS } from "@/lib/assets";
-import { siteContent } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import HeroBackground from "@/components/ui/HeroBackground";
 import HeroTitle from "@/components/ui/HeroTitle";
 import IPadMockup from "@/components/ui/IPadMockup";
@@ -8,7 +10,8 @@ import SubtitleText from "@/components/ui/SubtitleText";
 import HeroBottomLogo from "@/components/ui/HeroBottomLogo";
 
 export default function HeroSection() {
-  const { hero } = siteContent;
+  const { text } = useLanguage();
+  const { hero } = text;
 
   return (
     <section
@@ -33,7 +36,7 @@ export default function HeroSection() {
           <VideoThumbnailCard
             imageSrc={ASSETS.images.hero.appScreenshot}
             imageAlt="CHALK Preview"
-            badgeText={hero.intro_badge}
+            badgeText={hero.introBadge}
             className="relative z-20 max-w-[90vw]"
           />
         </div>

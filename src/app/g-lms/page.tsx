@@ -7,14 +7,17 @@ import {
   GLMSProgressSection,
   GLMSMotivationSection,
 } from "@/components/sections/glms";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { text as fallbackText } from "@/constants/text";
 
+// metadata는 서버사이드에서 실행되므로 fallback text 사용
 export const metadata: Metadata = {
-  title: "G-LMS - 글로벌 학습 관리 시스템",
-  description:
-    "CHALK의 혁신적인 글로벌 학습 관리 시스템(G-LMS)을 통해 개인 맞춤형 학습을 경험하세요.",
+  title: `${fallbackText.gLMS.hero.title} - ${fallbackText.gLMS.hero.subtitle}`,
+  description: `CHALK의 혁신적인 ${fallbackText.gLMS.hero.description}`,
 };
 
 export default function GLMSPage() {
+  // 클라이언트사이드에서는 useLanguage hook 사용 (향후 컴포넌트에서 사용)
   return (
     <PageLayout>
       {/* Figma 기반 G-LMS Hero Section (Node ID: 5094:6987) */}

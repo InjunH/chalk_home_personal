@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import OptimizedImage from "@/components/ui/OptimizedImage";
-import { GLMS_GAMIFICATION_LAYOUT_CONFIG } from "./styles";
 
 export default function GLMSCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -10,13 +9,7 @@ export default function GLMSCarousel() {
 
   return (
     <div className="relative w-full flex flex-col items-center">
-      <div
-        className="relative z-10"
-        // style={{
-        //   width: GLMS_GAMIFICATION_LAYOUT_CONFIG.carouselWidth,
-        //   height: GLMS_GAMIFICATION_LAYOUT_CONFIG.carouselImageHeight,
-        // }}
-      >
+      <div className="relative z-10">
         {/* 캐러셀 컨테이너 - 완성된 pad.png 이미지 사용 */}
         <div className="relative w-full h-full rounded-2xl overflow-hidden">
           <OptimizedImage

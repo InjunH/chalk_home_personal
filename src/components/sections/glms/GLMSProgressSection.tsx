@@ -1,39 +1,14 @@
+"use client";
+
 import GLMSProgressTitleSection from "./GLMSProgressTitleSection";
 import FeatureCard from "@/components/ui/FeatureCard";
-
-// Progress Tracker 섹션 데이터 (Figma CHALK PC sub 인스턴스 기반)
-const PROGRESS_FEATURES = [
-  {
-    id: 1,
-    title: "나만의 목표,\n나만의 대시보드",
-    description:
-      "나의 강점, 목표, 학습 상태가 한눈에 정리된 \n나만의 대시보드에서 나의 학습 흐름을 확인해 보세요.",
-    imageSrc: "/images/g-lms/oll_in_one_1.png",
-    imageAlt: "나만의 대시보드",
-    isReversed: false,
-  },
-  {
-    id: 2,
-    title: "나의 성취를 한눈에 보는\n그래픽 시스템",
-    description:
-      "주간 리포트를 통해 나의 학습 성취와 진행 상황을 한눈에 확인하고,\nCHALK와 함께 성장하는 변화를 경험해 보세요.",
-    imageSrc: "/images/g-lms/oll_in_one_2.png",
-    imageAlt: "그래픽 시스템",
-    isReversed: true,
-  },
-  {
-    id: 3,
-    title: "내게 딱 맞는 코스를 찾아주는\n진로 선생님같은 솔루션",
-    description:
-      "나의 학습 데이터를 기반으로, \n오직 나만을 위해 설계된 맞춤형 경로를 경험해 보세요.",
-    imageSrc: "/images/g-lms/oll_in_one_3.png",
-    imageAlt: "진로 솔루션",
-    isReversed: false,
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // 메인 섹션 컴포넌트
 export default function GLMSProgressSection() {
+  const { text } = useLanguage();
+  const progressFeatures = text.gLMS.progress.features;
+
   return (
     <section className="min-h-screen py-12 md:py-20 overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl">
@@ -51,7 +26,7 @@ export default function GLMSProgressSection() {
           </div>
 
           {/* Feature 카드들 - 모바일에서는 좌우 전환 없이 수직 배치 */}
-          {PROGRESS_FEATURES.map((feature, index) => (
+          {progressFeatures.map((feature, index) => (
             <FeatureCard
               key={feature.id}
               title={feature.title}
@@ -68,7 +43,7 @@ export default function GLMSProgressSection() {
           <GLMSProgressTitleSection />
 
           {/* Feature 카드들 */}
-          {PROGRESS_FEATURES.map((feature, index) => (
+          {progressFeatures.map((feature, index) => (
             <FeatureCard
               key={feature.id}
               title={feature.title}

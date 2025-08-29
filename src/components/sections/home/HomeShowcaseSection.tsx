@@ -1,10 +1,14 @@
+"use client";
+
 import OptimizedImage from "@/components/ui/OptimizedImage";
-import { siteContent } from "@/lib/content";
+
+import { useLanguage } from "@/contexts/LanguageContext";
 import SectionSubtitle from "@/components/ui/SectionSubtitle";
 import NNKonradTitle from "@/components/ui/NNKonradTitle";
 
 export default function HomeShowcaseSection() {
-  const { features } = siteContent;
+  const { text } = useLanguage();
+  const { features } = text;
   return (
     <section className="text-white overflow-hidden pt-12 md:pt-20 lg:pt-[15rem]">
       <div className="space-y-16 md:space-y-24 lg:space-y-32">
@@ -26,7 +30,7 @@ export default function HomeShowcaseSection() {
 
                 <div className="flex justify-center">
                   <OptimizedImage
-                    src={features.experience.content.middle_image}
+                    src={features.experience.content.middleImage}
                     alt="feature"
                     width={1000}
                     height={1000}
@@ -47,7 +51,7 @@ export default function HomeShowcaseSection() {
 
                 <div className="flex justify-center">
                   <OptimizedImage
-                    src={features.experience.content.middle_image}
+                    src={features.experience.content.middleImage}
                     alt="feature"
                     width={1000}
                     height={1000}

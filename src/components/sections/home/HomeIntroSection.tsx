@@ -1,11 +1,14 @@
+"use client";
+
 import { ASSETS } from "@/lib/assets";
-import { siteContent } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import IntroMainTitle from "@/components/ui/IntroMainTitle";
 import IntroTestimonial from "@/components/ui/IntroTestimonial";
 import IntroImages from "@/components/ui/IntroImages";
 
 export default function IntroSection() {
-  const { intro, review } = siteContent;
+  const { text } = useLanguage();
+  const { intro, review } = text;
 
   // 메인 제목들 - 기존 데이터 구조 유지
   const descriptions = [

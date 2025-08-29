@@ -1,10 +1,13 @@
-import { siteContent } from "@/lib/content";
+"use client";
+
+import { useLanguage } from "@/contexts/LanguageContext";
 import SectionSubtitle from "@/components/ui/SectionSubtitle";
 import FeatureMainTitle from "@/components/features/FeatureMainTitle";
 import StatCardList from "@/components/features/StatCardList";
 
 export default function HomeStatsSection() {
-  const { features } = siteContent;
+  const { text } = useLanguage();
+  const { features } = text;
 
   return (
     <section id="features" className="text-white overflow-hidden">

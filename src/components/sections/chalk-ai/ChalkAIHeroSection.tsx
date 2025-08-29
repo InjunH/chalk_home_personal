@@ -8,7 +8,6 @@ export default function ChalkAIHeroSection() {
     >
       <div className="container mx-auto max-w-7xl">
         <ChalkAIHeroTitle />
-        {/* Right Side - AI Logo */}
       </div>
     </section>
   );

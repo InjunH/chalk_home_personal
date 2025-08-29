@@ -1,10 +1,13 @@
-import { siteContent } from "@/lib/content";
+"use client";
+
+import { useLanguage } from "@/contexts/LanguageContext";
 import Image from "next/image";
 import HomeQRSection from "../sections/home/HomeQRSection";
 
 // Footer 컴포넌트
 export default function Footer() {
-  const { company, links, menu, copyright } = siteContent.footer;
+  const { text } = useLanguage();
+  const { company, links, menu, copyright } = text.footer;
 
   return (
     <>
@@ -42,10 +45,10 @@ export default function Footer() {
                   </h4>
                   <div className="space-y-2 md:space-y-3">
                     <p className="text-white/80 text-xs md:text-sm leading-relaxed">
-                      {company.address_kr}
+                      {company.addressKr}
                     </p>
                     <p className="text-white/80 text-xs md:text-sm leading-relaxed">
-                      {company.address_us}
+                      {company.addressUs}
                     </p>
                   </div>
                 </div>
@@ -65,7 +68,7 @@ export default function Footer() {
                 {/* 회사 소개 + 다운로드 */}
                 <div className="space-y-3 md:space-y-4">
                   <h4 className="text-white text-sm md:text-base font-bold uppercase tracking-wide">
-                    {links.company_intro}
+                    {links.companyIntro}
                   </h4>
                   <div className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/10 rounded-lg backdrop-blur-sm hover:bg-white/20 transition-colors cursor-pointer">
                     <span className="text-white/80 text-xs md:text-sm font-medium">

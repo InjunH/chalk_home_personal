@@ -1,11 +1,12 @@
 "use client";
 
-import { siteContent } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import Image from "next/image";
 
 // QR 코드 섹션 컴포넌트
 export default function HomeQRSection() {
-  const { app_info } = siteContent.footer;
+  const { text } = useLanguage();
+  const { appInfo } = text.footer;
 
   return (
     <section className="relative overflow-hidden">
@@ -37,9 +38,9 @@ export default function HomeQRSection() {
             {/* 텍스트 */}
             <div className="flex flex-col items-center space-y-2 text-center">
               <h3 className="text-white text-base font-medium">
-                {app_info.title}
+                {appInfo.title}
               </h3>
-              <p className="text-white/80 text-sm">{app_info.availability}</p>
+              <p className="text-white/80 text-sm">{appInfo.availability}</p>
             </div>
           </div>
         </div>
@@ -73,10 +74,10 @@ export default function HomeQRSection() {
             {/* 텍스트 */}
             <div className="flex flex-col items-center space-y-2 text-center">
               <h3 className="text-white text-lg md:text-xl lg:text-2xl font-medium">
-                {app_info.title}
+                {appInfo.title}
               </h3>
               <p className="text-white/80 text-sm md:text-base">
-                {app_info.availability}
+                {appInfo.availability}
               </p>
             </div>
           </div>

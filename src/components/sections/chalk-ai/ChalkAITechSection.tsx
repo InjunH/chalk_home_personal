@@ -1,6 +1,12 @@
+"use client";
+
 import OptimizedImage from "@/components/ui/OptimizedImage";
 
+import { useLanguage } from "@/contexts/LanguageContext";
+
 export default function ChalkAITechSection() {
+  const { text } = useLanguage();
+  
   return (
     <section className="py-20 relative overflow-hidden">
       {/* 배경 그라디언트 효과 */}
@@ -14,7 +20,7 @@ export default function ChalkAITechSection() {
           {/* 상단 텍스트 */}
           <div className="text-center">
             <p className="chalk-ai-tech-hint-text-mobile text-white">
-              👀 퍼스트해빗의 기술에 대해 더 알고싶다면?
+              {text.chalkAI.techCTA.preTitle}
             </p>
           </div>
 
@@ -22,8 +28,8 @@ export default function ChalkAITechSection() {
           <div className="flex flex-col items-center justify-center chalk-ai-tech-content-gap-mobile">
             <div className="relative flex-1">
               <h2 className="chalk-ai-tech-main-title-mobile text-center uppercase transform">
-                <span className="block">UNLOCK THE</span>
-                <span className="block">TECHNOLOGY</span>
+                <span className="block">{text.chalkAI.techCTA.mainTitle.line1}</span>
+                <span className="block">{text.chalkAI.techCTA.mainTitle.line2}</span>
               </h2>
             </div>
 
@@ -37,7 +43,7 @@ export default function ChalkAITechSection() {
                   </div>
 
                   <span className="chalk-ai-tech-button-text-mobile text-black">
-                    FIRSTHABIT TECH PAGE
+                    {text.chalkAI.techCTA.buttons[0].text}
                   </span>
                 </div>
               </a>
@@ -62,7 +68,7 @@ export default function ChalkAITechSection() {
                   </div>
 
                   <span className="chalk-ai-tech-button-text-mobile text-black">
-                    FIRSTHABIT TECH BLOG
+                    {text.chalkAI.techCTA.buttons[1].text}
                   </span>
                 </div>
               </a>
@@ -89,7 +95,7 @@ export default function ChalkAITechSection() {
           {/* 상단 텍스트 */}
           <div className="text-center">
             <p className="chalk-ai-tech-hint-text text-white">
-              👀 퍼스트해빗의 기술에 대해 더 알고싶다면?
+              {text.chalkAI.techCTA.preTitle}
             </p>
           </div>
 
@@ -97,8 +103,8 @@ export default function ChalkAITechSection() {
           <div className="flex flex-col items-center justify-center chalk-ai-tech-content-gap">
             <div className="relative flex-1">
               <h2 className="chalk-ai-tech-main-title text-center uppercase transform">
-                <span className="block">UNLOCK THE</span>
-                <span className="block">TECHNOLOGY</span>
+                <span className="block">{text.chalkAI.techCTA.mainTitle.line1}</span>
+                <span className="block">{text.chalkAI.techCTA.mainTitle.line2}</span>
               </h2>
             </div>
 
@@ -112,7 +118,7 @@ export default function ChalkAITechSection() {
                   </div>
 
                   <span className="chalk-ai-tech-button-text text-black">
-                    FIRSTHABIT TECH PAGE
+                    {text.chalkAI.techCTA.buttons[0].text}
                   </span>
                 </div>
               </a>
@@ -137,7 +143,7 @@ export default function ChalkAITechSection() {
                   </div>
 
                   <span className="chalk-ai-tech-button-text text-black">
-                    FIRSTHABIT TECH BLOG
+                    {text.chalkAI.techCTA.buttons[1].text}
                   </span>
                 </div>
               </a>

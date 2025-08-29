@@ -1,11 +1,12 @@
 "use client";
 
-import { siteContent } from "@/lib/content";
+import { useLanguage } from "@/contexts/LanguageContext";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Header() {
-  const { navigation } = siteContent;
+  const { text, currentLanguage, changeLanguage } = useLanguage();
+  const { rightMenu } = text.navigation;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -21,6 +22,12 @@ export default function Header() {
   // 모바일 메뉴 토글
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  // 언어 전환 함수
+  const handleLanguageToggle = () => {
+    const newLang = currentLanguage === 'ko' ? 'en' : 'ko';
+    changeLanguage(newLang);
   };
 
   return (
@@ -45,7 +52,7 @@ export default function Header() {
             <div className="flex items-center header-items-gap">
               {/* Desktop Navigation - 중앙 */}
               <nav className="hidden md:flex items-center header-items-gap">
-                {navigation.right_menu.map((item) => {
+                {rightMenu.map((item) => {
                   const href = item === "CHALK AI" ? "/chalk-ai" : "/g-lms";
                   return (
                     <Link
@@ -60,14 +67,19 @@ export default function Header() {
               </nav>
               {/* Language - Desktop & Tablet */}
               <div className="hidden sm:flex items-center justify-center header-lang">
-                <span className="header-lang-text">{navigation.language}</span>
+                <button 
+                  onClick={handleLanguageToggle}
+                  className="header-lang-text"
+                >
+                  {currentLanguage === 'ko' ? 'KR' : 'EN'}
+                </button>
               </div>
 
               {/* Mobile Menu Button */}
               <button
                 onClick={toggleMobileMenu}
                 className="md:hidden text-white p-2 relative z-50"
-                aria-label="메뉴 열기"
+                aria-label={text.common.menuToggle}
                 aria-expanded={isMobileMenuOpen}
               >
                 <div
@@ -125,7 +137,7 @@ export default function Header() {
                 HOME
               </h1>
 
-              {navigation.right_menu.map((item, index) => {
+              {rightMenu.map((item, index) => {
                 const href = item === "CHALK AI" ? "/chalk-ai" : "/g-lms";
                 return (
                   <Link
@@ -160,11 +172,11 @@ export default function Header() {
                 transitionDelay: isMobileMenuOpen ? "500ms" : "0ms",
               }}
             >
-              <button className="text-white text-lg font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30">
-                KR
-              </button>
-              <button className="text-white/50 text-lg font-medium hover:text-white transition-colors">
-                EN
+              <button 
+                onClick={handleLanguageToggle}
+                className="text-white text-lg font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30"
+              >
+                {currentLanguage === 'ko' ? 'KR' : 'EN'}
               </button>
             </div>
           </div>

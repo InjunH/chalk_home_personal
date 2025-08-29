@@ -1,8 +1,14 @@
+"use client";
+
 import AILogoCard from "@/components/sections/home/FeatureSystem/AILogoCard";
 import TextCard from "@/components/sections/home/FeatureSystem/TextCard";
 import PassportCard from "@/components/sections/home/FeatureSystem/PassportCard";
 
+import { useLanguage } from "@/contexts/LanguageContext";
+
 export default function HomeProductsSection() {
+  const { text } = useLanguage();
+
   return (
     <section className="overflow-hidden">
       <div className="max-w-[1920px] mx-auto container pt-[9.375rem] md:pt-[9.375rem]">
@@ -20,9 +26,14 @@ export default function HomeProductsSection() {
             }
             description={
               <>
-                초개인화로 학생의 상태와 목표, 성향과 선호도를 정확히 파악하고
-                <br />
-                개개인의 수준과 선호에 맞는 맞춤형 콘텐츠를 제작합니다.
+                {text.features.system.cards[0].description
+                  .split("\n")
+                  .map((line, i, arr) => (
+                    <span key={i}>
+                      {line}
+                      {i < arr.length - 1 && <br />}
+                    </span>
+                  ))}
               </>
             }
           />
@@ -39,13 +50,14 @@ export default function HomeProductsSection() {
             }
             description={
               <>
-                공부는 머릿속에 지식을 쌓아가는 과정입니다.
-                <br />
-                초크를 통해 우리는 성취를 눈으로 보고, 지식을 쌓아갑니다.
-                <br />
-                쌓여가는 지식과 성취되는 보상속에서, 공부는
-                <br />
-                &apos;해야 하는 것&apos;에서 &apos;하고 싶은 것&apos;이 됩니다.
+                {text.features.system.cards[1].description
+                  .split("\n")
+                  .map((line, i, arr) => (
+                    <span key={i}>
+                      {line}
+                      {i < arr.length - 1 && <br />}
+                    </span>
+                  ))}
               </>
             }
             hasSubtitle={true}
@@ -68,9 +80,14 @@ export default function HomeProductsSection() {
               }
               description={
                 <>
-                  초개인화로 학생의 상태와 목표, 성향과 선호도를 정확히 파악하고
-                  <br />
-                  개개인의 수준과 선호에 맞는 맞춤형 콘텐츠를 제작합니다.
+                  {text.features.system.cards[0].description
+                    .split("\n")
+                    .map((line, i, arr) => (
+                      <span key={i}>
+                        {line}
+                        {i < arr.length - 1 && <br />}
+                      </span>
+                    ))}
                 </>
               }
             />
@@ -79,24 +96,18 @@ export default function HomeProductsSection() {
           {/* 두 번째 행 - G-LMS + Passport 이미지 */}
           <div className="flex card-gap">
             <TextCard
-              title="G-LMS"
-              subtitle={
-                <>
-                  Gamified Learning Management
-                  <br />
-                  System
-                </>
-              }
+              title={text.features.system.cards[1].title}
+              subtitle={<>{text.features.system.cards[1].subtitle}</>}
               description={
                 <>
-                  공부는 머릿속에 지식을 쌓아가는 과정입니다.
-                  <br />
-                  초크를 통해 우리는 성취를 눈으로 보고, 지식을 쌓아갑니다.
-                  <br />
-                  쌓여가는 지식과 성취되는 보상속에서, 공부는
-                  <br />
-                  &apos;해야 하는 것&apos;에서 &apos;하고 싶은 것&apos;이
-                  됩니다.
+                  {text.features.system.cards[1].description
+                    .split("\n")
+                    .map((line, i, arr) => (
+                      <span key={i}>
+                        {line}
+                        {i < arr.length - 1 && <br />}
+                      </span>
+                    ))}
                 </>
               }
               hasSubtitle={true}
