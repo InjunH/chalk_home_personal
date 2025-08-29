@@ -4,7 +4,31 @@ export default function GLMSHeroSection() {
   return (
     <section className="pt-32 pb-20 px-6 relative overflow-hidden">
       <div className="container mx-auto max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[500px]">
+        {/* 모바일 버전 */}
+        <div className="block md:hidden text-center space-y-8 min-h-[400px] h-screen flex flex-col justify-center">
+          <h1 className="glms-hero-title-mobile text-white text-left leading-tight">
+            <span className="block">Gamified</span>
+            <span className="block">Learning</span>
+            <span className="block">Management</span>
+            <span className="block">System.</span>
+          </h1>
+
+          <div className="flex justify-center">
+            <div className="relative">
+              <OptimizedImage
+                src="/images/g-lms/lms_main.png"
+                alt="G-LMS Main Background"
+                className="w-120 h-120 object-cover rounded-lg"
+                style={{
+                  mixBlendMode: "lighten",
+                }}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* PC 버전 (기존 그대로) */}
+        <div className="hidden md:grid lg:grid-cols-2 gap-12 items-center min-h-[500px]">
           {/* Left Side - Gamified Learning Management System Text */}
           <div className="text-left space-y-2">
             <h1

@@ -19,8 +19,8 @@ export default function FeatureCard({
       {/* 모바일: 세로 스택 레이아웃 */}
       <div className="block md:hidden flex flex-col gap-6">
         {/* 텍스트 영역 */}
-        <div className="flex flex-col gap-4">
-          <h3 className="text-white font-bold uppercase feature-video-card-title-mobile">
+        <div className="flex flex-col gap-4 pb-[2.5rem]">
+          <h3 className="text-white font-bold uppercase feature-video-card-title-mobile ">
             {title.split(",").map((part, index) => (
               <span key={index}>
                 {part.trim()}

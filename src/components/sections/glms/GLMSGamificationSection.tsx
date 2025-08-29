@@ -26,14 +26,42 @@ export default function GLMSGamificationSection() {
 
   return (
     <section
-      className="relative py-20 px-6"
+      className="relative"
       style={{
         backgroundColor: GLMS_GAMIFICATION_LAYOUT_CONFIG.sectionBackground,
       }}
     >
       <div className="container mx-auto max-w-7xl">
+        {/* 모바일 버전 */}
+        <div className="block md:hidden flex flex-col space-y-12">
+          <div className="justify-start">
+            <GLMSGamificationTitle />
+          </div>
+
+          {/* 모바일에서는 캐러셀을 간단하게 표시 */}
+          <div className="w-full flex justify-center">
+            <GLMSCarousel />
+          </div>
+
+          {/* 기능 설명 카드들 */}
+          <div className="flex flex-col w-full gap-8 py-[2.5rem]">
+            <FeatureCard
+              title={firstFeatureCard.title}
+              description={firstFeatureCard.description}
+              image={firstFeatureCard.imageSrc}
+              index={0}
+            />
+
+            <GLMSCityBuildingCard
+              title={cityBuildingCard.title}
+              description={cityBuildingCard.description}
+            />
+          </div>
+        </div>
+
+        {/* PC 버전 (기존 그대로) */}
         <div
-          className="flex flex-col"
+          className="hidden md:flex flex-col"
           style={{ gap: GLMS_GAMIFICATION_LAYOUT_CONFIG.sectionGap }}
         >
           <div
