@@ -45,18 +45,36 @@ export default function HomeCTASection() {
             onSubmit={handleSubmit}
             className="flex items-center justify-center px-4"
           >
-            <div className="flex items-center bg-black rounded-full w-full max-w-md md:max-w-lg lg:max-w-xl px-4 md:px-6 py-3 md:py-4">
+            <div 
+              className="flex items-center bg-[#121212] rounded-full w-full max-w-md md:max-w-lg lg:max-w-xl px-4 md:px-6 py-3 md:py-4"
+              style={{
+                boxShadow: `
+                  0 0 80px rgba(255, 255, 255, 0.2),
+                  0 0 150px rgba(255, 255, 255, 0.15),
+                  0 0 200px rgba(255, 255, 255, 0.1)
+                `
+              }}
+            >
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="ENTER YOUR EMAIL"
-                className="flex-1 bg-transparent text-white placeholder-white font-bold text-sm md:text-base lg:text-lg border-none outline-none"
+                className="flex-1 bg-transparent text-white placeholder-white/50 font-bold text-sm md:text-base lg:text-lg border-none outline-none"
+                style={{
+                  fontFamily: "Suisse Intl",
+                  fontWeight: 700,
+                  letterSpacing: "-0.02em"
+                }}
                 required
               />
               <button
                 type="submit"
                 className="bg-white text-black font-bold rounded-full px-4 md:px-6 py-2 md:py-3 ml-2 text-sm md:text-base hover:bg-gray-100 transition-colors"
+                style={{
+                  fontFamily: "Suisse Intl",
+                  fontWeight: 700
+                }}
               >
                 JOIN
               </button>

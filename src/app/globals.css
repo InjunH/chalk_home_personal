@@ -945,7 +945,7 @@ body {
 }
 
 /* Feature Main Title Classes */
-.feature-title-the {
+.feature-title {
   font-family: "Suisse Intl";
   font-weight: 700;
   font-size: clamp(3rem, 8vw, 6rem); /* 48px-96px / 16 = 3rem-6rem */
