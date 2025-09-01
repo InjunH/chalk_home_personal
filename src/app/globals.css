@@ -657,8 +657,7 @@ body {
 
 .hero-title-main {
   font-family: "Suisse Intl";
-  /* 모바일: 3rem (48px) → 태블릿: 6rem (96px) → 데스크탑: 11.375rem (182px) */
-  font-size: clamp(3rem, 12vw, 11.375rem);
+  font-size: clamp(3rem, 12vw, 10.375rem);
   font-weight: 700;
   letter-spacing: clamp(-0.03rem, -0.02em, -0.01em);
   line-height: clamp(0.8, 0.75, 0.7);
@@ -961,7 +960,7 @@ body {
 
 .intro-main-heading {
   font-size: 4.5rem; /* 72px / 16 = 4.5rem */
-  line-height: 4.238rem;
+  line-height: 1;
   letter-spacing: 0rem; /* 0px = 0rem */
   font-family: "Pretendard";
   font-weight: 700;
@@ -1164,7 +1163,7 @@ body {
 /* Intro Testimonial Classes */
 .testimonial-quote {
   font-size: 2.25rem; /* 36px / 16 = 2.25rem */
-  line-height: 2.074rem; /* 33.18px / 16 = 2.074rem */
+  line-height: 110.00000000000001%; /* 33.18px / 16 = 2.074rem */
   letter-spacing: -0.023rem; /* -0.36px / 16 = -0.023rem */
   font-family: "Pretendard";
   font-weight: 700;
