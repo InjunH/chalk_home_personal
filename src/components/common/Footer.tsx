@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import Image from "next/image";
+import Link from "next/link";
 import HomeQRSection from "../sections/home/HomeQRSection";
 
 // Footer 컴포넌트
@@ -113,15 +114,23 @@ export default function Footer() {
 
               {/* 세 번째 컬럼 - 메뉴 */}
               <div className="space-y-3 md:space-y-4 order-1 lg:order-3">
-                {menu.map((item, index) => (
-                  <a
-                    key={index}
-                    href={`#${item.toLowerCase().replace(" ", "-")}`}
-                    className="block text-white text-sm md:text-base font-bold hover:text-white/80 transition-colors"
-                  >
-                    {item}
-                  </a>
-                ))}
+                {menu.map((item) => {
+                  const href =
+                    item === "CHALK AI"
+                      ? "/chalk-ai"
+                      : item === "G-LMS"
+                      ? "/g-lms"
+                      : "/";
+                  return (
+                    <Link
+                      key={item}
+                      href={href}
+                      className="block text-white text-sm md:text-base font-bold hover:text-white/80 transition-colors"
+                    >
+                      {item}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -130,13 +139,18 @@ export default function Footer() {
           <div className="lg:hidden mt-8 space-y-4 text-left">
             {/* CHALK 로고 */}
             <div className="flex justify-start">
-              <Image
-                src="/images/chalk_logo.svg"
-                alt="CHALK Logo"
-                width={292}
-                height={61}
-                className="text-white w-48 md:w-60 h-auto"
-              />
+              <Link
+                href="/"
+                className="hover:opacity-80 transition-opacity cursor-pointer"
+              >
+                <Image
+                  src="/images/chalk_logo.svg"
+                  alt="CHALK Logo"
+                  width={292}
+                  height={61}
+                  className="text-white w-48 md:w-60 h-auto cursor-pointer hover:opacity-80 transition-opacity"
+                />
+              </Link>
             </div>
 
             {/* 저작권 - 제일 하단 */}

@@ -26,7 +26,7 @@ export default function Header() {
 
   // 언어 전환 함수
   const handleLanguageToggle = () => {
-    const newLang = currentLanguage === 'ko' ? 'en' : 'ko';
+    const newLang = currentLanguage === "ko" ? "en" : "ko";
     changeLanguage(newLang);
   };
 
@@ -66,12 +66,12 @@ export default function Header() {
                 })}
               </nav>
               {/* Language - Desktop & Tablet */}
-              <div className="hidden sm:flex items-center justify-center header-lang">
-                <button 
+              <div className="hidden  items-center justify-center header-lang">
+                <button
                   onClick={handleLanguageToggle}
                   className="header-lang-text"
                 >
-                  {currentLanguage === 'ko' ? 'KR' : 'EN'}
+                  {currentLanguage === "ko" ? "KR" : "EN"}
                 </button>
               </div>
 
@@ -83,12 +83,12 @@ export default function Header() {
                 aria-expanded={isMobileMenuOpen}
               >
                 <div
-                  className={`w-6 h-6 flex flex-col justify-center items-center transition-all duration-300`}
+                  className={`w-6 h-6 flex flex-col justify-center items-center transition-all duration-300 relative`}
                 >
                   <span
-                    className={`block h-0.5 w-6 bg-current transition-all duration-300 ${
+                    className={`block h-0.5 w-6 bg-current transition-all duration-300 absolute ${
                       isMobileMenuOpen
-                        ? "rotate-45 translate-y-0"
+                        ? "rotate-45"
                         : "-translate-y-1.5"
                     }`}
                   />
@@ -98,9 +98,9 @@ export default function Header() {
                     }`}
                   />
                   <span
-                    className={`block h-0.5 w-6 bg-current transition-all duration-300 ${
+                    className={`block h-0.5 w-6 bg-current transition-all duration-300 absolute ${
                       isMobileMenuOpen
-                        ? "-rotate-45 -translate-y-0"
+                        ? "-rotate-45"
                         : "translate-y-1.5"
                     }`}
                   />
@@ -125,7 +125,7 @@ export default function Header() {
             {/* Mobile Navigation - 좌측 정렬 */}
             <nav className="flex flex-col space-y-6 mb-16">
               <h1
-                className={`text-white text-4xl font-bold transition-all duration-700 ${
+                className={`text-white text-4xl font-bold transition-all duration-700 cursor-pointer ${
                   isMobileMenuOpen
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
@@ -172,11 +172,11 @@ export default function Header() {
                 transitionDelay: isMobileMenuOpen ? "500ms" : "0ms",
               }}
             >
-              <button 
+              <button
                 onClick={handleLanguageToggle}
                 className="text-white text-lg font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30"
               >
-                {currentLanguage === 'ko' ? 'KR' : 'EN'}
+                {currentLanguage === "ko" ? "KR" : "EN"}
               </button>
             </div>
           </div>
