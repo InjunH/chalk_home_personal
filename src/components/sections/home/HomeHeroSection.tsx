@@ -31,7 +31,7 @@ export default function HeroSection() {
       <HeroTitle />
       {/* 하단 요소들 */}
 
-      <div className="absolute top-5/6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-full  md:bottom-0 md:left-0 md:right-0 md:z-30 flex flex-row justify-center md:justify-between items-end w-full px-6 pb-4">
+      {/* <div className="absolute top-5/6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:w-full  md:bottom-0 md:left-0 md:right-0 md:z-30 flex flex-row justify-center md:justify-between items-end w-full px-6 pb-4">
         <div className="hidden md:block">
           <VideoThumbnailCard
             imageSrc={ASSETS.images.hero.appScreenshot}
@@ -48,7 +48,7 @@ export default function HeroSection() {
         <div className="hidden md:block">
           <HeroBottomLogo src="/images/logo_gray.svg" alt="CHALK Logo" />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
