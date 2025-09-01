@@ -13,13 +13,10 @@ export default function IPadMockup({
 }: IPadMockupProps) {
   return (
     <div
-      className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 ipad-container ${className}`}
+      className={`absolute top-3/5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:bottom-0 md:top-auto md:-translate-y-0 ipad-container ${className}`}
     >
-      {/* 마스킹 그라데이션 */}
-      <div className="absolute inset-0 z-10" />
-
       {/* iPad 목업 이미지 */}
-      <div className="relative w-full h-full flex items-end justify-center">
+      <div className="relative w-full h-full flex items-center justify-center md:items-end">
         <OptimizedImage
           src={imageSrc}
           alt={imageAlt}

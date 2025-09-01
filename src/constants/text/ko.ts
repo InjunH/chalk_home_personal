@@ -122,7 +122,7 @@ export const ko = {
           title: "Hyper-Personalized",
           subtitle: "Learning Solution",
           description:
-            "수 천만명의 학습자 데이터 분석, 개인의 시간과 효율을 높이는 초개인화된 기능으로 수학 영역의 새로운 접근을 시작합니다.",
+            "초개인화로 학생의 상태와 목표, 성향과 선호도를 정확히 파악하고 개개인의 수준과 선호에 맞는 맞춤형 콘텐츠를 제작합니다.",
           image: "featureSystemImg",
           type: "image",
         },
@@ -131,7 +131,7 @@ export const ko = {
           title: "G-LMS",
           subtitle: "Gamified Learning Management System",
           description:
-            "게임의 재미와 학습의 효율성을 결합한 혁신적인 학습 시스템입니다.\n즉각적 피드백과 리워드를 통해 지속적인 학습 동기를 부여하고,\n개인화된 학습 경로를 통해 최적의 학습 효과를 달성합니다.",
+            "공부는 머릿속에 지식을 쌓아가는 과정입니다. 초크를 통해 우리는 성취를 눈으로 보고, 지식을 쌓아갑니다. 쌓여가는 지식과 성취되는 보상속에서, 공부는 ‘해야 하는 것’에서 ‘하고 싶은 것’이 됩니다.",
           media: "featureVideo",
           type: "video",
         },

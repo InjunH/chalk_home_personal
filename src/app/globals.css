@@ -7,6 +7,19 @@ body {
   color: #ffffff; /* white */
 }
 
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+  border: none !important;
+}
+
+hr {
+  border-top-width: 0 !important;
+  border: none !important;
+}
+
 h2 {
   margin: 0;
 }
@@ -774,7 +787,8 @@ body {
   font-family: "Pretendard";
   font-size: 2.625rem; /* 42px / 16 = 2.625rem */
   letter-spacing: 0rem; /* 0px = 0rem */
-  line-height: 0.92;
+  font-weight: 700;
+  line-height: 110.00000000000001%;
 }
 
 .feature-video-card-title-mobile {
@@ -788,8 +802,8 @@ body {
 .feature-video-card-description {
   font-family: "Pretendard";
   font-size: 1.125rem; /* 18px / 16 = 1.125rem */
-  letter-spacing: -0.011rem; /* -0.18px / 16 = -0.011rem */
-  line-height: 0.94;
+  letter-spacing: -1%; /* -0.18px / 16 = -0.011rem */
+  line-height: 110.00000000000001%;
 }
 
 .feature-video-card-description-mobile {

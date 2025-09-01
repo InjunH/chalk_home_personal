@@ -36,11 +36,13 @@ export default function HomeQRSection() {
             </div>
 
             {/* 텍스트 */}
-            <div className="flex flex-col items-center space-y-2 text-center">
+            <div className="flex flex-col items-center space-y-2 text-center max-w-[250px] md:max-w-full">
               <h3 className="text-white text-base font-medium">
                 {appInfo.title}
               </h3>
-              <p className="text-white/80 text-sm">{appInfo.availability}</p>
+              <p className="text-white/50 text-sm font-bold">
+                {appInfo.availability}
+              </p>
             </div>
           </div>
         </div>

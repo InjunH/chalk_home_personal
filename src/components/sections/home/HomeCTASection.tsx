@@ -43,11 +43,12 @@ export default function HomeCTASection() {
           {/* Email Form */}
           <form
             onSubmit={handleSubmit}
-            className="flex items-center justify-center px-4"
+            className="flex items-center justify-center"
           >
             <div
-              className="flex items-center bg-[#121212] rounded-full w-full max-w-md md:max-w-lg lg:max-w-xl px-4 md:px-6 py-3 md:py-4"
+              className="flex items-center bg-[#121212] rounded-full w-full max-w-md md:max-w-lg lg:max-w-xl md:px-6 md:py-4"
               style={{
+                padding: "0.75rem 0.75rem 0.75rem 1.5rem",
                 boxShadow: `
                   0 0 80px rgba(255, 255, 255, 0.2),
                   0 0 150px rgba(255, 255, 255, 0.15),

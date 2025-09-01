@@ -10,11 +10,10 @@ export default function SubtitleText({
   style = {},
 }: SubtitleTextProps) {
   return (
-    <p
-      className={`text-right subtitle-text ${className}`}
-style={style}
-    >
-      {text}
-    </p>
+    <div className="max-w-[150px] md:max-w-full">
+      <p className={`subtitle-text ${className}`} style={style}>
+        {text}
+      </p>
+    </div>
   );
 }
