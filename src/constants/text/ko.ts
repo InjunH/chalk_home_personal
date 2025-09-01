@@ -192,10 +192,12 @@ export const ko = {
       },
       logo: "/images/chalk-ai/ai.svg",
     },
-    description: {
-      title: "개인의 다양하고 심도있는 질문을 위한 맞춤형 교육의 혁신",
-      subtitle: "끝없는 질문을 위한 확실한 가이드",
-    },
+    description: [
+      "개인의 다양하고 심도있는 질문을 위한",
+      "맞춤형 교육의 혁신",
+      "끝없는 질문을 위한",
+      "확실한 가이드",
+    ],
     titleSection: {
       mainTitle: "24/7",
       subtitle: "MANAGEMENT",
