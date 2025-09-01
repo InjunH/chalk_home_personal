@@ -194,11 +194,12 @@ export const en = {
       },
       logo: "/images/chalk-ai/ai.svg",
     },
-    description: {
-      title:
-        "A revolution in personalized learning, designed to address deep and diverse questions.",
-      subtitle: "Your ultimate guide to endless curiosity.",
-    },
+    description: [
+      "A revolution in personalized learning,",
+      "designed to address deep and diverse questions.",
+      "Your ultimate guide to",
+      "endless curiosity.",
+    ],
     titleSection: {
       mainTitle: "24/7",
       subtitle: "MANAGEMENT",
@@ -236,9 +237,24 @@ export const en = {
       subtitle: "BASED LEARNING",
       image: "/images/chalk-ai/ontolos.png",
       features: [
-        { id: 1, title: "BEYOND THE BASE MODEL", icon: "+" },
-        { id: 2, title: "FLEXIBLE RESPONSE", icon: "+" },
-        { id: 3, title: "ADVANCED PROBLEM SOLVING", icon: "+" },
+        { 
+          id: 1, 
+          title: "BEYOND THE BASE MODEL", 
+          icon: "+",
+          description: "Providing educational and clear solutions beyond GPT-based models"
+        },
+        { 
+          id: 2, 
+          title: "FLEXIBLE RESPONSE", 
+          icon: "+",
+          description: "Understanding student's problem-solving process and providing appropriate multimodal feedback"
+        },
+        { 
+          id: 3, 
+          title: "ADVANCED PROBLEM SOLVING", 
+          icon: "+",
+          description: "Solving high-difficulty problems that require complex reasoning and calculation"
+        },
       ],
     },
     techCTA: {
