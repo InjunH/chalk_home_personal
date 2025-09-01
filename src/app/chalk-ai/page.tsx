@@ -10,12 +10,11 @@ import { text as fallbackText } from "@/constants/text";
 
 // metadata는 서버사이드에서 실행되므로 fallback text 사용
 export const metadata: Metadata = {
-  title: `CHALK AI - ${fallbackText.chalkAI.description.title}`,
-  description: `CHALK AI의 혁신적인 ${fallbackText.chalkAI.description.title}을 만나보세요. ${fallbackText.intro.mainCopy}`,
+  title: `CHALK AI - ${fallbackText.chalkAI.description[0]} ${fallbackText.chalkAI.description[1]} ${fallbackText.chalkAI.description[2]}`,
+  description: `CHALK AI의 혁신적인 ${fallbackText.chalkAI.description[0]} ${fallbackText.chalkAI.description[1]} ${fallbackText.chalkAI.description[2]}을 만나보세요. ${fallbackText.intro.mainCopy}`,
 };
 
 export default function ChalkAiPage() {
-  // 클라이언트사이드에서는 useLanguage hook 사용 (향후 컴포넌트에서 사용)
   return (
     <PageLayout>
       {/* Hero Section */}
