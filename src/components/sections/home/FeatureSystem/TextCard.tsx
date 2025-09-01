@@ -32,7 +32,7 @@ export default function TextCard({
       </div>
 
       {/* PC: 기존 레이아웃 그대로 유지 */}
-      <div className="hidden md:flex flex-col title-gap">
+      <div className="hidden md:flex flex-col title-gap min-h-[560px]">
         {/* 타이틀 섹션 */}
         <div className="flex flex-col mb-6">
           <h2 className="leading-none gradient-title">{title}</h2>

@@ -67,7 +67,7 @@ export default function HomeProductsSection() {
         {/* PC: 기존 2행 레이아웃 그대로 유지 */}
         <div className="hidden md:block">
           {/* 첫 번째 행 - AI 로고 카드 + Hyper-Personalized Learning Solution */}
-          <div className="flex card-gap row-gap">
+          <div className="grid grid-cols-2 gap-8 mb-8">
             <AILogoCard />
 
             <TextCard
@@ -94,7 +94,7 @@ export default function HomeProductsSection() {
           </div>
 
           {/* 두 번째 행 - G-LMS + Passport 이미지 */}
-          <div className="flex card-gap">
+          <div className="grid grid-cols-2 gap-8">
             <TextCard
               title={text.features.system.cards[1].title}
               subtitle={<>{text.features.system.cards[1].subtitle}</>}

@@ -26,10 +26,12 @@ export default function NNKonradTitle({
       case "gold":
         return {
           background:
-            "linear-gradient(90deg, #F8EACA 0%, #FFF6E8 50%, #C2AD89 100%)",
+            "linear-gradient(90deg, #F8EACA 0%, #FFF6E8 35%, #C2AD89 70%, #8B7355 100%)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           backgroundClip: "text",
+          // 더 명확한 대비를 위한 텍스트 그림자 추가
+          textShadow: "0 0 20px rgba(248, 234, 202, 0.3)",
         };
       case "highlight":
         return {
@@ -64,8 +66,9 @@ export default function NNKonradTitle({
           fontSize: "6rem" /* 96px / 16 = 6rem */,
           fontWeight: 700,
           letterSpacing: "-0.18rem" /* -2.88px / 16 = -0.18rem */,
-          lineHeight: "1.0",
+          lineHeight: "1.1", // line-height를 1.0에서 1.1로 증가
           textAlign: "center",
+          paddingBottom: "0.25rem", // 하단에 여백 추가
           ...getVariantStyles(),
         }}
       >

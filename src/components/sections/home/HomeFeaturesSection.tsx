@@ -22,13 +22,19 @@ export default function HomeFeaturesSection() {
               {features.video.title}
             </SectionSubtitle>
             <FeatureTitleSection layout="vertical">
-              <h2 className="text-white font-bold uppercase text-center mobile-feature-title md:feature-title text-2xl md:text-4xl lg:text-5xl xl:text-6xl tracking-tight">
+              <h2
+                className="text-white font-bold uppercase text-center 
+                text-[2.25rem] md:text-[6rem]
+                tracking-tight leading-none
+                font-['Suisse_Intl']"
+              >
                 BE READY FOR THE
               </h2>
 
               <NNKonradTitle
                 variant="gold"
-                className="mobile-feature-title md:feature-title text-4xl md:text-6xl lg:text-7xl xl:text-8xl"
+                className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl
+                tracking-tight overflow-visible"
               >
                 Next Big Thing
               </NNKonradTitle>

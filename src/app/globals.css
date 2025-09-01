@@ -846,18 +846,24 @@ body {
 }
 
 /* System Card Layout Classes */
-.system-card-base {
-  height: var(--card-height);
-  border-radius: var(--card-border-radius);
-  padding: var(--card-inner-padding);
+/* PC 스타일 (768px 이상) */
+@media (min-width: 768px) {
+  .system-card-base {
+    height: var(--card-height);
+    border-radius: var(--card-border-radius);
+    /* padding: var(--card-inner-padding); */
+    padding: 3.375rem;
+  }
 }
 
-/* 모바일용 시스템 카드 */
-.system-card-mobile {
-  height: auto;
-  min-height: 20rem; /* 320px - 모바일에서 적절한 최소 높이 */
-  border-radius: 1rem; /* 16px - 모바일에서 작은 둥글기 */
-  padding: 1.5rem; /* 24px - 모바일에서 작은 패딩 */
+/* 모바일 스타일 (768px 미만) */
+@media (max-width: 767px) {
+  .system-card-mobile {
+    height: auto;
+    min-height: 20rem; /* 320px - 모바일에서 적절한 최소 높이 */
+    border-radius: 1rem; /* 16px - 모바일에서 작은 둥글기 */
+    padding: 1.5rem; /* 24px - 모바일에서 작은 패딩 */
+  }
 }
 
 /* Experience Components Classes */
@@ -968,12 +974,15 @@ body {
 }
 
 /* Feature Main Title Classes */
-.feature-title {
-  font-family: "Suisse Intl";
-  font-weight: 700;
-  font-size: clamp(3rem, 8vw, 6rem); /* 48px-96px / 16 = 3rem-6rem */
-  letter-spacing: -0.18rem; /* -2.88px / 16 = -0.18rem */
-  line-height: 4.188rem; /* 67px / 16 = 4.188rem */
+/* PC 스타일 (768px 이상) */
+@media (min-width: 768px) {
+  .feature-title {
+    font-family: "Suisse Intl";
+    font-weight: 700;
+    font-size: clamp(3rem, 8vw, 6rem); /* 48px-96px / 16 = 3rem-6rem */
+    letter-spacing: -0.18rem; /* -2.88px / 16 = -0.18rem */
+    line-height: 4.188rem; /* 67px / 16 = 4.188rem */
+  }
 }
 
 .feature-title-new {
@@ -1880,12 +1889,15 @@ body {
   text-align: center;
 }
 
-.mobile-feature-title {
-  font-family: "Suisse Intl";
-  font-weight: 700;
-  font-size: 2.25rem;
-  letter-spacing: -0.18rem;
-  line-height: 1;
+/* 모바일 스타일 (768px 미만) */
+@media (max-width: 767px) {
+  .mobile-feature-title {
+    font-family: "Suisse Intl";
+    font-weight: 700;
+    font-size: 2.25rem;
+    letter-spacing: -0.18rem;
+    line-height: 1;
+  }
 }
 
 /* ========================================

@@ -8,7 +8,10 @@ export default function SystemCard({
 }: CardBaseProps) {
   return (
     <div
-      className={`flex-1 system-card-mobile md:system-card-base border-[0.1625rem] border-white/[0.04] ${className}`}
+      className={`flex-1 
+        h-auto min-h-[20rem] rounded-[1rem] p-6
+        md:h-[var(--card-height)] md:rounded-[var(--card-border-radius)] md:p-[3.375rem]
+        border-[0.1625rem] border-white/[0.04] ${className}`}
       style={{
         ...(height && { height }),
         ...(padding && { padding }),

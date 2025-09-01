@@ -5,7 +5,7 @@ import SystemCard from "./SystemCard";
 
 export default function AILogoCard() {
   return (
-    <SystemCard className="relative" padding="0">
+    <SystemCard className="relative border-none" padding="0">
       {/* 배경 이미지 - hyper.png */}
       <OptimizedImage
         src={ASSETS.images.features.hyperPersonalized}
