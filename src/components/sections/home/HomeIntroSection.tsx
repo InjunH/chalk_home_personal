@@ -17,22 +17,22 @@ export default function IntroSection() {
     intro.description3,
   ];
 
-  // 프리뷰 이미지들 - 겹쳐진 배치 설정
+  // 프리뷰 이미지들 - 초기에는 겹쳐진 상태
   const previewImages = [
     {
       src: ASSETS.images.intro.figmaImg1,
       alt: "CHALK Preview 1",
-      position: "absolute z-30 right-1/3",
+      position: "", // position은 IntroImages 컴포넌트에서 제어
     },
     {
       src: ASSETS.images.intro.figmaImg2,
       alt: "CHALK Preview 2",
-      position: "relative z-20",
+      position: "",
     },
     {
       src: ASSETS.images.intro.figmaImg3,
       alt: "CHALK Preview 3",
-      position: "absolute z-10 left-1/3",
+      position: "",
     },
   ];
 

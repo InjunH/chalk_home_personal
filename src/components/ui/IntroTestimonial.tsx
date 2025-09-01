@@ -68,7 +68,7 @@ export default function IntroTestimonial({
             </div>
 
             {/* Second Quote */}
-            <div className="text-white">
+            <div className="text-white/80">
               <p className="testimonial-quote">{testimonial.quote2}</p>
               <p className="testimonial-quote">{testimonial.quote3}</p>
             </div>

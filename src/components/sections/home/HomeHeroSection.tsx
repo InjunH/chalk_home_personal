@@ -19,7 +19,7 @@ export default function HeroSection() {
       className="relative overflow-hidden w-full h-screen max-h-[1000px]"
     >
       {/* 라이트 배경 효과 */}
-      <HeroBackground />
+      {/* <HeroBackground /> */}
 
       {/* iPad 목업 영역 */}
       <IPadMockup
