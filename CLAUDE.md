@@ -68,7 +68,7 @@ node fetch_figma.js
 **Node ID 기반 데이터 가져오기**
 ```bash
 # 환경변수 설정
-export FIGMA_ACCESS_TOKEN="figd_8ZHxbeGTULK0rNl-M1Tg5rPV4Oi1XZa4ncXWalpB"
+export FIGMA_ACCESS_TOKEN="your-figma-token-here"
 
 # 특정 노드의 JSON 데이터 가져오기 (예: QR Section)
 FIGMA_ACCESS_TOKEN="$FIGMA_ACCESS_TOKEN" node -e "
