@@ -20,8 +20,6 @@ export default function ChalkAIBenefitsSection() {
           const rect = sectionRef.current.getBoundingClientRect();
           const windowHeight = window.innerHeight;
 
-          console.log(rect.top, windowHeight);
-
           // 섹션이 화면에 들어왔을 때부터 애니메이션 시작
           if (rect.top <= windowHeight && rect.bottom >= 0) {
             // 애니메이션 시작 오프셋 조절 (양수: 늦게 시작, 음수: 일찍 시작)

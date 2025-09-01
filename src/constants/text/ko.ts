@@ -235,9 +235,26 @@ export const ko = {
       subtitle: "지식 온톨로지를 설계하고 이를 활용하여",
       image: "/images/chalk-ai/ontolos.png",
       features: [
-        { id: 1, title: "정확한 답변 제공", icon: "+" },
-        { id: 2, title: "유연한 대응", icon: "+" },
-        { id: 3, title: "고난도 문제 해결", icon: "+" },
+        {
+          id: 1,
+          title: "정확한 답변 제공",
+          icon: "+",
+          description: "GPT 기반 모델을 넘어 교육적이고 명확한 솔루션 제공",
+        },
+        {
+          id: 2,
+          title: "유연한 대응",
+          icon: "+",
+          description:
+            "학생의 풀이 과정과 상황을 파악하고, 적절한 멀티모달 피드백 제공",
+        },
+        {
+          id: 3,
+          title: "고난도 문제 해결",
+          icon: "+",
+          description:
+            "실시간으로 중등 및 고등 고난도 문제를 다양한 풀이 방식으로 해결",
+        },
       ],
     },
     techCTA: {
